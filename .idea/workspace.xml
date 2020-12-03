@@ -21,15 +21,12 @@
   <component name="ChangeListManager">
     <list default="true" id="d1612a24-8f92-4a41-8a01-9056ae58447d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/action_provision" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/action_provision" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/action_set_name" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/action_set_name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/id" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/id" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/index_uuid" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/index_uuid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/private_key" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/private_key" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Product/ProductResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Product/ProductResource.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Product/ProductRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Product/ProductRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_02_230250_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_02_230250_create_products_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -193,7 +190,8 @@
       <updated>1606386341288</updated>
       <workItem from="1606386342465" duration="712000" />
       <workItem from="1606725275848" duration="1546000" />
-      <workItem from="1606950223385" duration="6118000" />
+      <workItem from="1606950223385" duration="7404000" />
+      <workItem from="1606988657647" duration="8996000" />
     </task>
     <servers />
   </component>
@@ -210,21 +208,22 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="698" y="313" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606956172332">
+    <state x="698" y="313" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607019683953">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="698" y="313" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1606956172332" />
+    <state x="698" y="313" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607019683953" />
     <state x="698" y="313" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.25.1920.1055/0.0.1920.1080@0.0.1920.1080" timestamp="1606951494560" />
-    <state x="660" y="330" key="#com.jetbrains.php.refactoring.extract.interface.PhpExtractInterfaceDialog#" timestamp="1606951147580">
+    <state x="660" y="330" key="#com.jetbrains.php.refactoring.extract.interface.PhpExtractInterfaceDialog#" timestamp="1607009151067">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="660" y="330" key="#com.jetbrains.php.refactoring.extract.interface.PhpExtractInterfaceDialog#/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1606951147580" />
-    <state x="666" y="284" key="NewPhpClassDialog" timestamp="1606952622284">
+    <state x="660" y="330" key="#com.jetbrains.php.refactoring.extract.interface.PhpExtractInterfaceDialog#/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607009151067" />
+    <state x="666" y="284" key="NewPhpClassDialog" timestamp="1607008848084">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="666" y="284" key="NewPhpClassDialog/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1606950808295" />
+    <state x="666" y="284" key="NewPhpClassDialog/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607008848084" />
     <state x="666" y="284" key="NewPhpClassDialog/1920.25.1920.1055/0.0.1920.1080@0.0.1920.1080" timestamp="1606952622284" />
     <state x="625" y="262" key="run.anything.popup" timestamp="1606951044335">
       <screen x="0" y="0" width="1920" height="1080" />

@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Resources\Product;
+namespace App\Http\Resources\Category;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class ProductResource extends JsonResource
+class CategoryResource extends JsonResource
 {
     /**
      * @param Request $request
@@ -16,12 +16,13 @@ class ProductResource extends JsonResource
         return
         [
             'id'                    => $this -> id,
-            'type'                  => 'Product',
+            'type'                  => 'Category',
 
             'attributes' =>
             [
                 'resource_id'       => $this -> resource_id,
-                'product_name'      => $this -> product_name,
+
+                'category_name'     => $this -> category_name,
 
                 'created_at'        => $this -> created_at -> toDateTimeString(),
                 'updated_at'        => $this -> updated_at -> toDateTimeString(),
