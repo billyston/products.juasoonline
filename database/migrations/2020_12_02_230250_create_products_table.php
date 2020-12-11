@@ -18,12 +18,20 @@ class CreateProductsTable extends Migration
             $table -> bigIncrements('id' );
             $table -> uuid( 'resource_id' ) -> unique() -> nullable( false );
 
-            $table -> unsignedBigInteger( 'category_id' ) -> nullable( false );
-            $table -> string( 'product_name' ) -> nullable( false );
+            $table -> unsignedBigInteger( 'category_id' );
+            $table -> unsignedBigInteger( 'shop_id' );
+
+            $table -> string( 'slug' ) -> nullable( true );
+            $table -> string( 'name' ) -> nullable( false );
+            $table -> mediumText( 'description' );
+            $table -> float( 'sales_price' );
+            $table -> float( 'price' );
+            $table -> integer( 'quantity' ) -> nullable( false ) ->default( 0 );
+            $table -> smallInteger( 'status' ) ->default( 1 );
 
             $table -> timestamps();
 
-            $table -> foreign('category_id') -> references('id' ) -> on ('categories' ) -> onDelete('cascade' );
+            $table -> foreign('category_id' ) -> references('id' ) -> on ('subcategories' ) -> onDelete('cascade' );
         });
     }
 

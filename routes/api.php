@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\Group\GroupController;
 use App\Http\Controllers\Category\CategoryController;
+use App\Http\Controllers\Subcategory\SubcategoryController;
 use App\Http\Controllers\Product\ProductController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,6 +19,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::group( [], function ()
 {
-    Route::apiResource( 'products', ProductController::class );
+    Route::apiResource( 'groups', GroupController::class );
     Route::apiResource( 'categories', CategoryController::class );
+    Route::apiResource( 'subcategories', SubcategoryController::class );
+    Route::apiResource( 'products', ProductController::class );
 });

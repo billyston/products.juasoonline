@@ -22,7 +22,7 @@ class CategoryResource extends JsonResource
             [
                 'resource_id'       => $this -> resource_id,
 
-                'category_name'     => $this -> category_name,
+                'name'              => $this -> name,
 
                 'created_at'        => $this -> created_at -> toDateTimeString(),
                 'updated_at'        => $this -> updated_at -> toDateTimeString(),

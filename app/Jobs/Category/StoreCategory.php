@@ -16,7 +16,6 @@ use Exception;
 class StoreCategory implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
-
     use apiResponseBuilder; private $theRequest;
 
     /**
@@ -28,11 +27,15 @@ class StoreCategory implements ShouldQueue
         $this -> theRequest = $categoryRequest;
     }
 
+    /**
+     * @return CategoryResource|void
+     */
     public function handle()
     {
         try
         {
             $Category = new Category( $this -> theRequest -> input( 'data.attributes' ) );
+            $Category -> group() -> associate( $this -> theRequest [ 'data.relationships.group.group_id' ] );
             $Category -> save();
 
             $Category -> refresh();

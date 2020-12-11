@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Jobs\Category;
+namespace App\Jobs\Group;
 
-use App\Http\Requests\Category\CategoryRequest;
-use App\Http\Resources\Category\CategoryResource;
-use App\Models\Category\Category;
+use App\Http\Requests\Group\GroupRequest;
+use App\Http\Resources\Group\GroupResource;
+use App\Models\Group\Group;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
@@ -12,31 +12,31 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Exception;
 
-class UpdateCategory implements ShouldQueue
+class UpdateGroup implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
     private $theRequest; private $theModel;
 
     /**
-     * UpdateCategory constructor.
-     * @param CategoryRequest $categoryRequest
-     * @param Category $category
+     * UpdateGroup constructor.
+     * @param GroupRequest $groupRequest
+     * @param Group $group
      */
-    public function __construct( CategoryRequest $categoryRequest, Category $category )
+    public function __construct( GroupRequest $groupRequest, Group $group )
     {
-        $this -> theRequest     = $categoryRequest;
-        $this -> theModel       = $category;
+        $this -> theRequest     = $groupRequest;
+        $this -> theModel       = $group;
     }
 
     /**
-     * @return CategoryResource|void
+     * @return GroupResource|void
      */
     public function handle()
     {
         try
         {
             $this -> theModel -> update( $this -> theRequest -> validated()[ 'data' ][ 'attributes' ] );
-            return new CategoryResource( $this -> theModel );
+            return new GroupResource( $this -> theModel );
         }
         catch ( Exception $exception )
         {

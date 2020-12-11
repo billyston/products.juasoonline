@@ -36,6 +36,13 @@ class ProductRequest extends FormRequest
         [
             'data'                                                                  => [ 'required' ],
             'data.type'                                                             => [ 'required', 'string', 'in:Product' ],
+
+            'data.attributes.shop_id'                                               => [ 'required', 'string' ],
+            'data.attributes.name'                                                  => [ 'required', 'string' ],
+            'data.attributes.sales_price'                                           => [ 'sometimes', 'string' ],
+            'data.attributes.price'                                                 => [ 'required', 'string' ],
+
+            'data.relationships.category.category_id'                               => [ 'required', 'string', 'exists:subcategories,id' ],
         ];
     }
 }

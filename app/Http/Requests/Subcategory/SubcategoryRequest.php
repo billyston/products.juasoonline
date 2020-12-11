@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Category;
+namespace App\Http\Requests\Subcategory;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CategoryRequest extends FormRequest
+class SubcategoryRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -28,8 +28,8 @@ class CategoryRequest extends FormRequest
             return $rules =
             [
                 'data'                                                              => [ 'required' ],
-                'data.id'                                                           => [ 'required', 'string', 'exists:categories,id' ],
-                'data.type'                                                         => [ 'required', 'string', 'in:Category' ],
+                'data.id'                                                           => [ 'required', 'string', 'exists:sub_categories,id' ],
+                'data.type'                                                         => [ 'required', 'string', 'in:Subcategory' ],
 
                 'data.attributes.name'                                              => [ 'sometimes', 'string', 'unique:categories,name' ],
             ];
@@ -37,12 +37,12 @@ class CategoryRequest extends FormRequest
         return
         [
             'data'                                                                  => [ 'required' ],
-            'data.type'                                                             => [ 'required', 'string', 'in:Category' ],
+            'data.type'                                                             => [ 'required', 'string', 'in:Subcategory' ],
 
             'data.attributes.name'                                                  => [ 'required', 'string', 'unique:categories,name' ],
             'data.attributes.description'                                           => [ 'sometimes', 'string' ],
 
-            'data.relationships.group.group_id'                                     => [ 'required', 'string', 'exists:groups,id' ],
+            'data.relationships.category.category_id'                               => [ 'required', 'string', 'exists:categories,id' ],
         ];
     }
 }

@@ -7,13 +7,33 @@ use App\Models\Product\Product;
 
 interface ProductRepositoryInterface
 {
+    /**
+     * @return mixed
+     */
     public function index();
 
-    public function store(ProductRequest $productRequest);
+    /**
+     * @param ProductRequest $productRequest
+     * @return mixed
+     */
+    public function store( ProductRequest $productRequest );
 
-    public function show(Product $product);
+    /**
+     * @param Product $product
+     * @return mixed
+     */
+    public function show( Product $product );
 
-    public function update(ProductRequest $productRequest, Product $product);
+    /**
+     * @param ProductRequest $productRequest
+     * @param Product $product
+     * @return mixed
+     */
+    public function update( ProductRequest $productRequest, Product $product );
 
-    public function delete(Product $product);
+    /**
+     * @param Product $product
+     * @return mixed
+     */
+    public function delete( Product $product );
 }

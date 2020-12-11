@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Jobs\Category;
+namespace App\Jobs\Subcategory;
 
-use App\Http\Requests\Category\CategoryRequest;
-use App\Http\Resources\Category\CategoryResource;
-use App\Models\Category\Category;
+use App\Http\Requests\Subcategory\SubcategoryRequest;
+use App\Http\Resources\Subcategory\SubcategoryResource;
+use App\Models\Subcategory\Subcategory;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
@@ -12,31 +12,31 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Exception;
 
-class UpdateCategory implements ShouldQueue
+class UpdateSubcategory implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
     private $theRequest; private $theModel;
 
     /**
-     * UpdateCategory constructor.
-     * @param CategoryRequest $categoryRequest
-     * @param Category $category
+     * UpdateSubcategory constructor.
+     * @param SubcategoryRequest $subcategoryRequest
+     * @param Subcategory $subcategory
      */
-    public function __construct( CategoryRequest $categoryRequest, Category $category )
+    public function __construct( SubcategoryRequest $subcategoryRequest, Subcategory $subcategory )
     {
-        $this -> theRequest     = $categoryRequest;
-        $this -> theModel       = $category;
+        $this -> theRequest     = $subcategoryRequest;
+        $this -> theModel       = $subcategory;
     }
 
     /**
-     * @return CategoryResource|void
+     * @return SubcategoryResource|void
      */
     public function handle()
     {
         try
         {
             $this -> theModel -> update( $this -> theRequest -> validated()[ 'data' ][ 'attributes' ] );
-            return new CategoryResource( $this -> theModel );
+            return new SubcategoryResource( $this -> theModel );
         }
         catch ( Exception $exception )
         {

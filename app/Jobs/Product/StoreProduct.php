@@ -25,7 +25,7 @@ class StoreProduct implements ShouldQueue
      */
     public function __construct( ProductRequest $productRequest )
     {
-        $this -> theRequest = $productRequest;
+        return $this -> theRequest = $productRequest;
     }
 
     /**
@@ -36,9 +36,9 @@ class StoreProduct implements ShouldQueue
         try
         {
             $Product = new Product( $this -> theRequest -> input( 'data.attributes' ) );
+            $Product -> category() -> associate( $this -> theRequest [ 'data.relationships.category.category_id' ] );
             $Product -> save();
 
-            $Product -> refresh();
             return ( new ProductResource( $Product ) );
         }
         catch ( Exception $exception )
