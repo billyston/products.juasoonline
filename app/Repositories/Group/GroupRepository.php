@@ -8,19 +8,22 @@ use App\Jobs\Group\StoreGroup;
 use App\Jobs\Group\UpdateGroup;
 use App\Models\Group\Group;
 use App\Traits\apiResponseBuilder;
+use App\Traits\Relatives;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;
 
 class GroupRepository implements GroupRepositoryInterface
 {
-    use apiResponseBuilder;
+    use apiResponseBuilder; use Relatives;
 
     /**
      * @return JsonResponse|mixed
      */
     public function index()
     {
-        return $this -> successResponse( GroupResource::collection( Group::paginate( 20 ) ), "Success", null, Response::HTTP_OK );
+        $Group = Group::query() -> when( $this -> loadRelationships(), function ( Builder $builder ) { return $builder -> with ( $this -> relationships ); } ) -> paginate( 20 );
+        return $this -> successResponse( GroupResource::collection( $Group ), "Success", null, Response::HTTP_OK );
     }
 
     /**
@@ -38,6 +41,7 @@ class GroupRepository implements GroupRepositoryInterface
      */
     public function show( Group $group )
     {
+        if ( $this -> loadRelationships() ) { $group -> load( $this -> relationships ); }
         return $this -> successResponse( new GroupResource( $group ), "Success", null, Response::HTTP_OK );
     }
 

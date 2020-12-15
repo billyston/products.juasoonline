@@ -8,20 +8,23 @@ use App\Jobs\Subcategory\StoreSubcategory;
 use App\Jobs\Subcategory\UpdateSubcategory;
 use App\Models\Subcategory\Subcategory;
 use App\Traits\apiResponseBuilder;
+use App\Traits\Relatives;
 use Exception;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;
 
 class SubcategoryRepository implements SubcategoryRepositoryInterface
 {
-    use apiResponseBuilder;
+    use apiResponseBuilder; use Relatives;
 
     /**
      * @return JsonResponse|mixed
      */
     public function index()
     {
-        return $this -> successResponse( SubcategoryResource::collection( Subcategory::paginate( 20 ) ), "Success", null, Response::HTTP_OK );
+        $Subcategory = Subcategory::query() -> when( $this -> loadRelationships(), function ( Builder $builder ) { return $builder -> with ( $this -> relationships ); } ) -> paginate( 20 );
+        return $this -> successResponse( SubcategoryResource::collection( $Subcategory ), "Success", null, Response::HTTP_OK );
     }
 
     /**

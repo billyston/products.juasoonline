@@ -5,6 +5,9 @@ namespace App\Http\Resources\Subcategory;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
+/**
+ * @method relationLoaded(string $string)
+ */
 class SubcategoryResource extends JsonResource
 {
     /**
@@ -28,7 +31,12 @@ class SubcategoryResource extends JsonResource
 
                 'created_at'        => $this -> created_at -> toDateTimeString(),
                 'updated_at'        => $this -> updated_at -> toDateTimeString(),
-            ]
+            ],
+
+            'include'               => $this -> when( $this -> relationLoaded( 'category' ),
+            [
+                'category'             => new SubcategoryResource( $this -> whenLoaded( 'category' ) ),
+            ])
         ];
     }
 }

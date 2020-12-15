@@ -3,6 +3,7 @@
 namespace App\Models\Category;
 
 use App\Models\Group\Group;
+use App\Models\Subcategory\Subcategory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -33,7 +34,7 @@ class Category extends Model
     /**
      * @return HasMany
      */
-    public function sub_category() : HasMany
+    public function subcategory() : HasMany
     {
         return $this -> hasMany( Subcategory::class );
     }

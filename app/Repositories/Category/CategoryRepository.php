@@ -8,20 +8,23 @@ use App\Jobs\Category\StoreCategory;
 use App\Jobs\Category\UpdateCategory;
 use App\Models\Category\Category;
 use App\Traits\apiResponseBuilder;
+use App\Traits\Relatives;
 use Exception;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;
 
 class CategoryRepository implements CategoryRepositoryInterface
 {
-    use apiResponseBuilder;
+    use apiResponseBuilder; use Relatives;
 
     /**
      * @return JsonResponse
      */
     public function index()
     {
-        return $this -> successResponse( CategoryResource::collection( Category::paginate( 20 ) ), "Success", null, Response::HTTP_OK );
+        $Category = Category::query() -> when( $this -> loadRelationships(), function ( Builder $builder ) { return $builder -> with ( $this -> relationships ); } ) -> paginate( 20 );
+        return $this -> successResponse( CategoryResource::collection( $Category ), "Success", null, Response::HTTP_OK );
     }
 
     /**
@@ -39,6 +42,7 @@ class CategoryRepository implements CategoryRepositoryInterface
      */
     public function show( Category $category )
     {
+        if ( $this -> loadRelationships() ) { $category -> load( $this -> relationships ); }
         return $this -> successResponse( new CategoryResource( $category ), "Success", null, Response::HTTP_OK );
     }
 
