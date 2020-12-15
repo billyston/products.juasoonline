@@ -18,7 +18,6 @@ class CreateProductsTable extends Migration
             $table -> bigIncrements('id' );
             $table -> uuid( 'resource_id' ) -> unique() -> nullable( false );
 
-            $table -> unsignedBigInteger( 'category_id' );
             $table -> unsignedBigInteger( 'shop_id' );
 
             $table -> string( 'slug' ) -> nullable( true );
@@ -31,7 +30,6 @@ class CreateProductsTable extends Migration
 
             $table -> timestamps();
 
-            $table -> foreign('category_id' ) -> references('id' ) -> on ('subcategories' ) -> onDelete('cascade' );
         });
     }
 

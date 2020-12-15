@@ -5,6 +5,7 @@ namespace App\Jobs\Product;
 use App\Http\Requests\Product\ProductRequest;
 use App\Http\Resources\Product\ProductResource;
 use App\Models\Product\Product;
+use App\Models\Subcategory\Subcategory;
 use App\Traits\apiResponseBuilder;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -35,10 +36,10 @@ class StoreProduct implements ShouldQueue
     {
         try
         {
-            $Product = new Product( $this -> theRequest -> input( 'data.attributes' ) );
-            $Product -> category() -> associate( $this -> theRequest [ 'data.relationships.category.category_id' ] );
+            $Product = new Product( $this -> getAttributes()[ 'attributes' ] );
             $Product -> save();
 
+            $this -> attachCategories( $Product, $this -> getAttributes()[ 'relationships' ][ 'categories' ] );
             return ( new ProductResource( $Product ) );
         }
         catch ( Exception $exception )
@@ -47,4 +48,25 @@ class StoreProduct implements ShouldQueue
             return abort(500, 'something went wrong, please try again later');
         }
     }
+
+    /**
+     * @return array
+     */
+    private function getAttributes(): array
+    {
+        return $this -> theRequest -> validated()[ 'data' ];
+    }
+
+    /**
+     * @param Product $product
+     * @param array $subcategories
+     */
+    private function attachCategories( Product $product, array $subcategories ): void
+    {
+        foreach ( $subcategories[ 'data' ] as $subcategory )
+        {
+            $product -> subcategory() -> attach( $subcategory[ 'category_id' ] );
+        }
+    }
+
 }

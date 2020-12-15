@@ -21,15 +21,15 @@
   <component name="ChangeListManager">
     <list default="true" id="d1612a24-8f92-4a41-8a01-9056ae58447d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/action_set_name" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/action_set_name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Product/ProductRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Product/ProductRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Resources/Category/CategoryResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Category/CategoryResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Group/GroupResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Group/GroupResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Product/ProductResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Product/ProductResource.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Resources/Subcategory/SubcategoryResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Subcategory/SubcategoryResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Category/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Category/CategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Category/CategoryRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Group/GroupRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Group/GroupRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Subcategory/SubcategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Subcategory/SubcategoryRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/Product/StoreProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/Product/StoreProduct.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Product/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Subcategory/Subcategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Subcategory/Subcategory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Product/ProductRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Product/ProductRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_02_230250_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_02_230250_create_products_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,7 +243,14 @@
       <workItem from="1608041017093" duration="1785000" />
       <workItem from="1608043227798" duration="1144000" />
       <workItem from="1608046782053" duration="1467000" />
-      <workItem from="1608048592535" duration="513000" />
+      <workItem from="1608048592535" duration="1101000" />
+      <workItem from="1608062420290" duration="1089000" />
+      <workItem from="1608064232929" duration="1372000" />
+      <workItem from="1608066045298" duration="1794000" />
+      <workItem from="1608067874049" duration="1151000" />
+      <workItem from="1608069880064" duration="1433000" />
+      <workItem from="1608072175977" duration="1440000" />
+      <workItem from="1608073997946" duration="25000" />
     </task>
     <servers />
   </component>
@@ -271,10 +278,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="729" y="0" width="1174" height="1080" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607714038910" />
-    <state x="698" y="313" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607991338097">
+    <state x="698" y="313" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1608072816030">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="698" y="313" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607991338097" />
+    <state x="698" y="313" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1608072816030" />
     <state x="698" y="313" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.25.1920.1055/0.0.1920.1080@0.0.1920.1080" timestamp="1606951494560" />
     <state x="660" y="330" key="#com.jetbrains.php.refactoring.extract.interface.PhpExtractInterfaceDialog#" timestamp="1607009151067">
       <screen x="0" y="0" width="1920" height="1080" />

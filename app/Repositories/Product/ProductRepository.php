@@ -8,20 +8,23 @@ use App\Jobs\Product\StoreProduct;
 use App\Jobs\Product\UpdateProduct;
 use App\Models\Product\Product;
 use App\Traits\apiResponseBuilder;
+use App\Traits\Relatives;
 use Exception;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;
 
 class ProductRepository implements ProductRepositoryInterface
 {
-    use apiResponseBuilder;
+    use apiResponseBuilder; use Relatives;
 
     /**
      * @return JsonResponse
      */
     public function index()
     {
-        return $this -> successResponse( ProductResource::collection( Product::paginate( 20 ) ), "Success", null, Response::HTTP_OK );
+        $Group = Product::query() -> when( $this -> loadRelationships(), function ( Builder $builder ) { return $builder -> with ( $this -> relationships ); } ) -> paginate( 20 );
+        return $this -> successResponse( ProductResource::collection( $Group ), "Success", null, Response::HTTP_OK );
     }
 
     /**
@@ -39,6 +42,7 @@ class ProductRepository implements ProductRepositoryInterface
      */
     public function show( Product $product )
     {
+        if ( $this -> loadRelationships() ) { $product -> load( $this -> relationships ); }
         return $this -> successResponse( new ProductResource( $product ), "Success", null, Response::HTTP_OK );
     }
 

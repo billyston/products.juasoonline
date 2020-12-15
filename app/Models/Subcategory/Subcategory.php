@@ -3,9 +3,11 @@
 namespace App\Models\Subcategory;
 
 use App\Models\Category\Category;
+use App\Models\Product\Product;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Subcategory extends Model
 {
@@ -24,5 +26,13 @@ class Subcategory extends Model
     public function category(): BelongsTo
     {
         return $this -> belongsTo( Category::class );
+    }
+
+    /**
+     * @return BelongsToMany
+     */
+    public function product(): BelongsToMany
+    {
+        return $this -> belongsToMany( Product::class );
     }
 }
