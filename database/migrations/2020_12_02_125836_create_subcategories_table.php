@@ -25,6 +25,8 @@ class CreateSubCategoriesTable extends Migration
 
             $table -> timestamps();
 
+            $table -> softDeletes();
+
             $table -> foreign('category_id' ) -> references('id' ) -> on ('categories' ) -> onDelete('cascade' );
         });
     }

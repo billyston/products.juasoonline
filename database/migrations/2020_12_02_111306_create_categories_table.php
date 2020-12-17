@@ -25,6 +25,8 @@ class CreateCategoriesTable extends Migration
 
             $table -> timestamps();
 
+            $table -> softDeletes();
+
             $table -> foreign('group_id' ) -> references('id' ) -> on ('groups' ) -> onDelete('cascade' );
         });
     }

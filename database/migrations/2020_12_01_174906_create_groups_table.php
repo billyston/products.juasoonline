@@ -22,7 +22,9 @@ class CreateGroupsTable extends Migration
             $table -> string( 'slug' ) -> nullable( true );
             $table -> mediumText( 'description' ) -> nullable( false );
 
-            $table->timestamps();
+            $table -> softDeletes();
+
+            $table -> timestamps();
         });
     }
 
