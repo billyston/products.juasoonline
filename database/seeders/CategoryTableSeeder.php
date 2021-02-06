@@ -17,33 +17,6 @@ class CategoryTableSeeder extends Seeder
         DB::table( 'categories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
             "group_id"          =>  1,
-            "name"              =>  "Women's Fashion",
-            "slug"              =>  "",
-            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
-            "created_at"        => date("Y-m-d H:i:s"),
-            "updated_at"        => date("Y-m-d H:i:s"),
-        ]);
-        DB::table( 'categories' ) -> insert([
-            "resource_id"       =>  hexdec( uniqid() ),
-            "group_id"          =>  1,
-            "name"              =>  "Swimwear",
-            "slug"              =>  "",
-            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
-            "created_at"        => date("Y-m-d H:i:s"),
-            "updated_at"        => date("Y-m-d H:i:s"),
-        ]);
-        DB::table( 'categories' ) -> insert([
-            "resource_id"       =>  hexdec( uniqid() ),
-            "group_id"          =>  1,
-            "name"              =>  "Bottoms",
-            "slug"              =>  "",
-            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
-            "created_at"        => date("Y-m-d H:i:s"),
-            "updated_at"        => date("Y-m-d H:i:s"),
-        ]);
-        DB::table( 'categories' ) -> insert([
-            "resource_id"       =>  hexdec( uniqid() ),
-            "group_id"          =>  1,
             "name"              =>  "Weddings & Events",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -63,6 +36,33 @@ class CategoryTableSeeder extends Seeder
             "resource_id"       =>  hexdec( uniqid() ),
             "group_id"          =>  1,
             "name"              =>  "Accessories",
+            "slug"              =>  "",
+            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'categories' ) -> insert([
+            "resource_id"       =>  hexdec( uniqid() ),
+            "group_id"          =>  1,
+            "name"              =>  "Women's Fashion",
+            "slug"              =>  "",
+            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'categories' ) -> insert([
+            "resource_id"       =>  hexdec( uniqid() ),
+            "group_id"          =>  1,
+            "name"              =>  "Bottoms",
+            "slug"              =>  "",
+            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'categories' ) -> insert([
+            "resource_id"       =>  hexdec( uniqid() ),
+            "group_id"          =>  1,
+            "name"              =>  "Swimwear",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
             "created_at"        => date("Y-m-d H:i:s"),
@@ -90,7 +90,7 @@ class CategoryTableSeeder extends Seeder
         DB::table( 'categories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
             "group_id"          =>  2,
-            "name"              =>  "Outerwear & Jackets",
+            "name"              =>  "Underwear & Loungewear",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
             "created_at"        => date("Y-m-d H:i:s"),
@@ -99,7 +99,7 @@ class CategoryTableSeeder extends Seeder
         DB::table( 'categories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
             "group_id"          =>  2,
-            "name"              =>  "Underwear & Loungewear",
+            "name"              =>  "Outerwear & Jackets",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
             "created_at"        => date("Y-m-d H:i:s"),
@@ -200,25 +200,25 @@ class CategoryTableSeeder extends Seeder
         DB::table( 'categories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
             "group_id"          =>  4,
-            "name"              =>  "Laptops",
-            "slug"              =>  "",
-            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
-            "created_at"        => date("Y-m-d H:i:s"),
-            "updated_at"        => date("Y-m-d H:i:s"),
-        ]);
-        DB::table( 'categories' ) -> insert([
-            "resource_id"       =>  hexdec( uniqid() ),
-            "group_id"          =>  4,
-            "name"              =>  "Security & Protection",
-            "slug"              =>  "",
-            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
-            "created_at"        => date("Y-m-d H:i:s"),
-            "updated_at"        => date("Y-m-d H:i:s"),
-        ]);
-        DB::table( 'categories' ) -> insert([
-            "resource_id"       =>  hexdec( uniqid() ),
-            "group_id"          =>  4,
             "name"              =>  "Storage Devices",
+            "slug"              =>  "",
+            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'categories' ) -> insert([
+            "resource_id"       =>  hexdec( uniqid() ),
+            "group_id"          =>  4,
+            "name"              =>  "Computer Networking",
+            "slug"              =>  "",
+            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'categories' ) -> insert([
+            "resource_id"       =>  hexdec( uniqid() ),
+            "group_id"          =>  4,
+            "name"              =>  "Laptops",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
             "created_at"        => date("Y-m-d H:i:s"),
@@ -236,7 +236,7 @@ class CategoryTableSeeder extends Seeder
         DB::table( 'categories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
             "group_id"          =>  4,
-            "name"              =>  "Computer Networking",
+            "name"              =>  "Security & Protection",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
             "created_at"        => date("Y-m-d H:i:s"),
@@ -301,7 +301,7 @@ class CategoryTableSeeder extends Seeder
         DB::table( 'categories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
             "group_id"          =>  6,
-            "name"              =>  "Fine Jewelry",
+            "name"              =>  "Women's Watches",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
             "created_at"        => date("Y-m-d H:i:s"),
@@ -328,7 +328,7 @@ class CategoryTableSeeder extends Seeder
         DB::table( 'categories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
             "group_id"          =>  6,
-            "name"              =>  "Women's Watches",
+            "name"              =>  "Fine Jewelry",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
             "created_at"        => date("Y-m-d H:i:s"),
@@ -365,7 +365,7 @@ class CategoryTableSeeder extends Seeder
         DB::table( 'categories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
             "group_id"          =>  7,
-            "name"              =>  "Pet Products",
+            "name"              =>  "Garden Supplies",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
             "created_at"        => date("Y-m-d H:i:s"),
@@ -410,7 +410,7 @@ class CategoryTableSeeder extends Seeder
         DB::table( 'categories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
             "group_id"          =>  7,
-            "name"              =>  "Furniture",
+            "name"              =>  "Pet Products",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
             "created_at"        => date("Y-m-d H:i:s"),
@@ -437,7 +437,7 @@ class CategoryTableSeeder extends Seeder
         DB::table( 'categories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
             "group_id"          =>  7,
-            "name"              =>  "Garden Supplies",
+            "name"              =>  "Furniture",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
             "created_at"        => date("Y-m-d H:i:s"),
@@ -502,7 +502,7 @@ class CategoryTableSeeder extends Seeder
         DB::table( 'categories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
             "group_id"          =>  9,
-            "name"              =>  "Mother & Baby Items",
+            "name"              =>  "Boys Clothing",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
             "created_at"        => date("Y-m-d H:i:s"),
@@ -520,25 +520,25 @@ class CategoryTableSeeder extends Seeder
         DB::table( 'categories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
             "group_id"          =>  9,
-            "name"              =>  "Girls Clothing",
-            "slug"              =>  "",
-            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
-            "created_at"        => date("Y-m-d H:i:s"),
-            "updated_at"        => date("Y-m-d H:i:s"),
-        ]);
-        DB::table( 'categories' ) -> insert([
-            "resource_id"       =>  hexdec( uniqid() ),
-            "group_id"          =>  9,
-            "name"              =>  "Boys Clothing",
-            "slug"              =>  "",
-            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
-            "created_at"        => date("Y-m-d H:i:s"),
-            "updated_at"        => date("Y-m-d H:i:s"),
-        ]);
-        DB::table( 'categories' ) -> insert([
-            "resource_id"       =>  hexdec( uniqid() ),
-            "group_id"          =>  9,
             "name"              =>  "Shoes & Bags",
+            "slug"              =>  "",
+            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'categories' ) -> insert([
+            "resource_id"       =>  hexdec( uniqid() ),
+            "group_id"          =>  9,
+            "name"              =>  "Mother & Baby Items",
+            "slug"              =>  "",
+            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'categories' ) -> insert([
+            "resource_id"       =>  hexdec( uniqid() ),
+            "group_id"          =>  9,
+            "name"              =>  "Girls Clothing",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
             "created_at"        => date("Y-m-d H:i:s"),
@@ -767,7 +767,7 @@ class CategoryTableSeeder extends Seeder
         DB::table( 'categories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
             "group_id"          =>  13,
-            "name"              =>  "Tools",
+            "name"              =>  "Home Improvement",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
             "created_at"        => date("Y-m-d H:i:s"),
@@ -794,7 +794,7 @@ class CategoryTableSeeder extends Seeder
         DB::table( 'categories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
             "group_id"          =>  13,
-            "name"              =>  "Home Improvement",
+            "name"              =>  "Tools",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
             "created_at"        => date("Y-m-d H:i:s"),

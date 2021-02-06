@@ -22,14 +22,19 @@
     <list default="true" id="d1612a24-8f92-4a41-8a01-9056ae58447d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/action_set_name" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/action_set_name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Category/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Group/Group.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Group/Group.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/synced_folders" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/synced_folders" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/vagrant_cwd" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/vagrant_cwd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/Product/StoreProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/Product/StoreProduct.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Product/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Subcategory/Subcategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Subcategory/Subcategory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Observers/Group/GroupObserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Observers/Group/GroupObserver.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_01_174906_create_groups_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_01_174906_create_groups_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_02_111306_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_02_111306_create_categories_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_02_125836_create_subcategories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_02_125836_create_subcategories_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_02_230250_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_02_230250_create_products_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/CategoryTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/CategoryTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/GroupTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/GroupTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/SubcategoryTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/SubcategoryTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,8 +170,9 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Repositories" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -252,6 +258,48 @@
       <workItem from="1608072175977" duration="1440000" />
       <workItem from="1608073997946" duration="540000" />
       <workItem from="1608131433636" duration="667000" />
+      <workItem from="1608164457754" duration="1785000" />
+      <workItem from="1608166289266" duration="787000" />
+      <workItem from="1608201366630" duration="1792000" />
+      <workItem from="1608203184616" duration="1696000" />
+      <workItem from="1608205016097" duration="1743000" />
+      <workItem from="1608208011891" duration="2797000" />
+      <workItem from="1608211022786" duration="1645000" />
+      <workItem from="1608212871582" duration="1914000" />
+      <workItem from="1608219344336" duration="1785000" />
+      <workItem from="1608221162759" duration="2055000" />
+      <workItem from="1608223389674" duration="1740000" />
+      <workItem from="1608225503359" duration="5586000" />
+      <workItem from="1608245164620" duration="1764000" />
+      <workItem from="1608247004530" duration="1924000" />
+      <workItem from="1608289762651" duration="959000" />
+      <workItem from="1608293940134" duration="647000" />
+      <workItem from="1608505407612" duration="499000" />
+      <workItem from="1608507225661" duration="1610000" />
+      <workItem from="1608509049049" duration="529000" />
+      <workItem from="1608511014484" duration="1377000" />
+      <workItem from="1608512825344" duration="1551000" />
+      <workItem from="1608514636384" duration="1721000" />
+      <workItem from="1608516554419" duration="1595000" />
+      <workItem from="1608541340630" duration="1526000" />
+      <workItem from="1608582242629" duration="28000" />
+      <workItem from="1608588969240" duration="324000" />
+      <workItem from="1608589309124" duration="1381000" />
+      <workItem from="1608591191113" duration="13000" />
+      <workItem from="1608591805735" duration="1199000" />
+      <workItem from="1608593094129" duration="966000" />
+      <workItem from="1608624361729" duration="19000" />
+      <workItem from="1608894354686" duration="528000" />
+      <workItem from="1608895090233" duration="1479000" />
+      <workItem from="1608896901263" duration="1667000" />
+      <workItem from="1608900020653" duration="709000" />
+      <workItem from="1608903003670" duration="386000" />
+      <workItem from="1608906838920" duration="24000" />
+      <workItem from="1610475094394" duration="85000" />
+      <workItem from="1610475804835" duration="582000" />
+      <workItem from="1610477618821" duration="603000" />
+      <workItem from="1610479978646" duration="7000" />
+      <workItem from="1611188903104" duration="12683000" />
     </task>
     <servers />
   </component>
@@ -269,53 +317,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="648" y="280" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1607937631859">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="648" y="280" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607937631859" />
-    <state x="729" y="0" width="1174" height="1080" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1607714038910">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="729" y="0" width="1174" height="1080" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607714038910" />
-    <state x="698" y="313" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1608072816030">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="698" y="313" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1608072816030" />
-    <state x="698" y="313" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.25.1920.1055/0.0.1920.1080@0.0.1920.1080" timestamp="1606951494560" />
-    <state x="660" y="330" key="#com.jetbrains.php.refactoring.extract.interface.PhpExtractInterfaceDialog#" timestamp="1607009151067">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="660" y="330" key="#com.jetbrains.php.refactoring.extract.interface.PhpExtractInterfaceDialog#/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607009151067" />
-    <state x="666" y="284" key="NewPhpClassDialog" timestamp="1607951549447">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="666" y="284" key="NewPhpClassDialog/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607951549447" />
-    <state x="666" y="284" key="NewPhpClassDialog/1920.25.1920.1055/0.0.1920.1080@0.0.1920.1080" timestamp="1606952622284" />
-    <state x="780" y="467" key="NewPhpFileDialog" timestamp="1607951369622">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="780" y="467" key="NewPhpFileDialog/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607951369622" />
-    <state x="469" y="176" key="SettingsEditor" timestamp="1607336931031">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="469" y="176" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607336931031" />
-    <state x="761" y="458" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607692032544">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="761" y="458" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607692032544" />
-    <state x="661" y="295" width="597" height="490" key="find.popup" timestamp="1607972790233">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="661" y="295" width="597" height="490" key="find.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607972790233" />
-    <state x="625" y="262" key="run.anything.popup" timestamp="1607730553743">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="625" y="262" key="run.anything.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607730553743" />
-    <state x="625" y="241" width="670" height="676" key="search.everywhere.popup" timestamp="1607973195076">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="625" y="241" width="670" height="676" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607973195076" />
   </component>
 </project>

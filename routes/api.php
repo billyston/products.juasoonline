@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\File\FileController;
 use App\Http\Controllers\Group\GroupController;
 use App\Http\Controllers\Category\CategoryController;
+use App\Http\Controllers\Image\ImageController;
 use App\Http\Controllers\Subcategory\SubcategoryController;
 use App\Http\Controllers\Product\ProductController;
 use Illuminate\Support\Facades\Route;
@@ -23,4 +25,6 @@ Route::group( [], function ()
     Route::apiResource( 'categories', CategoryController::class );
     Route::apiResource( 'subcategories', SubcategoryController::class );
     Route::apiResource( 'products', ProductController::class );
+    Route::apiResource( 'files', FileController::class );
+    Route::apiResource( 'images', ImageController::class );
 });

@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Repositories\File\FileRepository;
+use App\Repositories\File\FileRepositoryInterface;
 use App\Repositories\Group\GroupRepositoryInterface;
 use App\Repositories\Group\GroupRepository;
 use App\Repositories\Category\CategoryRepositoryInterface;
@@ -25,6 +27,7 @@ class RepositoryServiceProvider extends ServiceProvider
         $this -> app -> bind( CategoryRepositoryInterface::class, CategoryRepository::class );
         $this -> app -> bind( SubcategoryRepositoryInterface::class, SubcategoryRepository::class );
         $this -> app -> bind( ProductRepositoryInterface::class, ProductRepository::class );
+        $this -> app -> bind( FileRepositoryInterface::class, FileRepository::class );
     }
 
     /**

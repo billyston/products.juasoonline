@@ -2,10 +2,12 @@
 
 namespace App\Models\Product;
 
+use App\Models\File\File;
 use App\Models\Subcategory\Subcategory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
@@ -29,5 +31,13 @@ class Product extends Model
     public function subcategory(): BelongsToMany
     {
         return $this -> belongsToMany( Subcategory::class );
+    }
+
+    /**
+     * @return HasMany
+     */
+    public function file() : HasMany
+    {
+        return $this -> hasMany( File::class );
     }
 }

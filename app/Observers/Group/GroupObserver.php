@@ -3,6 +3,7 @@
 namespace App\Observers\Group;
 
 use App\Models\Group\Group;
+use Illuminate\Support\Str;
 
 class GroupObserver
 {

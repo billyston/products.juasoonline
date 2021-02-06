@@ -17,162 +17,6 @@ class SubcategoryTableSeeder extends Seeder
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
             "category_id"       =>  1,
-            "name"              =>  "Dresses",
-            "slug"              =>  "",
-            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
-            "created_at"        => date("Y-m-d H:i:s"),
-            "updated_at"        => date("Y-m-d H:i:s"),
-        ]);
-        DB::table( 'subcategories' ) -> insert([
-            "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  1,
-            "name"              =>  "Tees",
-            "slug"              =>  "",
-            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
-            "created_at"        => date("Y-m-d H:i:s"),
-            "updated_at"        => date("Y-m-d H:i:s"),
-        ]);
-        DB::table( 'subcategories' ) -> insert([
-            "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  1,
-            "name"              =>  "Blouses & Shirts",
-            "slug"              =>  "",
-            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
-            "created_at"        => date("Y-m-d H:i:s"),
-            "updated_at"        => date("Y-m-d H:i:s"),
-        ]);
-        DB::table( 'subcategories' ) -> insert([
-            "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  1,
-            "name"              =>  "Hoodies & Sweatshirts",
-            "slug"              =>  "",
-            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
-            "created_at"        => date("Y-m-d H:i:s"),
-            "updated_at"        => date("Y-m-d H:i:s"),
-        ]);
-        DB::table( 'subcategories' ) -> insert([
-            "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  1,
-            "name"              =>  "Women's Sets",
-            "slug"              =>  "",
-            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
-            "created_at"        => date("Y-m-d H:i:s"),
-            "updated_at"        => date("Y-m-d H:i:s"),
-        ]);
-        DB::table( 'subcategories' ) -> insert([
-            "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  1,
-            "name"              =>  "Suits & Blazers",
-            "slug"              =>  "",
-            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
-            "created_at"        => date("Y-m-d H:i:s"),
-            "updated_at"        => date("Y-m-d H:i:s"),
-        ]);
-        DB::table( 'subcategories' ) -> insert([
-            "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  1,
-            "name"              =>  "Bodysuits",
-            "slug"              =>  "",
-            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
-            "created_at"        => date("Y-m-d H:i:s"),
-            "updated_at"        => date("Y-m-d H:i:s"),
-        ]);
-        DB::table( 'subcategories' ) -> insert([
-            "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  1,
-            "name"              =>  "Tanks & Camis",
-            "slug"              =>  "",
-            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
-            "created_at"        => date("Y-m-d H:i:s"),
-            "updated_at"        => date("Y-m-d H:i:s"),
-        ]);
-        DB::table( 'subcategories' ) -> insert([
-            "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  1,
-            "name"              =>  "Coats & Jackets",
-            "slug"              =>  "",
-            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
-            "created_at"        => date("Y-m-d H:i:s"),
-            "updated_at"        => date("Y-m-d H:i:s"),
-        ]);
-        DB::table( 'subcategories' ) -> insert([
-            "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  1,
-            "name"              =>  "Sweaters",
-            "slug"              =>  "",
-            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
-            "created_at"        => date("Y-m-d H:i:s"),
-            "updated_at"        => date("Y-m-d H:i:s"),
-        ]);
-
-        DB::table( 'subcategories' ) -> insert([
-            "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  2,
-            "name"              =>  "Bikini Sets",
-            "slug"              =>  "",
-            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
-            "created_at"        => date("Y-m-d H:i:s"),
-            "updated_at"        => date("Y-m-d H:i:s"),
-        ]);
-        DB::table( 'subcategories' ) -> insert([
-            "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  2,
-            "name"              =>  "Cover-Ups",
-            "slug"              =>  "",
-            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
-            "created_at"        => date("Y-m-d H:i:s"),
-            "updated_at"        => date("Y-m-d H:i:s"),
-        ]);
-
-        DB::table( 'subcategories' ) -> insert([
-            "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  3,
-            "name"              =>  "Leggings",
-            "slug"              =>  "",
-            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
-            "created_at"        => date("Y-m-d H:i:s"),
-            "updated_at"        => date("Y-m-d H:i:s"),
-        ]);
-        DB::table( 'subcategories' ) -> insert([
-            "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  3,
-            "name"              =>  "Skirts",
-            "slug"              =>  "",
-            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
-            "created_at"        => date("Y-m-d H:i:s"),
-            "updated_at"        => date("Y-m-d H:i:s"),
-        ]);
-        DB::table( 'subcategories' ) -> insert([
-            "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  3,
-            "name"              =>  "Shorts",
-            "slug"              =>  "",
-            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
-            "created_at"        => date("Y-m-d H:i:s"),
-            "updated_at"        => date("Y-m-d H:i:s"),
-        ]);
-        DB::table( 'subcategories' ) -> insert([
-            "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  3,
-            "name"              =>  "Jeans",
-            "slug"              =>  "",
-            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
-            "created_at"        => date("Y-m-d H:i:s"),
-            "updated_at"        => date("Y-m-d H:i:s"),
-        ]);
-        DB::table( 'subcategories' ) -> insert([
-            "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  3,
-            "name"              =>  "Pants & Capris",
-            "slug"              =>  "",
-            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
-            "created_at"        => date("Y-m-d H:i:s"),
-            "updated_at"        => date("Y-m-d H:i:s"),
-        ]);
-
-        DB::table( 'subcategories' ) -> insert([
-            "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  4,
             "name"              =>  "Wedding Dresses",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -181,7 +25,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  4,
+            "category_id"       =>  1,
             "name"              =>  "Prom Dresses",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -190,7 +34,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  4,
+            "category_id"       =>  1,
             "name"              =>  "Evening Dresses",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -199,7 +43,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  4,
+            "category_id"       =>  1,
             "name"              =>  "Africa Clothing",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -208,7 +52,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  4,
+            "category_id"       =>  1,
             "name"              =>  "Cosplay Costumes",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -218,7 +62,7 @@ class SubcategoryTableSeeder extends Seeder
 
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  5,
+            "category_id"       =>  2,
             "name"              =>  "Pajama Sets",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -227,7 +71,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  5,
+            "category_id"       =>  2,
             "name"              =>  "Bras",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -236,7 +80,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  5,
+            "category_id"       =>  2,
             "name"              =>  "Panties",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -245,7 +89,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  5,
+            "category_id"       =>  2,
             "name"              =>  "Women's Socks",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -254,7 +98,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  5,
+            "category_id"       =>  2,
             "name"              =>  "Bra & Brief Sets",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -263,7 +107,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  5,
+            "category_id"       =>  2,
             "name"              =>  "Shapewear",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -273,7 +117,7 @@ class SubcategoryTableSeeder extends Seeder
 
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  6,
+            "category_id"       =>  3,
             "name"              =>  "Hair Accessories",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -282,7 +126,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  6,
+            "category_id"       =>  3,
             "name"              =>  "Sunglasses",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -291,7 +135,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  6,
+            "category_id"       =>  3,
             "name"              =>  "Blue Light Blocking Glasses",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -300,7 +144,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  6,
+            "category_id"       =>  3,
             "name"              =>  "Baseball Caps",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -309,7 +153,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  6,
+            "category_id"       =>  3,
             "name"              =>  "Bucket Hats",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -318,8 +162,164 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  6,
+            "category_id"       =>  3,
             "name"              =>  "Belts",
+            "slug"              =>  "",
+            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+
+        DB::table( 'subcategories' ) -> insert([
+            "resource_id"       =>  hexdec( uniqid() ),
+            "category_id"       =>  4,
+            "name"              =>  "Dresses",
+            "slug"              =>  "",
+            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'subcategories' ) -> insert([
+            "resource_id"       =>  hexdec( uniqid() ),
+            "category_id"       =>  4,
+            "name"              =>  "Tees",
+            "slug"              =>  "",
+            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'subcategories' ) -> insert([
+            "resource_id"       =>  hexdec( uniqid() ),
+            "category_id"       =>  4,
+            "name"              =>  "Blouses & Shirts",
+            "slug"              =>  "",
+            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'subcategories' ) -> insert([
+            "resource_id"       =>  hexdec( uniqid() ),
+            "category_id"       =>  4,
+            "name"              =>  "Hoodies & Sweatshirts",
+            "slug"              =>  "",
+            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'subcategories' ) -> insert([
+            "resource_id"       =>  hexdec( uniqid() ),
+            "category_id"       =>  4,
+            "name"              =>  "Women's Sets",
+            "slug"              =>  "",
+            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'subcategories' ) -> insert([
+            "resource_id"       =>  hexdec( uniqid() ),
+            "category_id"       =>  4,
+            "name"              =>  "Suits & Blazers",
+            "slug"              =>  "",
+            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'subcategories' ) -> insert([
+            "resource_id"       =>  hexdec( uniqid() ),
+            "category_id"       =>  4,
+            "name"              =>  "Bodysuits",
+            "slug"              =>  "",
+            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'subcategories' ) -> insert([
+            "resource_id"       =>  hexdec( uniqid() ),
+            "category_id"       =>  4,
+            "name"              =>  "Tanks & Camis",
+            "slug"              =>  "",
+            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'subcategories' ) -> insert([
+            "resource_id"       =>  hexdec( uniqid() ),
+            "category_id"       =>  4,
+            "name"              =>  "Coats & Jackets",
+            "slug"              =>  "",
+            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'subcategories' ) -> insert([
+            "resource_id"       =>  hexdec( uniqid() ),
+            "category_id"       =>  4,
+            "name"              =>  "Sweaters",
+            "slug"              =>  "",
+            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+
+        DB::table( 'subcategories' ) -> insert([
+            "resource_id"       =>  hexdec( uniqid() ),
+            "category_id"       =>  5,
+            "name"              =>  "Leggings",
+            "slug"              =>  "",
+            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'subcategories' ) -> insert([
+            "resource_id"       =>  hexdec( uniqid() ),
+            "category_id"       =>  5,
+            "name"              =>  "Skirts",
+            "slug"              =>  "",
+            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'subcategories' ) -> insert([
+            "resource_id"       =>  hexdec( uniqid() ),
+            "category_id"       =>  5,
+            "name"              =>  "Shorts",
+            "slug"              =>  "",
+            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'subcategories' ) -> insert([
+            "resource_id"       =>  hexdec( uniqid() ),
+            "category_id"       =>  5,
+            "name"              =>  "Jeans",
+            "slug"              =>  "",
+            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'subcategories' ) -> insert([
+            "resource_id"       =>  hexdec( uniqid() ),
+            "category_id"       =>  5,
+            "name"              =>  "Pants & Capris",
+            "slug"              =>  "",
+            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+
+        DB::table( 'subcategories' ) -> insert([
+            "resource_id"       =>  hexdec( uniqid() ),
+            "category_id"       =>  6,
+            "name"              =>  "Bikini Sets",
+            "slug"              =>  "",
+            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'subcategories' ) -> insert([
+            "resource_id"       =>  hexdec( uniqid() ),
+            "category_id"       =>  6,
+            "name"              =>  "Cover-Ups",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
             "created_at"        => date("Y-m-d H:i:s"),
@@ -439,6 +439,52 @@ class SubcategoryTableSeeder extends Seeder
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
             "category_id"       =>  9,
+            "name"              =>  "Boxers",
+            "slug"              =>  "",
+            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'subcategories' ) -> insert([
+            "resource_id"       =>  hexdec( uniqid() ),
+            "category_id"       =>  9,
+            "name"              =>  "Briefs",
+            "slug"              =>  "",
+            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'subcategories' ) -> insert([
+            "resource_id"       =>  hexdec( uniqid() ),
+            "category_id"       =>  9,
+            "name"              =>  "Long Johns",
+            "slug"              =>  "",
+            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'subcategories' ) -> insert([
+            "resource_id"       =>  hexdec( uniqid() ),
+            "category_id"       =>  9,
+            "name"              =>  "Men's Sleep & Lounge",
+            "slug"              =>  "",
+            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'subcategories' ) -> insert([
+            "resource_id"       =>  hexdec( uniqid() ),
+            "category_id"       =>  10,
+            "name"              =>  "Pajama Sets",
+            "slug"              =>  "",
+            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+
+        DB::table( 'subcategories' ) -> insert([
+            "resource_id"       =>  hexdec( uniqid() ),
+            "category_id"       =>  10,
             "name"              =>  "Jackets",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -447,7 +493,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  9,
+            "category_id"       =>  10,
             "name"              =>  "Sweaters",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -456,7 +502,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  9,
+            "category_id"       =>  10,
             "name"              =>  "Casual Faux Leather",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -474,7 +520,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  9,
+            "category_id"       =>  10,
             "name"              =>  "Parkas",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -483,7 +529,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  9,
+            "category_id"       =>  10,
             "name"              =>  "Down Jackets",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -492,54 +538,8 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  9,
+            "category_id"       =>  10,
             "name"              =>  "Suits & Blazer",
-            "slug"              =>  "",
-            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
-            "created_at"        => date("Y-m-d H:i:s"),
-            "updated_at"        => date("Y-m-d H:i:s"),
-        ]);
-
-        DB::table( 'subcategories' ) -> insert([
-            "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  10,
-            "name"              =>  "Boxers",
-            "slug"              =>  "",
-            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
-            "created_at"        => date("Y-m-d H:i:s"),
-            "updated_at"        => date("Y-m-d H:i:s"),
-        ]);
-        DB::table( 'subcategories' ) -> insert([
-            "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  10,
-            "name"              =>  "Briefs",
-            "slug"              =>  "",
-            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
-            "created_at"        => date("Y-m-d H:i:s"),
-            "updated_at"        => date("Y-m-d H:i:s"),
-        ]);
-        DB::table( 'subcategories' ) -> insert([
-            "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  10,
-            "name"              =>  "Long Johns",
-            "slug"              =>  "",
-            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
-            "created_at"        => date("Y-m-d H:i:s"),
-            "updated_at"        => date("Y-m-d H:i:s"),
-        ]);
-        DB::table( 'subcategories' ) -> insert([
-            "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  10,
-            "name"              =>  "Men's Sleep & Lounge",
-            "slug"              =>  "",
-            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
-            "created_at"        => date("Y-m-d H:i:s"),
-            "updated_at"        => date("Y-m-d H:i:s"),
-        ]);
-        DB::table( 'subcategories' ) -> insert([
-            "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  10,
-            "name"              =>  "Pajama Sets",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
             "created_at"        => date("Y-m-d H:i:s"),
@@ -1017,16 +1017,7 @@ class SubcategoryTableSeeder extends Seeder
 
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  21,
-            "name"              =>  "Keyboards",
-            "slug"              =>  "",
-            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
-            "created_at"        => date("Y-m-d H:i:s"),
-            "updated_at"        => date("Y-m-d H:i:s"),
-        ]);
-        DB::table( 'subcategories' ) -> insert([
-            "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  21,
+            "category_id"       =>  23,
             "name"              =>  "Gaming Laptops",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -1035,7 +1026,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  21,
+            "category_id"       =>  23,
             "name"              =>  "Ultraslim Laptops",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -1044,7 +1035,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  21,
+            "category_id"       =>  23,
             "name"              =>  "Tablets",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -1053,7 +1044,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  21,
+            "category_id"       =>  23,
             "name"              =>  "Laptop Accessories",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -1062,7 +1053,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  21,
+            "category_id"       =>  23,
             "name"              =>  "Tablet Accessories",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -1071,7 +1062,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  21,
+            "category_id"       =>  23,
             "name"              =>  "Laptop Bags & Cases",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -1080,7 +1071,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  21,
+            "category_id"       =>  23,
             "name"              =>  "Laptop Bags & Cases",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -1090,7 +1081,7 @@ class SubcategoryTableSeeder extends Seeder
 
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  22,
+            "category_id"       =>  25,
             "name"              =>  "Surveillance Items",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -1099,7 +1090,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  22,
+            "category_id"       =>  25,
             "name"              =>  "Access Control Systems",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -1108,7 +1099,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  22,
+            "category_id"       =>  25,
             "name"              =>  "Smoke Detectors",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -1117,7 +1108,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  22,
+            "category_id"       =>  25,
             "name"              =>  "Safety Equipment",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -1126,7 +1117,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  22,
+            "category_id"       =>  25,
             "name"              =>  "Alarms & Sensors",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -1135,7 +1126,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  22,
+            "category_id"       =>  25,
             "name"              =>  "Door Intercom Systems",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -1145,7 +1136,7 @@ class SubcategoryTableSeeder extends Seeder
 
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  23,
+            "category_id"       =>  21,
             "name"              =>  "USB Flash Drives",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -1154,7 +1145,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  23,
+            "category_id"       =>  21,
             "name"              =>  "Memory Cards",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -1163,7 +1154,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  23,
+            "category_id"       =>  21,
             "name"              =>  "External Hard Drives",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -1172,7 +1163,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  23,
+            "category_id"       =>  21,
             "name"              =>  "HDD Box Enclosures",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -1181,7 +1172,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  23,
+            "category_id"       =>  21,
             "name"              =>  "SSDs",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -1264,7 +1255,7 @@ class SubcategoryTableSeeder extends Seeder
 
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  25,
+            "category_id"       =>  22,
             "name"              =>  "Wireless Routers",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -1273,7 +1264,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  25,
+            "category_id"       =>  22,
             "name"              =>  "Network Cards",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -1282,7 +1273,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  25,
+            "category_id"       =>  22,
             "name"              =>  "3G Modems",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -1291,7 +1282,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  25,
+            "category_id"       =>  22,
             "name"              =>  "Modem-Router Combos",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -1300,7 +1291,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  25,
+            "category_id"       =>  22,
             "name"              =>  "Networking Tools",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -1604,7 +1595,7 @@ class SubcategoryTableSeeder extends Seeder
 
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  32,
+            "category_id"       =>  35,
             "name"              =>  "925 Silver Jewelry",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -1613,7 +1604,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  32,
+            "category_id"       =>  35,
             "name"              =>  "Diamond Jewelry",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -1622,7 +1613,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  32,
+            "category_id"       =>  35,
             "name"              =>  "Pearl Jewelry",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -1631,7 +1622,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  32,
+            "category_id"       =>  35,
             "name"              =>  "Gemstones",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -1640,7 +1631,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  32,
+            "category_id"       =>  35,
             "name"              =>  "K-Gold Jewelry",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -1649,7 +1640,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  32,
+            "category_id"       =>  35,
             "name"              =>  "Fine Earrings",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -1658,7 +1649,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  32,
+            "category_id"       =>  35,
             "name"              =>  "Fine Jewelry Sets",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -1667,7 +1658,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  32,
+            "category_id"       =>  35,
             "name"              =>  "Men's Fine Jewelry",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -1751,7 +1742,7 @@ class SubcategoryTableSeeder extends Seeder
 
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  35,
+            "category_id"       =>  32,
             "name"              =>  "Women's Bracelet Watches",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -1760,7 +1751,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  35,
+            "category_id"       =>  32,
             "name"              =>  "Elegant Watches",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -1769,7 +1760,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  35,
+            "category_id"       =>  32,
             "name"              =>  "Romantic Watches",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -1778,7 +1769,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  35,
+            "category_id"       =>  32,
             "name"              =>  "Sports Watches",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -1787,7 +1778,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  35,
+            "category_id"       =>  32,
             "name"              =>  "Innovative Watches",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -1935,7 +1926,7 @@ class SubcategoryTableSeeder extends Seeder
 
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  39,
+            "category_id"       =>  44,
             "name"              =>  "Dog Collars & Leads",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -1944,7 +1935,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  39,
+            "category_id"       =>  44,
             "name"              =>  "Toys",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -1953,7 +1944,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  39,
+            "category_id"       =>  44,
             "name"              =>  "Fish & Aquatic",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -2084,7 +2075,7 @@ class SubcategoryTableSeeder extends Seeder
 
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  44,
+            "category_id"       =>  47,
             "name"              =>  "Office Furniture",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -2093,7 +2084,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  44,
+            "category_id"       =>  47,
             "name"              =>  "Home Furniture",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -2177,7 +2168,7 @@ class SubcategoryTableSeeder extends Seeder
 
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  47,
+            "category_id"       =>  39,
             "name"              =>  "Watering & Irrigation Kits",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -2186,7 +2177,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  47,
+            "category_id"       =>  39,
             "name"              =>  "Flower Pots & Planters",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -2195,7 +2186,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  47,
+            "category_id"       =>  39,
             "name"              =>  "Repellents",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -2204,7 +2195,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  47,
+            "category_id"       =>  39,
             "name"              =>  "Outdoor Furniture",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -2535,7 +2526,7 @@ class SubcategoryTableSeeder extends Seeder
 
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  54,
+            "category_id"       =>  57,
             "name"              =>  "Thermometers",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -2544,8 +2535,8 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  54,
-            "name"              =>  "Diaper Bags",
+            "category_id"       =>  57,
+            "name"              =>  "Diaper Bags and Cloth Diapers",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
             "created_at"        => date("Y-m-d H:i:s"),
@@ -2553,7 +2544,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  54,
+            "category_id"       =>  57,
             "name"              =>  "Baby Teething Items",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -2562,7 +2553,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  54,
+            "category_id"       =>  57,
             "name"              =>  "Baby Strollers",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -2571,16 +2562,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  54,
-            "name"              =>  "Cloth Diapers",
-            "slug"              =>  "",
-            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
-            "created_at"        => date("Y-m-d H:i:s"),
-            "updated_at"        => date("Y-m-d H:i:s"),
-        ]);
-        DB::table( 'subcategories' ) -> insert([
-            "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  54,
+            "category_id"       =>  57,
             "name"              =>  "Blankets & Swaddling",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -2589,7 +2571,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  54,
+            "category_id"       =>  57,
             "name"              =>  "Backpacks & Carriers",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -2598,7 +2580,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  54,
+            "category_id"       =>  57,
             "name"              =>  "Maternity Clothing",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -2607,7 +2589,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  54,
+            "category_id"       =>  57,
             "name"              =>  "Highchairs",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -2616,7 +2598,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  54,
+            "category_id"       =>  57,
             "name"              =>  "Baby Cribs",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -2672,7 +2654,7 @@ class SubcategoryTableSeeder extends Seeder
 
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  56,
+            "category_id"       =>  58,
             "name"              =>  "Dresses",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -2681,7 +2663,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  56,
+            "category_id"       =>  58,
             "name"              =>  "Clothing Sets",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -2690,7 +2672,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  56,
+            "category_id"       =>  58,
             "name"              =>  "Tops & Tees",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -2699,7 +2681,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  56,
+            "category_id"       =>  58,
             "name"              =>  "Outerwear & Coats",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -2708,7 +2690,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  56,
+            "category_id"       =>  58,
             "name"              =>  "Family Matching Outfits",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -2717,7 +2699,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  56,
+            "category_id"       =>  58,
             "name"              =>  "Sleepwear & Robes",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -2727,7 +2709,7 @@ class SubcategoryTableSeeder extends Seeder
 
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  57,
+            "category_id"       =>  54,
             "name"              =>  "Clothing Sets",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -2736,7 +2718,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  57,
+            "category_id"       =>  54,
             "name"              =>  "T-Shirts",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -2745,7 +2727,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  57,
+            "category_id"       =>  54,
             "name"              =>  "Outerwear & Coats",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -2754,7 +2736,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  57,
+            "category_id"       =>  54,
             "name"              =>  "Jeans",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -2773,7 +2755,7 @@ class SubcategoryTableSeeder extends Seeder
 
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  58,
+            "category_id"       =>  56,
             "name"              =>  "Sneakers",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -2782,7 +2764,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  58,
+            "category_id"       =>  56,
             "name"              =>  "Sandals",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -2791,7 +2773,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  58,
+            "category_id"       =>  56,
             "name"              =>  "Boots",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -2847,25 +2829,7 @@ class SubcategoryTableSeeder extends Seeder
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
             "category_id"       =>  59,
-            "name"              =>  "RC Helicopters",
-            "slug"              =>  "",
-            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
-            "created_at"        => date("Y-m-d H:i:s"),
-            "updated_at"        => date("Y-m-d H:i:s"),
-        ]);
-        DB::table( 'subcategories' ) -> insert([
-            "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  59,
             "name"              =>  "Stuffed & Plush Animals",
-            "slug"              =>  "",
-            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
-            "created_at"        => date("Y-m-d H:i:s"),
-            "updated_at"        => date("Y-m-d H:i:s"),
-        ]);
-        DB::table( 'subcategories' ) -> insert([
-            "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  59,
-            "name"              =>  "Diecasts & Toy Vehicles",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
             "created_at"        => date("Y-m-d H:i:s"),
@@ -2884,24 +2848,6 @@ class SubcategoryTableSeeder extends Seeder
             "resource_id"       =>  hexdec( uniqid() ),
             "category_id"       =>  59,
             "name"              =>  "Model Building Toys",
-            "slug"              =>  "",
-            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
-            "created_at"        => date("Y-m-d H:i:s"),
-            "updated_at"        => date("Y-m-d H:i:s"),
-        ]);
-        DB::table( 'subcategories' ) -> insert([
-            "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  59,
-            "name"              =>  "Stickers",
-            "slug"              =>  "",
-            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
-            "created_at"        => date("Y-m-d H:i:s"),
-            "updated_at"        => date("Y-m-d H:i:s"),
-        ]);
-        DB::table( 'subcategories' ) -> insert([
-            "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  59,
-            "name"              =>  "Spinning Tops",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
             "created_at"        => date("Y-m-d H:i:s"),
@@ -3776,25 +3722,7 @@ class SubcategoryTableSeeder extends Seeder
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
             "category_id"       =>  79,
-            "name"              =>  "Car Radios",
-            "slug"              =>  "",
-            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
-            "created_at"        => date("Y-m-d H:i:s"),
-            "updated_at"        => date("Y-m-d H:i:s"),
-        ]);
-        DB::table( 'subcategories' ) -> insert([
-            "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  79,
-            "name"              =>  "Car Monitors",
-            "slug"              =>  "",
-            "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
-            "created_at"        => date("Y-m-d H:i:s"),
-            "updated_at"        => date("Y-m-d H:i:s"),
-        ]);
-        DB::table( 'subcategories' ) -> insert([
-            "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  79,
-            "name"              =>  "Car Fridges & Heaters",
+            "name"              =>  "Car Radios & Car Monitors",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
             "created_at"        => date("Y-m-d H:i:s"),
@@ -3977,7 +3905,7 @@ class SubcategoryTableSeeder extends Seeder
 
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  83,
+            "category_id"       =>  86,
             "name"              =>  "Measurement & Analysis Tools",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -3986,7 +3914,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  83,
+            "category_id"       =>  86,
             "name"              =>  "Hand Tools",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -3995,7 +3923,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  83,
+            "category_id"       =>  86,
             "name"              =>  "Power Tools",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -4004,7 +3932,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  83,
+            "category_id"       =>  86,
             "name"              =>  "Garden Tools",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -4013,7 +3941,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  83,
+            "category_id"       =>  86,
             "name"              =>  "Tool Sets",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -4022,7 +3950,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  83,
+            "category_id"       =>  86,
             "name"              =>  "Welding Equipment",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -4031,7 +3959,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  83,
+            "category_id"       =>  86,
             "name"              =>  "Welding & Soldering Supplies",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -4040,7 +3968,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  83,
+            "category_id"       =>  86,
             "name"              =>  "Machine Tools & Accessories",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -4049,7 +3977,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  83,
+            "category_id"       =>  86,
             "name"              =>  "Woodworking Machinery",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -4058,7 +3986,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  83,
+            "category_id"       =>  86,
             "name"              =>  "Tool Storage Items",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -4169,7 +4097,7 @@ class SubcategoryTableSeeder extends Seeder
 
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  86,
+            "category_id"       =>  83,
             "name"              =>  "Electrical Equipment & Supplies",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -4178,7 +4106,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  86,
+            "category_id"       =>  83,
             "name"              =>  "Wall Switches",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -4187,7 +4115,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  86,
+            "category_id"       =>  83,
             "name"              =>  "Hardware",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -4196,7 +4124,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  86,
+            "category_id"       =>  83,
             "name"              =>  "Kitchen Fixtures",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -4205,7 +4133,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  86,
+            "category_id"       =>  83,
             "name"              =>  "Paint Tools",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -4214,7 +4142,7 @@ class SubcategoryTableSeeder extends Seeder
         ]);
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
-            "category_id"       =>  86,
+            "category_id"       =>  83,
             "name"              =>  "Pumps",
             "slug"              =>  "",
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
@@ -4269,5 +4197,3 @@ class SubcategoryTableSeeder extends Seeder
         ]);
     }
 }
-
-
