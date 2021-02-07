@@ -3,6 +3,7 @@
 namespace App\Observers\Category;
 
 use App\Models\Category\Category;
+use Illuminate\Support\Str;
 
 class CategoryObserver
 {
@@ -12,5 +13,6 @@ class CategoryObserver
     public function creating( Category $category )
     {
         $category -> resource_id = uniqid();
+        $category -> slug = Str::slug( $category -> name );
     }
 }

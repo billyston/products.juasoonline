@@ -13,5 +13,6 @@ class GroupObserver
     public function creating( Group $group )
     {
         $group -> resource_id = uniqid();
+        $group -> slug = Str::slug( $group -> name );
     }
 }

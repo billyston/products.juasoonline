@@ -19,7 +19,7 @@ class CreateGroupsTable extends Migration
             $table -> uuid( 'resource_id' ) -> unique() -> nullable( false );
 
             $table -> string( 'name' ) -> nullable( false );
-            $table -> string( 'slug' ) -> nullable( true );
+            $table -> string( 'slug' ) -> nullable( false );
             $table -> mediumText( 'description' ) -> nullable( false );
 
             $table -> timestamps();

@@ -20,7 +20,7 @@ class CreateSubCategoriesTable extends Migration
             $table -> unsignedBigInteger( 'category_id' );
 
             $table -> string( 'name' ) -> nullable( false );
-            $table -> string( 'slug' ) -> nullable( true );
+            $table -> string( 'slug' ) -> nullable( false );
             $table -> mediumText( 'description' ) -> nullable( false );
 
             $table -> timestamps();
