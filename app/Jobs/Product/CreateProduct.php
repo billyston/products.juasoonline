@@ -16,14 +16,14 @@ use Illuminate\Support\Facades\Storage;
 use Exception;
 
 
-class StoreProduct implements ShouldQueue
+class CreateProduct implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
     use apiResponseBuilder; private $theRequest;
 
     /**
-     * StoreProduct constructor.
+     * CreateProduct constructor.
      * @param ProductRequest $productRequest
      */
     public function __construct( ProductRequest $productRequest )

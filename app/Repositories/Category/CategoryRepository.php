@@ -4,7 +4,7 @@ namespace App\Repositories\Category;
 
 use App\Http\Requests\Category\CategoryRequest;
 use App\Http\Resources\Category\CategoryResource;
-use App\Jobs\Category\StoreCategory;
+use App\Jobs\Category\CreateCategory;
 use App\Jobs\Category\UpdateCategory;
 use App\Models\Category\Category;
 use App\Traits\apiResponseBuilder;
@@ -33,7 +33,7 @@ class CategoryRepository implements CategoryRepositoryInterface
      */
     public function store( CategoryRequest $categoryRequest )
     {
-        return $this -> successResponse( ( new StoreCategory( $categoryRequest ) ) -> handle(), "Success", "Product created successfully", Response::HTTP_CREATED );
+        return $this -> successResponse( ( new CreateCategory( $categoryRequest ) ) -> handle(), "Success", "Product created successfully", Response::HTTP_CREATED );
     }
 
     /**

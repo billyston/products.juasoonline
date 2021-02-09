@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 /**
- * @method relationLoaded(string $string)
+ * @method relationLoaded( string $string )
  */
 class ProductResource extends JsonResource
 {
@@ -15,7 +15,7 @@ class ProductResource extends JsonResource
      * @param Request $request
      * @return array
      */
-    public function toArray( $request )
+    public function toArray( $request ) : array
     {
         return
         [

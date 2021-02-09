@@ -12,13 +12,13 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 
-class StoreFile implements ShouldQueue
+class CreateFile implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
     use apiResponseBuilder; private $theRequest;
 
     /**
-     * StoreFile constructor.
+     * CreateFile constructor.
      * @param FileRequest $fileRequest
      */
     public function __construct( FileRequest $fileRequest )

@@ -13,13 +13,13 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Exception;
 
-class StoreCategory implements ShouldQueue
+class CreateCategory implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
     use apiResponseBuilder; private $theRequest;
 
     /**
-     * StoreCategory constructor.
+     * CreateCategory constructor.
      * @param CategoryRequest $categoryRequest
      */
     public function __construct( CategoryRequest $categoryRequest )

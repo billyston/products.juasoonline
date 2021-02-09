@@ -4,7 +4,7 @@ namespace App\Repositories\Subcategory;
 
 use App\Http\Requests\Subcategory\SubcategoryRequest;
 use App\Http\Resources\Subcategory\SubcategoryResource;
-use App\Jobs\Subcategory\StoreSubcategory;
+use App\Jobs\Subcategory\CreateSubcategory;
 use App\Jobs\Subcategory\UpdateSubcategory;
 use App\Models\Subcategory\Subcategory;
 use App\Traits\apiResponseBuilder;
@@ -33,7 +33,7 @@ class SubcategoryRepository implements SubcategoryRepositoryInterface
      */
     public function store( SubcategoryRequest $subcategoryRequest )
     {
-        return $this -> successResponse( ( new StoreSubcategory( $subcategoryRequest ) ) -> handle(), "Success", "Product created successfully", Response::HTTP_CREATED );
+        return $this -> successResponse( ( new CreateSubcategory( $subcategoryRequest ) ) -> handle(), "Success", "Product created successfully", Response::HTTP_CREATED );
     }
 
     /**

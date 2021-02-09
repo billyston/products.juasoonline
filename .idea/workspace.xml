@@ -20,16 +20,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d1612a24-8f92-4a41-8a01-9056ae58447d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/symfony2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Observers/Category/CategoryObserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Observers/Category/CategoryObserver.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Observers/Group/GroupObserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Observers/Group/GroupObserver.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Observers/Subcategory/SubcategoryObserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Observers/Subcategory/SubcategoryObserver.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_01_174906_create_groups_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_01_174906_create_groups_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_02_111306_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_02_111306_create_categories_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_02_125836_create_subcategories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_02_125836_create_subcategories_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/CategoryTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/CategoryTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/GroupTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/GroupTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/SubcategoryTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/SubcategoryTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/action_set_name" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/action_set_name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Product/ProductResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Product/ProductResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/Category/StoreCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/Category/CreateCategory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/File/StoreFile.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/File/CreateFile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/Group/StoreGroup.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/Group/CreateGroup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/Product/StoreProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/Product/CreateProduct.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/Subcategory/StoreSubcategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/Subcategory/CreateSubcategory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Product/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Category/CategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Category/CategoryRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/File/FileRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/File/FileRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Group/GroupRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Group/GroupRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Product/ProductRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Product/ProductRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Subcategory/SubcategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Subcategory/SubcategoryRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_02_230250_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_02_230250_create_products_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -295,7 +304,9 @@
       <workItem from="1610477618821" duration="603000" />
       <workItem from="1610479978646" duration="7000" />
       <workItem from="1611188903104" duration="12683000" />
-      <workItem from="1612582916350" duration="15548000" />
+      <workItem from="1612582916350" duration="16953000" />
+      <workItem from="1612773321087" duration="40223000" />
+      <workItem from="1612876944666" duration="5609000" />
     </task>
     <servers />
   </component>

@@ -1,9 +1,12 @@
 <?php
 
+use App\Http\Controllers\Branch\BranchController;
 use App\Http\Controllers\File\FileController;
 use App\Http\Controllers\Group\GroupController;
 use App\Http\Controllers\Category\CategoryController;
 use App\Http\Controllers\Image\ImageController;
+use App\Http\Controllers\Store\StoreController;
+use App\Http\Controllers\StoreAdministrator\StoreAdministratorController;
 use App\Http\Controllers\Subcategory\SubcategoryController;
 use App\Http\Controllers\Product\ProductController;
 use Illuminate\Support\Facades\Route;
@@ -21,6 +24,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::group( [], function ()
 {
+    Route::apiResource( 'stores', StoreController::class );
+    Route::prefix( 'store' ) -> group( function () { Route::apiResource( 'administrator', StoreAdministratorController::class ); } );
+    Route::prefix( 'store' ) -> group( function () { Route::apiResource( 'branches', BranchController::class ); });
+
     Route::apiResource( 'groups', GroupController::class );
     Route::apiResource( 'categories', CategoryController::class );
     Route::apiResource( 'subcategories', SubcategoryController::class );

@@ -2,12 +2,18 @@
 
 namespace App\Providers;
 
+use App\Repositories\Branch\BranchRepository;
+use App\Repositories\Branch\BranchRepositoryInterface;
 use App\Repositories\File\FileRepository;
 use App\Repositories\File\FileRepositoryInterface;
 use App\Repositories\Group\GroupRepositoryInterface;
 use App\Repositories\Group\GroupRepository;
 use App\Repositories\Category\CategoryRepositoryInterface;
 use App\Repositories\Category\CategoryRepository;
+use App\Repositories\Store\StoreRepository;
+use App\Repositories\Store\StoreRepositoryInterface;
+use App\Repositories\StoreAdministrator\StoreAdministratorRepository;
+use App\Repositories\StoreAdministrator\StoreAdministratorRepositoryInterface;
 use App\Repositories\Subcategory\SubcategoryRepositoryInterface;
 use App\Repositories\Subcategory\SubcategoryRepository;
 use App\Repositories\Product\ProductRepositoryInterface;
@@ -23,6 +29,10 @@ class RepositoryServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $this -> app -> bind( StoreRepositoryInterface::class, StoreRepository::class );
+        $this -> app -> bind( StoreAdministratorRepositoryInterface::class, StoreAdministratorRepository::class );
+        $this -> app -> bind( BranchRepositoryInterface::class, BranchRepository::class );
+
         $this -> app -> bind( GroupRepositoryInterface::class, GroupRepository::class );
         $this -> app -> bind( CategoryRepositoryInterface::class, CategoryRepository::class );
         $this -> app -> bind( SubcategoryRepositoryInterface::class, SubcategoryRepository::class );

@@ -4,7 +4,7 @@ namespace App\Repositories\Group;
 
 use App\Http\Requests\Group\GroupRequest;
 use App\Http\Resources\Group\GroupResource;
-use App\Jobs\Group\StoreGroup;
+use App\Jobs\Group\CreateGroup;
 use App\Jobs\Group\UpdateGroup;
 use App\Models\Group\Group;
 use App\Traits\apiResponseBuilder;
@@ -32,7 +32,7 @@ class GroupRepository implements GroupRepositoryInterface
      */
     public function store( GroupRequest $groupRequest )
     {
-        return $this -> successResponse( ( new StoreGroup( $groupRequest ) ) -> handle(), "Success", "Group created successfully", Response::HTTP_CREATED );
+        return $this -> successResponse( ( new CreateGroup( $groupRequest ) ) -> handle(), "Success", "Group created successfully", Response::HTTP_CREATED );
     }
 
     /**

@@ -4,7 +4,7 @@ namespace App\Repositories\File;
 
 use App\Http\Requests\File\FileRequest;
 use App\Http\Resources\File\FileResource;
-use App\Jobs\File\StoreFile;
+use App\Jobs\File\CreateFile;
 use App\Models\File\File;
 use App\Traits\apiResponseBuilder;
 use App\Traits\Relatives;
@@ -31,6 +31,6 @@ class FileRepository implements FileRepositoryInterface
      */
     public function store( FileRequest $fileRequest )
     {
-        return $this -> successResponse( ( new StoreFile( $fileRequest ) ) -> handle(), "Success", "Product created successfully", Response::HTTP_CREATED );
+        return $this -> successResponse( ( new CreateFile( $fileRequest ) ) -> handle(), "Success", "Product created successfully", Response::HTTP_CREATED );
     }
 }

@@ -4,7 +4,7 @@ namespace App\Repositories\Product;
 
 use App\Http\Requests\Product\ProductRequest;
 use App\Http\Resources\Product\ProductResource;
-use App\Jobs\Product\StoreProduct;
+use App\Jobs\Product\CreateProduct;
 use App\Jobs\Product\UpdateProduct;
 use App\Models\Product\Product;
 use App\Traits\apiResponseBuilder;
@@ -33,7 +33,7 @@ class ProductRepository implements ProductRepositoryInterface
      */
     public function store( ProductRequest $productRequest )
     {
-        return $this -> successResponse( ( new StoreProduct( $productRequest ) ) -> handle(), "Success", "Product created successfully", Response::HTTP_CREATED );
+        return $this -> successResponse( ( new CreateProduct( $productRequest ) ) -> handle(), "Success", "Product created successfully", Response::HTTP_CREATED );
     }
 
     /**

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProductsTable extends Migration
+class CreateBranchesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,19 +13,23 @@ class CreateProductsTable extends Migration
      */
     public function up()
     {
-        Schema::create( 'products', function ( Blueprint $table )
+        Schema::create( 'branches', function ( Blueprint $table )
         {
             $table -> bigIncrements('id' );
             $table -> uuid( 'resource_id' ) -> unique() -> nullable( false );
             $table -> unsignedBigInteger( 'store_id' );
 
-            $table -> string( 'name' ) -> nullable( false );
-            $table -> string( 'slug' ) -> nullable( true );
-            $table -> mediumText( 'description' );
-            $table -> float( 'sales_price' );
-            $table -> float( 'price' );
-            $table -> integer( 'quantity' ) -> nullable( false ) ->default( 0 );
-            $table -> smallInteger( 'status' ) ->default( 1 );
+            $table -> string( 'branch_name' ) -> nullable( false ) -> unique();
+
+            $table -> string( 'region' );
+            $table -> string( 'city' );
+            $table -> string( 'address' );
+            $table -> string( 'postal_code' );
+
+            $table -> string( 'mobile_phone' ) -> nullable( false ) -> unique();
+            $table -> string( 'other_phone' );
+
+            $table -> string( 'email' ) -> unique();
 
             $table -> timestamps();
             $table -> softDeletes();
@@ -41,6 +45,6 @@ class CreateProductsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists( 'products' );
+        Schema::dropIfExists('branches');
     }
 }

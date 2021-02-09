@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProductsTable extends Migration
+class CreateStoreAdministratorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,19 +13,21 @@ class CreateProductsTable extends Migration
      */
     public function up()
     {
-        Schema::create( 'products', function ( Blueprint $table )
+        Schema::create( 'store_administrators', function ( Blueprint $table )
         {
             $table -> bigIncrements('id' );
             $table -> uuid( 'resource_id' ) -> unique() -> nullable( false );
             $table -> unsignedBigInteger( 'store_id' );
 
-            $table -> string( 'name' ) -> nullable( false );
-            $table -> string( 'slug' ) -> nullable( true );
-            $table -> mediumText( 'description' );
-            $table -> float( 'sales_price' );
-            $table -> float( 'price' );
-            $table -> integer( 'quantity' ) -> nullable( false ) ->default( 0 );
-            $table -> smallInteger( 'status' ) ->default( 1 );
+            $table -> string('first_name' ) -> nullable( false );
+            $table -> string('other_names' ) -> nullable();
+            $table -> string('last_name' ) -> nullable( false );
+
+            $table -> string('designation', 30 ) -> nullable( false );
+
+            $table -> string('email', 50 ) -> nullable( false ) -> unique();
+            $table -> string('mobile_phone', 20 ) -> nullable( false ) -> unique();
+            $table -> string('office_phone', 20 ) -> unique();
 
             $table -> timestamps();
             $table -> softDeletes();
@@ -41,6 +43,6 @@ class CreateProductsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists( 'products' );
+        Schema::dropIfExists('store_administrators');
     }
 }

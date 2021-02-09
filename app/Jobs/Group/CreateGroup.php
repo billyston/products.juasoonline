@@ -13,13 +13,13 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Exception;
 
-class StoreGroup implements ShouldQueue
+class CreateGroup implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
     use apiResponseBuilder; private $theRequest;
 
     /**
-     * StoreGroup constructor.
+     * CreateGroup constructor.
      * @param GroupRequest $groupRequest
      */
     public function __construct( GroupRequest $groupRequest )
