@@ -11,7 +11,7 @@ class BranchRequest extends FormRequest
      *
      * @return bool
      */
-    public function authorize()
+    public function authorize(): bool
     {
         return true;
     }
@@ -21,7 +21,7 @@ class BranchRequest extends FormRequest
      *
      * @return array
      */
-    public function rules()
+    public function rules(): array
     {
         if ( in_array( $this -> getMethod (), [ 'PUT', 'PATCH' ] ) )
         {
@@ -29,7 +29,7 @@ class BranchRequest extends FormRequest
             [
                 'data'                                                              => [ 'required' ],
                 'data.id'                                                           => [ 'required', 'string', 'exists:branches,id' ],
-                'data.type'                                                         => [ 'required', 'string', 'in:Branch' ],
+                'data.type'                                                         => [ 'required', 'string', 'in:StoreBranch' ],
 
                 'data.attributes.branch_name'                                       => [ 'required', 'string', 'unique:branches,branch_name' ],
 
@@ -48,7 +48,7 @@ class BranchRequest extends FormRequest
         return
         [
             'data'                                                                  => [ 'required' ],
-            'data.type'                                                             => [ 'required', 'string', 'in:Branch' ],
+            'data.type'                                                             => [ 'required', 'string', 'in:StoreBranch' ],
 
             'data.attributes.branch_name'                                           => [ 'required', 'string', 'unique:branches,branch_name' ],
 
@@ -62,14 +62,14 @@ class BranchRequest extends FormRequest
 
             'data.attributes.email'                                                 => [ 'sometimes', 'email', 'unique:branches,email' ],
 
-            'data.relationships.shop.shop_id'                                       => [ 'required', 'string', 'exists:shops,id' ],
+            'data.relationships.store.store_id'                                     => [ 'required', 'string', 'exists:stores,id' ],
         ];
     }
 
     /**
      * @return array|string[]
      */
-    public function messages()
+    public function messages() : array
     {
         return
         [

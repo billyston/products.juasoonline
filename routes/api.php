@@ -5,6 +5,7 @@ use App\Http\Controllers\File\FileController;
 use App\Http\Controllers\Group\GroupController;
 use App\Http\Controllers\Category\CategoryController;
 use App\Http\Controllers\Image\ImageController;
+use App\Http\Controllers\Specification\SpecificationController;
 use App\Http\Controllers\Store\StoreController;
 use App\Http\Controllers\StoreAdministrator\StoreAdministratorController;
 use App\Http\Controllers\Subcategory\SubcategoryController;
@@ -32,6 +33,9 @@ Route::group( [], function ()
     Route::apiResource( 'categories', CategoryController::class );
     Route::apiResource( 'subcategories', SubcategoryController::class );
     Route::apiResource( 'products', ProductController::class );
+
+    Route::apiResource( 'specifications', SpecificationController::class );
+
     Route::apiResource( 'files', FileController::class );
     Route::apiResource( 'images', ImageController::class );
 });

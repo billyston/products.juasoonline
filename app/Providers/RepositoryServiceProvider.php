@@ -10,6 +10,8 @@ use App\Repositories\Group\GroupRepositoryInterface;
 use App\Repositories\Group\GroupRepository;
 use App\Repositories\Category\CategoryRepositoryInterface;
 use App\Repositories\Category\CategoryRepository;
+use App\Repositories\Specification\SpecificationRepository;
+use App\Repositories\Specification\SpecificationRepositoryInterface;
 use App\Repositories\Store\StoreRepository;
 use App\Repositories\Store\StoreRepositoryInterface;
 use App\Repositories\StoreAdministrator\StoreAdministratorRepository;
@@ -38,6 +40,7 @@ class RepositoryServiceProvider extends ServiceProvider
         $this -> app -> bind( SubcategoryRepositoryInterface::class, SubcategoryRepository::class );
         $this -> app -> bind( ProductRepositoryInterface::class, ProductRepository::class );
         $this -> app -> bind( FileRepositoryInterface::class, FileRepository::class );
+        $this -> app -> bind( SpecificationRepositoryInterface::class, SpecificationRepository::class );
     }
 
     /**

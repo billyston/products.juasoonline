@@ -30,12 +30,12 @@ class CreateBranch implements ShouldQueue
     /**
      * @return BranchResource|void
      */
-    public function handle()
+    public function handle(): BranchResource
     {
         try
         {
             $Branch = new Branch( $this -> theRequest -> input( 'data.attributes' ) );
-            $Branch -> shop() -> associate( $this -> theRequest [ 'data.relationships.shop.shop_id' ] );
+            $Branch -> store() -> associate( $this -> theRequest [ 'data.relationships.store.store_id' ] );
             $Branch -> save();
 
             $Branch -> refresh();

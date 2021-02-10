@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 /**
- * @method relationLoaded(string $string)
+ * @method relationLoaded( string $string )
  */
 class BranchResource extends JsonResource
 {
@@ -17,12 +17,12 @@ class BranchResource extends JsonResource
      * @param  Request  $request
      * @return array
      */
-    public function toArray( $request )
+    public function toArray( $request ): array
     {
         return
         [
             'id'                    => $this -> id,
-            'type'                  => 'Branch',
+            'type'                  => 'StoreBranch',
 
             'attributes' =>
             [
@@ -43,9 +43,9 @@ class BranchResource extends JsonResource
                 'updated_at'        => $this -> updated_at -> toDateTimeString(),
             ],
 
-            'include'               => $this -> when( $this -> relationLoaded( 'shop' ),
+            'include'               => $this -> when( $this -> relationLoaded( 'store' ),
             [
-                'shop'              => new StoreResource( $this -> whenLoaded( 'shop' ) ),
+                'store'             => new StoreResource( $this -> whenLoaded( 'store' ) ),
             ])
         ];
     }

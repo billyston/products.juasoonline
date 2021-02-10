@@ -21,7 +21,7 @@ class ProductRepository implements ProductRepositoryInterface
     /**
      * @return JsonResponse
      */
-    public function index()
+    public function index() : JsonResponse
     {
         $Group = Product::query() -> when( $this -> loadRelationships(), function ( Builder $builder ) { return $builder -> with ( $this -> relationships ); } ) -> paginate( 20 );
         return $this -> successResponse( ProductResource::collection( $Group ), "Success", null, Response::HTTP_OK );
@@ -31,7 +31,7 @@ class ProductRepository implements ProductRepositoryInterface
      * @param ProductRequest $productRequest
      * @return JsonResponse
      */
-    public function store( ProductRequest $productRequest )
+    public function store( ProductRequest $productRequest ) : JsonResponse
     {
         return $this -> successResponse( ( new CreateProduct( $productRequest ) ) -> handle(), "Success", "Product created successfully", Response::HTTP_CREATED );
     }
@@ -40,7 +40,7 @@ class ProductRepository implements ProductRepositoryInterface
      * @param Product $product
      * @return JsonResponse
      */
-    public function show( Product $product )
+    public function show( Product $product ) : JsonResponse
     {
         if ( $this -> loadRelationships() ) { $product -> load( $this -> relationships ); }
         return $this -> successResponse( new ProductResource( $product ), "Success", null, Response::HTTP_OK );
@@ -51,7 +51,7 @@ class ProductRepository implements ProductRepositoryInterface
      * @param Product $product
      * @return JsonResponse
      */
-    public function update( ProductRequest $productRequest, Product $product )
+    public function update( ProductRequest $productRequest, Product $product ) : JsonResponse
     {
         return $this -> successResponse( ( new UpdateProduct( $productRequest, $product ) ) -> handle(), 'Success', 'Product updated successfully', Response::HTTP_OK );
     }
@@ -61,7 +61,7 @@ class ProductRepository implements ProductRepositoryInterface
      * @return JsonResponse
      * @throws Exception
      */
-    public function delete( Product $product )
+    public function delete( Product $product ) : JsonResponse
     {
         $product -> delete();
         return $this -> successResponse( null, 'Success', 'Product deleted successfully', Response::HTTP_NO_CONTENT );

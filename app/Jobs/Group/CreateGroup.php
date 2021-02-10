@@ -30,7 +30,7 @@ class CreateGroup implements ShouldQueue
     /**
      * @return GroupResource|void
      */
-    public function handle()
+    public function handle() : GroupResource
     {
         try
         {

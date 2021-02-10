@@ -22,7 +22,7 @@ class Branch extends Model
     /**
      * @return BelongsTo
      */
-    public function shop() : BelongsTo
+    public function store() : BelongsTo
     {
         return $this -> belongsTo( Store::class );
     }

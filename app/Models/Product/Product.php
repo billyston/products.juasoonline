@@ -3,6 +3,7 @@
 namespace App\Models\Product;
 
 use App\Models\File\File;
+use App\Models\Specification\Specification;
 use App\Models\Store\Store;
 use App\Models\Subcategory\Subcategory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -41,6 +42,14 @@ class Product extends Model
     public function subcategories(): BelongsToMany
     {
         return $this -> belongsToMany( Subcategory::class );
+    }
+
+    /**
+     * @return HasMany
+     */
+    public function specifications() : HasMany
+    {
+        return $this -> hasMany( Specification::class );
     }
 
     /**

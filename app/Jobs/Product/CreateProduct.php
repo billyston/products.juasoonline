@@ -19,7 +19,6 @@ use Exception;
 class CreateProduct implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
-
     use apiResponseBuilder; private $theRequest;
 
     /**
@@ -34,11 +33,12 @@ class CreateProduct implements ShouldQueue
     /**
      * @return ProductResource|void
      */
-    public function handle()
+    public function handle(): ProductResource
     {
         try
         {
             $Product = new Product( $this -> getAttributes()[ 'attributes' ] );
+            $Product -> store() -> associate( $this -> theRequest [ 'data.relationships.store.store_id' ] );
             $Product -> save();
 
             // Attach the categories
@@ -72,7 +72,7 @@ class CreateProduct implements ShouldQueue
     {
         foreach ( $subcategories[ 'data' ] as $subcategory )
         {
-            $product -> subcategory() -> attach( $subcategory[ 'category_id' ] );
+            $product -> subcategories() -> attach( $subcategory[ 'category_id' ] );
         }
     }
 
@@ -80,16 +80,14 @@ class CreateProduct implements ShouldQueue
     {
         foreach ( $Files[ 'data' ] as $File )
         {
-//            File::create([
-//                'product_id'    => $product,
-//                'title'         => $File['title' ],
-//                'description'   => $File['title' ],
-//                'path'          => Storage::put( 'public/storage/products', $File['file'] )
-//            ]);
-
-//            $File = $File[ 'file' ];
-//            echo $File;
+            File::create([
+                'product_id'    => $product,
+                'title'         => $File['title' ],
+                'description'   => $File['title' ],
+                'path'          => Storage::put( 'public/storage/products', $File['file'] )
+            ]);
+            $File = $File[ 'file' ];
+            echo $File;
         }
-        exit;
     }
 }

@@ -13,9 +13,19 @@ class CreateSpecificationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('specifications', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::create( 'specifications', function ( Blueprint $table )
+        {
+            $table -> bigIncrements('id' );
+            $table -> uuid( 'resource_id' ) -> unique() -> nullable( false );
+            $table -> unsignedBigInteger( 'product_id' );
+
+            $table -> string( 'specification' ) -> nullable( false );
+            $table -> string( 'value' ) -> nullable( false );
+
+            $table -> timestamps();
+            $table -> softDeletes();
+
+            $table -> foreign('product_id' ) -> references('id' ) -> on( 'products' ) -> onDelete( 'cascade' );
         });
     }
 
