@@ -5,6 +5,7 @@ use App\Http\Controllers\File\FileController;
 use App\Http\Controllers\Group\GroupController;
 use App\Http\Controllers\Category\CategoryController;
 use App\Http\Controllers\Image\ImageController;
+use App\Http\Controllers\Overview\OverviewController;
 use App\Http\Controllers\Review\ReviewController;
 use App\Http\Controllers\Specification\SpecificationController;
 use App\Http\Controllers\Store\StoreController;
@@ -37,6 +38,7 @@ Route::group( [], function ()
 
     Route::apiResource( 'specifications', SpecificationController::class );
     Route::apiResource( 'reviews', ReviewController::class );
+    Route::apiResource( 'overviews', OverviewController::class );
 
     Route::apiResource( 'files', FileController::class );
     Route::apiResource( 'images', ImageController::class );

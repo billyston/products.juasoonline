@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Review;
+namespace App\Http\Requests\Overview;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ReviewRequest extends FormRequest
+class OverviewRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -28,8 +28,8 @@ class ReviewRequest extends FormRequest
             return $rules =
             [
                 'data'                                                  => [ 'required' ],
-                'data.id'                                               => [ 'required', 'string', 'exists:branches,id' ],
-                'data.type'                                             => [ 'required', 'string', 'in:Review' ],
+                'data.id'                                               => [ 'required', 'string', 'exists:overviews,id' ],
+                'data.type'                                             => [ 'required', 'string', 'in:Overview' ],
 
                 'data.attributes.rating'                                => [ 'sometimes', 'string' ],
                 'data.attributes.review'                                => [ 'sometimes', 'string' ],
@@ -40,13 +40,13 @@ class ReviewRequest extends FormRequest
         return
         [
             'data'                                                      => [ 'required' ],
-            'data.type'                                                 => [ 'required', 'string', 'in:Review' ],
+            'data.type'                                                 => [ 'required', 'string', 'in:Overview' ],
 
-            'data.attributes.rating'                                    => [ 'required', 'string' ],
-            'data.attributes.review'                                    => [ 'required', 'string' ],
-            'data.attributes.customer_id'                               => [ 'required', 'string' ],
+            'data.attributes.title'                                    => [ 'sometimes', 'string' ],
+            'data.attributes.overview'                                 => [ 'required', 'string' ],
+            'data.attributes.file_path'                                => [ 'sometimes', 'string' ],
 
-            'data.relationships.product.product_id'                     => [ 'required', 'string', 'exists:products,id' ],
+            'data.relationships.product.product_id'                    => [ 'required', 'string', 'exists:products,id' ],
         ];
     }
 
@@ -63,12 +63,12 @@ class ReviewRequest extends FormRequest
             'data.type.string'                                          => "The type must be of a string",
             'data.type.in'                                              => "The type is invalid",
 
-            'data.attributes.rating.required'                           => "The rating is invalid",
-            'data.attributes.review.required'                           => "The review is invalid",
-            'data.attributes.customer_id.required'                      => "The customer resource id is invalid",
+            'data.attributes.overview.required'                         => "The overview is invalid",
 
             'data.relationships.product.product_id.required'            => "The product id is required",
-            'data.relationships.product.product_id.exists:products,id'  => "The product id does not exist",
+            'data.relationships.product.product_id.exists'              => "The product does not exist",
+
+            'data.id.exists'                                            => "The overview does not exist",
         ];
     }
 }

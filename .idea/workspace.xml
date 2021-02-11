@@ -21,17 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="d1612a24-8f92-4a41-8a01-9056ae58447d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Review/Review.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Review/ReviewController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Requests/Review/ReviewRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Review/ReviewRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Resources/Product/ProductResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Product/ProductResource.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Product/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Review/Review.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Review/Review.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Specification/Specification.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Specification/Specification.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_02_230250_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_02_230250_create_products_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_02_06_035341_create_specifications_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_02_06_035341_create_specifications_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_02_06_035444_create_reviews_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_02_06_035444_create_reviews_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -301,7 +295,7 @@
       <workItem from="1612582916350" duration="16953000" />
       <workItem from="1612773321087" duration="40223000" />
       <workItem from="1612876944666" duration="5975000" />
-      <workItem from="1612904921047" duration="28693000" />
+      <workItem from="1612904921047" duration="39054000" />
     </task>
     <servers />
   </component>

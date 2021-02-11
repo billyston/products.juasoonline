@@ -3,6 +3,7 @@
 namespace App\Models\Product;
 
 use App\Models\File\File;
+use App\Models\Overview\Overview;
 use App\Models\Review\Review;
 use App\Models\Specification\Specification;
 use App\Models\Store\Store;
@@ -59,6 +60,14 @@ class Product extends Model
     public function reviews() : HasMany
     {
         return $this -> hasMany( Review::class );
+    }
+
+    /**
+     * @return HasMany
+     */
+    public function overviews() : HasMany
+    {
+        return $this -> hasMany( Overview::class );
     }
 
     /**

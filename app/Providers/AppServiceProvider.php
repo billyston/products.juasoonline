@@ -6,6 +6,7 @@ use App\Models\Branch\Branch;
 use App\Models\Category\Category;
 use App\Models\File\File;
 use App\Models\Group\Group;
+use App\Models\Overview\Overview;
 use App\Models\Review\Review;
 use App\Models\Specification\Specification;
 use App\Models\Store\Store;
@@ -17,6 +18,7 @@ use App\Observers\Branch\BranchObserver;
 use App\Observers\Category\CategoryObserver;
 use App\Observers\File\FileObserver;
 use App\Observers\Group\GroupObserver;
+use App\Observers\Overview\OverviewObserver;
 use App\Observers\Review\ReviewObserver;
 use App\Observers\Specification\SpecificationObserver;
 use App\Observers\Store\StoreObserver;
@@ -56,5 +58,6 @@ class AppServiceProvider extends ServiceProvider
 
         Specification::observe( SpecificationObserver::class );
         Review::observe( ReviewObserver::class );
+        Overview::observe( OverviewObserver::class );
     }
 }
