@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources\Product;
 
+use App\Http\Resources\Review\ReviewResource;
 use App\Http\Resources\Specification\SpecificationResource;
 use App\Http\Resources\Subcategory\SubcategoryResource;
 use Illuminate\Http\Request;
@@ -37,10 +38,11 @@ class ProductResource extends JsonResource
                 'updated_at'        => $this -> updated_at -> toDateTimeString(),
             ],
 
-            'include'               => $this -> when( $this -> relationLoaded( 'subcategories' ) || $this -> relationLoaded( 'specifications' ),
+            'include'               => $this -> when( $this -> relationLoaded( 'subcategories' ) || $this -> relationLoaded( 'specifications' ) || $this -> relationLoaded( 'reviews' ),
             [
                 'subcategories'     => SubcategoryResource::collection( $this -> whenLoaded('subcategories') ),
                 'specifications'    => SpecificationResource::collection( $this -> whenLoaded('specifications') ),
+                'reviews'           => ReviewResource::collection( $this -> whenLoaded('reviews') ),
             ])
         ];
     }

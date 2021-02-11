@@ -23,7 +23,6 @@ class CreateSpecificationsTable extends Migration
             $table -> string( 'value' ) -> nullable( false );
 
             $table -> timestamps();
-            $table -> softDeletes();
 
             $table -> foreign('product_id' ) -> references('id' ) -> on( 'products' ) -> onDelete( 'cascade' );
         });

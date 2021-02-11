@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Specification extends Model
 {
-    use HasFactory; use SoftDeletes;
+    use HasFactory;
 
     protected $guarded = [ 'id' ];
 
