@@ -29,7 +29,7 @@ class FileResource extends JsonResource
 
                 'title'             => $this -> title,
                 'description'       => $this -> description,
-                'path'              => $this -> path,
+                'path'              => asset( $this -> path ),
 
                 'created_at'        => $this -> created_at -> toDateTimeString(),
                 'updated_at'        => $this -> updated_at -> toDateTimeString(),

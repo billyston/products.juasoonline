@@ -19,9 +19,9 @@ class CreateOverviewsTable extends Migration
             $table -> uuid( 'resource_id' ) -> unique() -> nullable( false );
             $table -> unsignedBigInteger( 'product_id' );
 
-            $table -> string( 'title' );
-            $table -> text( 'overview' );
-            $table -> string( 'file_path' );
+            $table -> string( 'title' ) -> nullable( true );
+            $table -> text( 'description' ) -> nullable( true );
+            $table -> string( 'file' ) -> nullable( true );
 
             $table -> timestamps();
             $table -> foreign('product_id' ) -> references('id' ) -> on( 'products' ) -> onDelete( 'cascade' );

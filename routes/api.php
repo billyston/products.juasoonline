@@ -4,7 +4,6 @@ use App\Http\Controllers\Branch\BranchController;
 use App\Http\Controllers\File\FileController;
 use App\Http\Controllers\Group\GroupController;
 use App\Http\Controllers\Category\CategoryController;
-use App\Http\Controllers\Image\ImageController;
 use App\Http\Controllers\Overview\OverviewController;
 use App\Http\Controllers\Review\ReviewController;
 use App\Http\Controllers\Specification\SpecificationController;
@@ -41,5 +40,5 @@ Route::group( [], function ()
     Route::apiResource( 'overviews', OverviewController::class );
 
     Route::apiResource( 'files', FileController::class );
-    Route::apiResource( 'images', ImageController::class );
+    Route::apiResource( 'images', \App\Http\Controllers\image\ImageController::class );
 });

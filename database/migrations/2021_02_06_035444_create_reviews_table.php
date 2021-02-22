@@ -20,7 +20,7 @@ class CreateReviewsTable extends Migration
             $table -> unsignedBigInteger( 'product_id' );
             $table -> unsignedBigInteger( 'customer_id' );
 
-            $table -> tinyInteger( 'rating' )->default( 0 );
+            $table -> tinyInteger( 'rating' ) ->default( 0 );
             $table -> mediumText( 'review' ) -> nullable( false );
             $table -> smallInteger( 'status' ) ->default( 1 );
 

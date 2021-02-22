@@ -66,9 +66,9 @@ class StoreRequest extends FormRequest
             'data.type.string'                                          => "The type must be of a string",
             'data.type.in'                                              => "The type is invalid",
 
-            'data.attributes.store_name.required'                        => "The store name is required",
-            'data.attributes.store_name.string'                          => "The store name must be of a string type",
-            'data.attributes.store_name.unique'                          => "The store name is already taken",
+            'data.attributes.store_name.required'                       => "The store name is required",
+            'data.attributes.store_name.string'                         => "The store name must be of a string type",
+            'data.attributes.store_name.unique'                         => "The store name is already taken",
 
             'data.attributes.region.required'                           => "The region is required",
             'data.attributes.region.string'                             => "The region must be of a string type",

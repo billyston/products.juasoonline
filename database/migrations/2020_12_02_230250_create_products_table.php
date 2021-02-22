@@ -22,10 +22,10 @@ class CreateProductsTable extends Migration
             $table -> string( 'name' ) -> nullable( false );
             $table -> string( 'sku' ) -> nullable( true );
             $table -> string( 'slug' ) -> nullable( true );
-            $table -> mediumText( 'description' );
+            $table -> integer( 'quantity' ) -> nullable( false ) ->default( 0 );
             $table -> float( 'price' );
             $table -> float( 'sales_price' );
-            $table -> integer( 'quantity' ) -> nullable( false ) ->default( 0 );
+            $table -> mediumText( 'description' );
             $table -> smallInteger( 'status' ) ->default( 1 );
 
             $table -> dateTime( 'promo_start' ) -> nullable( true );

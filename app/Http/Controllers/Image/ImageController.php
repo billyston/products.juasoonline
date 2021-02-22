@@ -1,11 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Image;
+namespace App\Http\Controllers\image;
 
 use App\Http\Controllers\Controller;
 use App\Models\File\File;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 
 class ImageController extends Controller
 {
@@ -19,33 +18,19 @@ class ImageController extends Controller
         //
     }
 
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
     public function store( Request $request )
     {
+        $file = $request -> path;
+        $filePath = $file -> store( 'products/images' );
+        $productData = array( 'product_id' => $request -> product_id, 'title' => $request -> title, 'description' => $request -> description, 'path' => $filePath );
 
-//        logger() -> debug( $request -> input( 'data.attributes' ) ); exit;
-
-        foreach ( $request -> input( 'data.attributes' ) as $image )
-        {
-            logger() -> debug( $image['path'] );
-
-            $path = $request -> file( $image['path'] ) -> store('products/images/');
-            logger() -> debug( $path );
-        }
-
-//        $attributes = $request->input('data.attributes.path');
-//        foreach ($request->input('data.attributes') as $image) {
-//            logger()->debug(Storage::disk('local')->copy($image['path'], 'products/images/' . str_shuffle('siouaodifajosupoidupaio'). '.jpg'));
-//        }
-//        return 'done';
-
-
-//        $paths = [];
-//        foreach ($request->input('data.attributes') as $image) {
-//            $path = 'products/images/' . str_shuffle('siouaodifajosupoidupaio'). '.jpg';
-//            Storage::disk('local')->copy($image['path'], $path);
-//            $paths[] = $path;
-//        }
-//        return $paths;
+        return File::create( $productData );
     }
 
     /**

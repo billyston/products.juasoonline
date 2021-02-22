@@ -43,7 +43,7 @@ class OverviewRequest extends FormRequest
             'data.type'                                                 => [ 'required', 'string', 'in:Overview' ],
 
             'data.attributes.title'                                    => [ 'sometimes', 'string' ],
-            'data.attributes.overview'                                 => [ 'required', 'string' ],
+            'data.attributes.description'                              => [ 'sometimes', 'string' ],
             'data.attributes.file_path'                                => [ 'sometimes', 'string' ],
 
             'data.relationships.product.product_id'                    => [ 'required', 'string', 'exists:products,id' ],
@@ -62,8 +62,6 @@ class OverviewRequest extends FormRequest
             'data.type.required'                                        => "The type is required",
             'data.type.string'                                          => "The type must be of a string",
             'data.type.in'                                              => "The type is invalid",
-
-            'data.attributes.overview.required'                         => "The overview is invalid",
 
             'data.relationships.product.product_id.required'            => "The product id is required",
             'data.relationships.product.product_id.exists'              => "The product does not exist",

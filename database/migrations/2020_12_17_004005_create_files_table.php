@@ -22,7 +22,7 @@ class CreateFilesTable extends Migration
 
             $table -> string( 'title' ) -> nullable( true );
             $table -> mediumText( 'description' );
-            $table -> string( 'path' ) -> nullable( false );
+            $table -> string( 'file' ) -> nullable( false );
 
             $table -> timestamps();
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources\Product;
 
+use App\Http\Resources\File\FileResource;
 use App\Http\Resources\Overview\OverviewResource;
 use App\Http\Resources\Review\ReviewResource;
 use App\Http\Resources\Specification\SpecificationResource;
@@ -45,9 +46,10 @@ class ProductResource extends JsonResource
                 'updated_at'        => $this -> updated_at -> toDateTimeString(),
             ],
 
-            'include'               => $this -> when( $this -> relationLoaded( 'subcategories' ) || $this -> relationLoaded( 'specifications' ) || $this -> relationLoaded( 'reviews' ) || $this -> relationLoaded( 'overviews' ),
+            'include'               => $this -> when( $this -> relationLoaded( 'subcategories' ) || $this -> relationLoaded( 'specifications' ) || $this -> relationLoaded( 'reviews' ) || $this -> relationLoaded( 'overviews' ) || $this -> relationLoaded( 'files' ),
             [
                 'subcategories'     => SubcategoryResource::collection( $this -> whenLoaded('subcategories') ),
+                'files'             => FileResource::collection( $this -> whenLoaded('files') ),
                 'specifications'    => SpecificationResource::collection( $this -> whenLoaded('specifications') ),
                 'reviews'           => ReviewResource::collection( $this -> whenLoaded('reviews') ),
                 'overviews'         => OverviewResource::collection( $this -> whenLoaded('overviews') ),
