@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\File;
+namespace App\Models\ProductImage;
 
 use App\Models\Product\Product;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -9,9 +9,9 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
- * @method static create(array $array)
+ * @method static create(array $productData)
  */
-class File extends Model
+class ProductImage extends Model
 {
     use HasFactory; use SoftDeletes;
 
@@ -20,7 +20,7 @@ class File extends Model
     /**
      * @return string
      */
-    public function getRouteKeyName (){ return 'resource_id'; }
+    public function getRouteKeyName (): string { return 'resource_id'; }
 
     /**
      * @return BelongsTo

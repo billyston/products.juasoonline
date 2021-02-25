@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFilesTable extends Migration
+class CreateProductImagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,13 @@ class CreateFilesTable extends Migration
      */
     public function up()
     {
-        Schema::create( 'files', function ( Blueprint $table )
+        Schema::create('product_images', function ( Blueprint $table )
         {
             $table -> bigIncrements('id' );
             $table -> uuid( 'resource_id' ) -> unique() -> nullable( false );
 
             $table -> unsignedBigInteger( 'product_id' );
 
-            $table -> string( 'title' ) -> nullable( true );
             $table -> mediumText( 'description' );
             $table -> string( 'file' ) -> nullable( false );
 
@@ -39,6 +38,6 @@ class CreateFilesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('files');
+        Schema::dropIfExists('product_images');
     }
 }

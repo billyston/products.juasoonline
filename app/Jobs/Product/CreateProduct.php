@@ -5,7 +5,6 @@ namespace App\Jobs\Product;
 use App\Http\Requests\Product\ProductRequest;
 use App\Http\Resources\Product\ProductResource;
 use App\Models\Overview\Overview;
-use App\Models\File\File;
 use App\Models\Product\Product;
 use App\Models\Specification\Specification;
 use App\Traits\apiResponseBuilder;
@@ -115,9 +114,12 @@ class CreateProduct implements ShouldQueue
         }
     }
 
+    /**
+     * @param Product $product
+     * @param array $files
+     */
     public function createFiles( Product $product, array $files ) : void
     {
-        logger( $files );
         foreach ( $files[ 'data' ] as $file )
         {
 //            $File = $request -> path;

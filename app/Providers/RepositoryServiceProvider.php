@@ -12,6 +12,8 @@ use App\Repositories\Category\CategoryRepositoryInterface;
 use App\Repositories\Category\CategoryRepository;
 use App\Repositories\Overview\OverviewRepository;
 use App\Repositories\Overview\OverviewRepositoryInterface;
+use App\Repositories\ProductImage\ProductImageRepository;
+use App\Repositories\ProductImage\ProductImageRepositoryInterface;
 use App\Repositories\Review\ReviewRepository;
 use App\Repositories\Review\ReviewRepositoryInterface;
 use App\Repositories\Specification\SpecificationRepository;
@@ -42,12 +44,12 @@ class RepositoryServiceProvider extends ServiceProvider
         $this -> app -> bind( GroupRepositoryInterface::class, GroupRepository::class );
         $this -> app -> bind( CategoryRepositoryInterface::class, CategoryRepository::class );
         $this -> app -> bind( SubcategoryRepositoryInterface::class, SubcategoryRepository::class );
-        $this -> app -> bind( ProductRepositoryInterface::class, ProductRepository::class );
-        $this -> app -> bind( FileRepositoryInterface::class, FileRepository::class );
 
+        $this -> app -> bind( ProductRepositoryInterface::class, ProductRepository::class );
         $this -> app -> bind( SpecificationRepositoryInterface::class, SpecificationRepository::class );
         $this -> app -> bind( ReviewRepositoryInterface::class, ReviewRepository::class );
         $this -> app -> bind( OverviewRepositoryInterface::class, OverviewRepository::class );
+        $this -> app -> bind( ProductImageRepositoryInterface::class, ProductImageRepository::class );
     }
 
     /**

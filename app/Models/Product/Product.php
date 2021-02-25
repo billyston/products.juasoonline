@@ -2,8 +2,8 @@
 
 namespace App\Models\Product;
 
-use App\Models\File\File;
 use App\Models\Overview\Overview;
+use App\Models\ProductImage\ProductImage;
 use App\Models\Review\Review;
 use App\Models\Specification\Specification;
 use App\Models\Store\Store;
@@ -73,8 +73,8 @@ class Product extends Model
     /**
      * @return HasMany
      */
-    public function files() : HasMany
+    public function images() : HasMany
     {
-        return $this -> hasMany( File::class );
+        return $this -> hasMany( ProductImage::class );
     }
 }

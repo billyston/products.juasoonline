@@ -13,6 +13,7 @@ class ProductRequest extends FormRequest
      */
     public function authorize()
     {
+//        logger() -> debug( $this -> all() );
         return true;
     }
 
@@ -27,9 +28,9 @@ class ProductRequest extends FormRequest
         {
             return $rules =
             [
-                'data'                                                              => [ 'required' ],
-                'data.id'                                                           => [ 'required', 'string', 'exists:products,id' ],
-                'data.type'                                                         => [ 'required', 'string', 'in:Product' ],
+                'data'                                                  => [ 'required' ],
+                'data.id'                                               => [ 'required', 'string', 'exists:products,id' ],
+                'data.type'                                             => [ 'required', 'string', 'in:Product' ],
             ];
         }
         return
