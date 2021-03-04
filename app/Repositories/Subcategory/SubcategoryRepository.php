@@ -21,7 +21,7 @@ class SubcategoryRepository implements SubcategoryRepositoryInterface
     /**
      * @return JsonResponse|mixed
      */
-    public function index()
+    public function index() : JsonResponse
     {
         $Subcategory = Subcategory::query() -> when( $this -> loadRelationships(), function ( Builder $builder ) { return $builder -> with ( $this -> relationships ); } ) -> paginate( 20 );
         return $this -> successResponse( SubcategoryResource::collection( $Subcategory ), "Success", null, Response::HTTP_OK );
@@ -31,16 +31,16 @@ class SubcategoryRepository implements SubcategoryRepositoryInterface
      * @param SubcategoryRequest $subcategoryRequest
      * @return JsonResponse|mixed
      */
-    public function store( SubcategoryRequest $subcategoryRequest )
+    public function store( SubcategoryRequest $subcategoryRequest ) : JsonResponse
     {
-        return $this -> successResponse( ( new CreateSubcategory( $subcategoryRequest ) ) -> handle(), "Success", "Product created successfully", Response::HTTP_CREATED );
+        return $this -> successResponse( ( new CreateSubcategory( $subcategoryRequest ) ) -> handle(), "Success", "Subcategory created", Response::HTTP_CREATED );
     }
 
     /**
      * @param Subcategory $subcategory
      * @return JsonResponse|mixed
      */
-    public function show( Subcategory $subcategory )
+    public function show( Subcategory $subcategory ) : JsonResponse
     {
         return $this -> successResponse( new SubcategoryResource( $subcategory ), "Success", null, Response::HTTP_OK );
     }
@@ -50,9 +50,9 @@ class SubcategoryRepository implements SubcategoryRepositoryInterface
      * @param Subcategory $subcategory
      * @return JsonResponse|mixed
      */
-    public function update( SubcategoryRequest $subcategoryRequest, Subcategory $subcategory )
+    public function update( SubcategoryRequest $subcategoryRequest, Subcategory $subcategory ) : JsonResponse
     {
-        return $this -> successResponse( ( new UpdateSubcategory( $subcategoryRequest, $subcategory ) ) -> handle(), 'Success', 'Product updated successfully', Response::HTTP_OK );
+        return $this -> successResponse( ( new UpdateSubcategory( $subcategoryRequest, $subcategory ) ) -> handle(), 'Success', 'Subcategory updated', Response::HTTP_OK );
     }
 
     /**
@@ -60,9 +60,9 @@ class SubcategoryRepository implements SubcategoryRepositoryInterface
      * @return JsonResponse|mixed
      * @throws Exception
      */
-    public function destroy( Subcategory $subcategory )
+    public function destroy( Subcategory $subcategory ) : JsonResponse
     {
         $subcategory -> delete();
-        return $this -> successResponse( null, 'Success', 'Category deleted successfully', Response::HTTP_NO_CONTENT );
+        return $this -> successResponse( null, 'Success', 'Subcategory deleted', Response::HTTP_NO_CONTENT );
     }
 }

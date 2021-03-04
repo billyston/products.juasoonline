@@ -21,7 +21,7 @@ class CategoryRepository implements CategoryRepositoryInterface
     /**
      * @return JsonResponse
      */
-    public function index()
+    public function index() : JsonResponse
     {
         $Category = Category::query() -> when( $this -> loadRelationships(), function ( Builder $builder ) { return $builder -> with ( $this -> relationships ); } ) -> paginate( 20 );
         return $this -> successResponse( CategoryResource::collection( $Category ), "Success", null, Response::HTTP_OK );
@@ -31,16 +31,16 @@ class CategoryRepository implements CategoryRepositoryInterface
      * @param CategoryRequest $categoryRequest
      * @return JsonResponse|mixed
      */
-    public function store( CategoryRequest $categoryRequest )
+    public function store( CategoryRequest $categoryRequest ) : JsonResponse
     {
-        return $this -> successResponse( ( new CreateCategory( $categoryRequest ) ) -> handle(), "Success", "Product created successfully", Response::HTTP_CREATED );
+        return $this -> successResponse( ( new CreateCategory( $categoryRequest ) ) -> handle(), "Success", "Category created", Response::HTTP_CREATED );
     }
 
     /**
      * @param Category $category
      * @return JsonResponse|mixed
      */
-    public function show( Category $category )
+    public function show( Category $category ) : JsonResponse
     {
         if ( $this -> loadRelationships() ) { $category -> load( $this -> relationships ); }
         return $this -> successResponse( new CategoryResource( $category ), "Success", null, Response::HTTP_OK );
@@ -51,9 +51,9 @@ class CategoryRepository implements CategoryRepositoryInterface
      * @param Category $category
      * @return JsonResponse|mixed
      */
-    public function update( CategoryRequest $categoryRequest, Category $category )
+    public function update( CategoryRequest $categoryRequest, Category $category ) : JsonResponse
     {
-        return $this -> successResponse( ( new UpdateCategory( $categoryRequest, $category ) ) -> handle(), 'Success', 'Product updated successfully', Response::HTTP_OK );
+        return $this -> successResponse( ( new UpdateCategory( $categoryRequest, $category ) ) -> handle(), 'Success', 'Category updated', Response::HTTP_OK );
     }
 
     /**
@@ -61,9 +61,9 @@ class CategoryRepository implements CategoryRepositoryInterface
      * @return JsonResponse
      * @throws Exception
      */
-    public function destroy( Category $category )
+    public function destroy( Category $category ) : JsonResponse
     {
         $category -> delete();
-        return $this -> successResponse( null, 'Success', 'Category deleted successfully', Response::HTTP_NO_CONTENT );
+        return $this -> successResponse( null, 'Success', 'Category deleted', Response::HTTP_NO_CONTENT );
     }
 }

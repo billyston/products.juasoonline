@@ -33,7 +33,7 @@ class ProductRepository implements ProductRepositoryInterface
      */
     public function store( ProductRequest $productRequest ) : JsonResponse
     {
-        return $this -> successResponse( ( new CreateProduct( $productRequest ) ) -> handle(), "Success", "Product created successfully", Response::HTTP_CREATED );
+        return $this -> successResponse( ( new CreateProduct( $productRequest ) ) -> handle(), "Success", "Product created", Response::HTTP_CREATED );
     }
 
     /**
@@ -53,7 +53,7 @@ class ProductRepository implements ProductRepositoryInterface
      */
     public function update( ProductRequest $productRequest, Product $product ) : JsonResponse
     {
-        return $this -> successResponse( ( new UpdateProduct( $productRequest, $product ) ) -> handle(), 'Success', 'Product updated successfully', Response::HTTP_OK );
+        return $this -> successResponse( ( new UpdateProduct( $productRequest, $product ) ) -> handle(), 'Success', 'Product updated', Response::HTTP_OK );
     }
 
     /**
@@ -64,6 +64,6 @@ class ProductRepository implements ProductRepositoryInterface
     public function delete( Product $product ) : JsonResponse
     {
         $product -> delete();
-        return $this -> successResponse( null, 'Success', 'Product deleted successfully', Response::HTTP_NO_CONTENT );
+        return $this -> successResponse( null, 'Success', 'Product deleted', Response::HTTP_NO_CONTENT );
     }
 }
