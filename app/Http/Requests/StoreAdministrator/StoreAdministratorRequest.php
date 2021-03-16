@@ -45,20 +45,20 @@ class StoreAdministratorRequest extends FormRequest
 
         return
         [
-            'data'                                                                  => [ 'required' ],
-            'data.type'                                                             => [ 'required', 'string', 'in:StoreAdministrator' ],
+            'data'                                                      => [ 'required' ],
+            'data.type'                                                 => [ 'required', 'string', 'in:StoreAdministrator' ],
 
-            'data.attributes.first_name'                                            => [ 'required', 'string' ],
-            'data.attributes.other_names'                                           => [ 'sometimes', 'string' ],
-            'data.attributes.last_name'                                             => [ 'required', 'string' ],
+            'data.attributes.first_name'                                => [ 'required', 'string' ],
+            'data.attributes.other_names'                               => [ 'sometimes', 'string' ],
+            'data.attributes.last_name'                                 => [ 'required', 'string' ],
 
-            'data.attributes.designation'                                           => [ 'required', 'string' ],
+            'data.attributes.designation'                               => [ 'required', 'string' ],
 
-            'data.attributes.email'                                                 => [ 'required', 'email', 'unique:store_administrators,email' ],
-            'data.attributes.mobile_phone'                                          => [ 'required', 'min:10', 'numeric', 'unique:store_administrators,mobile_phone' ],
-            'data.attributes.other_phone'                                           => [ 'min:10', 'numeric' ],
+            'data.attributes.email'                                     => [ 'required', 'email', 'unique:store_administrators,email' ],
+            'data.attributes.mobile_phone'                              => [ 'required', 'min:10', 'numeric', 'unique:store_administrators,mobile_phone' ],
+            'data.attributes.other_phone'                               => [ 'min:10', 'numeric' ],
 
-            'data.relationships.store.store_id'                                     => [ 'required', 'string', 'exists:stores,id' ],
+            'data.relationships.store.store_id'                         => [ 'required', 'numeric', 'exists:stores,id' ],
         ];
     }
 

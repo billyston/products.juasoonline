@@ -35,8 +35,8 @@ Route::group( [], function ()
     Route::apiResource( 'subcategories', SubcategoryController::class );
 
     Route::apiResource( 'products', ProductController::class );
-    Route::prefix( 'products' ) -> group( function () { Route::apiResource( 'images', ProductImageController::class ); });
-    Route::apiResource( 'specifications', SpecificationController::class );
-    Route::apiResource( 'reviews', ReviewController::class );
-    Route::apiResource( 'overviews', OverviewController::class );
+    Route::prefix( 'product' ) -> group( function () { Route::apiResource( 'images', ProductImageController::class ); });
+    Route::prefix( 'product' ) -> group( function () { Route::apiResource( 'specifications', SpecificationController::class ); });
+    Route::prefix( 'product' ) -> group( function () { Route::apiResource( 'reviews', ReviewController::class ); });
+    Route::prefix( 'product' ) -> group( function () { Route::apiResource( 'overviews', OverviewController::class ); });
 });

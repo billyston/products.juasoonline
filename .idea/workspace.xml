@@ -21,13 +21,13 @@
   <component name="ChangeListManager">
     <list default="true" id="d1612a24-8f92-4a41-8a01-9056ae58447d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/action_provision" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/action_provision" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/action_set_name" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/action_set_name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Category/CategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Category/CategoryRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Group/GroupRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Group/GroupRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Product/ProductRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Product/ProductRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Store/StoreRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Store/StoreRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Subcategory/SubcategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Subcategory/SubcategoryRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/cors.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/cors.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/id" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/id" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/index_uuid" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/index_uuid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/private_key" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/private_key" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/StoreAdministrator/StoreAdministratorRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/StoreAdministrator/StoreAdministratorRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -316,6 +316,21 @@
       <workItem from="1614340141576" duration="3320000" />
       <workItem from="1614856295063" duration="109000" />
       <workItem from="1614856719906" duration="1506000" />
+      <workItem from="1614865357944" duration="1769000" />
+      <workItem from="1614906106055" duration="379000" />
+      <workItem from="1614972641100" duration="1236000" />
+      <workItem from="1614975704290" duration="1158000" />
+      <workItem from="1614987700867" duration="5099000" />
+      <workItem from="1615144611799" duration="101000" />
+      <workItem from="1615279229497" duration="720000" />
+      <workItem from="1615281279503" duration="3740000" />
+      <workItem from="1615487080752" duration="58000" />
+      <workItem from="1615553034074" duration="33000" />
+      <workItem from="1615796241175" duration="1974000" />
+      <workItem from="1615836009765" duration="39000" />
+      <workItem from="1615836382077" duration="1472000" />
+      <workItem from="1615841856743" duration="20000" />
+      <workItem from="1615842147572" duration="13986000" />
     </task>
     <servers />
   </component>
