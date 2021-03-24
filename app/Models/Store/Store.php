@@ -20,7 +20,7 @@ class Store extends Model
     /**
      * @return string
      */
-    public function getRouteKeyName (): string { return 'resource_id'; }
+    public function getRouteKeyName () : string { return 'resource_id'; }
 
     /**
      * @return HasOne

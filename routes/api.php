@@ -26,17 +26,23 @@ use Illuminate\Support\Facades\Route;
 
 Route::group( [], function ()
 {
-    Route::apiResource( 'stores', StoreController::class );
-    Route::prefix( 'store' ) -> group( function () { Route::apiResource( 'administrator', StoreAdministratorController::class ); } );
-    Route::prefix( 'store' ) -> group( function () { Route::apiResource( 'branches', BranchController::class ); });
+    Route::group([ 'prefix' => 'stores' ], function()
+    {
+        Route::apiResource( '', StoreController::class, [ 'parameters' => [ '' => 'store' ]] );
+        Route::apiResource( 'administrator', StoreAdministratorController::class, [ 'parameters' => [ 'administrator' => 'store_administrator' ]] );
+        Route::apiResource( 'branches', BranchController::class );
+    });
 
     Route::apiResource( 'groups', GroupController::class );
     Route::apiResource( 'categories', CategoryController::class );
     Route::apiResource( 'subcategories', SubcategoryController::class );
 
-    Route::apiResource( 'products', ProductController::class );
-    Route::prefix( 'product' ) -> group( function () { Route::apiResource( 'images', ProductImageController::class ); });
-    Route::prefix( 'product' ) -> group( function () { Route::apiResource( 'specifications', SpecificationController::class ); });
-    Route::prefix( 'product' ) -> group( function () { Route::apiResource( 'reviews', ReviewController::class ); });
-    Route::prefix( 'product' ) -> group( function () { Route::apiResource( 'overviews', OverviewController::class ); });
+    Route::group([ 'prefix' => 'products' ], function()
+    {
+        Route::apiResource( '', ProductController::class, [ 'parameters' => [ '' => 'products' ]] );
+        Route::apiResource( 'images', ProductImageController::class );
+        Route::apiResource( 'specifications', SpecificationController::class );
+        Route::apiResource( 'reviews', ReviewController::class );
+        Route::apiResource( 'overviews', OverviewController::class );
+    });
 });

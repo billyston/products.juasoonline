@@ -21,12 +21,12 @@
   <component name="ChangeListManager">
     <list default="true" id="d1612a24-8f92-4a41-8a01-9056ae58447d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/action_provision" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/action_provision" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/action_set_name" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/action_set_name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/id" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/id" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/index_uuid" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/index_uuid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/private_key" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/private_key" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Requests/StoreAdministrator/StoreAdministratorRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/StoreAdministrator/StoreAdministratorRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Branch/BranchResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Branch/BranchResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/StoreAdministrator/StoreAdministratorResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/StoreAdministrator/StoreAdministratorResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Store/Store.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Store/Store.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/StoreAdministrator/StoreAdministrator.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/StoreAdministrator/StoreAdministrator.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -330,7 +330,16 @@
       <workItem from="1615836009765" duration="39000" />
       <workItem from="1615836382077" duration="1472000" />
       <workItem from="1615841856743" duration="20000" />
-      <workItem from="1615842147572" duration="13986000" />
+      <workItem from="1615842147572" duration="21665000" />
+      <workItem from="1616110131619" duration="89000" />
+      <workItem from="1616110531753" duration="1222000" />
+      <workItem from="1616167621648" duration="534000" />
+      <workItem from="1616195400136" duration="1644000" />
+      <workItem from="1616327694371" duration="9000" />
+      <workItem from="1616419503308" duration="12568000" />
+      <workItem from="1616572107800" duration="145000" />
+      <workItem from="1616573015827" duration="462000" />
+      <workItem from="1616574764824" duration="130000" />
     </task>
     <servers />
   </component>

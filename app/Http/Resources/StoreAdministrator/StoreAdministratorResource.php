@@ -3,6 +3,7 @@
 namespace App\Http\Resources\StoreAdministrator;
 
 use App\Http\Resources\Store\StoreResource;
+use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 /**
@@ -13,7 +14,7 @@ class StoreAdministratorResource extends JsonResource
     /**
      * Transform the resource into an array.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  Request  $request
      * @return array
      */
     public function toArray( $request ) : array
@@ -36,7 +37,6 @@ class StoreAdministratorResource extends JsonResource
                 'email'             => $this -> email,
                 'mobile_phone'      => $this -> mobile_phone,
                 'office_phone'      => $this -> office_phone,
-
 
                 'created_at'        => $this -> created_at -> toDateTimeString(),
                 'updated_at'        => $this -> updated_at -> toDateTimeString(),

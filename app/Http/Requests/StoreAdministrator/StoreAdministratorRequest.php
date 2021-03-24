@@ -54,9 +54,10 @@ class StoreAdministratorRequest extends FormRequest
 
             'data.attributes.designation'                               => [ 'required', 'string' ],
 
-            'data.attributes.email'                                     => [ 'required', 'email', 'unique:store_administrators,email' ],
             'data.attributes.mobile_phone'                              => [ 'required', 'min:10', 'numeric', 'unique:store_administrators,mobile_phone' ],
             'data.attributes.other_phone'                               => [ 'min:10', 'numeric' ],
+
+            'data.attributes.email'                                     => [ 'required', 'email', 'unique:store_administrators,email' ],
 
             'data.relationships.store.store_id'                         => [ 'required', 'numeric', 'exists:stores,id' ],
         ];
