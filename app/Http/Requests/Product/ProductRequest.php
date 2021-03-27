@@ -11,9 +11,8 @@ class ProductRequest extends FormRequest
      *
      * @return bool
      */
-    public function authorize()
+    public function authorize() : bool
     {
-//        logger() -> debug( $this -> all() );
         return true;
     }
 
@@ -45,7 +44,7 @@ class ProductRequest extends FormRequest
             'data.attributes.sales_price'                               => [ 'required', 'numeric', 'regex:/^\d*(\.\d{2})?$/' ],
 
             // Validate product relationship with store
-            'data.relationships.store.store_id'                         => [ 'required', 'string', 'exists:stores,id' ],
+            'data.relationships.store.store_id'                         => [ 'required', 'exists:stores,id' ],
 
             // Validate product relationship with brand
             // Coming soon
@@ -55,25 +54,6 @@ class ProductRequest extends FormRequest
             'data.relationships.categories.data'                        => [ 'required' ],
             'data.relationships.categories.data.*.type'                 => [ 'required', 'in:Category' ],
             'data.relationships.categories.data.*.category_id'          => [ 'required', 'string', 'exists:subcategories,id' ],
-
-            // Validate product specifications and relations
-            'data.relationships.specifications'                         => [ 'sometimes' ],
-            'data.relationships.specifications.data'                    => [ 'sometimes' ],
-            'data.relationships.specifications.data.*.specification'    => [ 'sometimes' ],
-            'data.relationships.specifications.data.*.value'            => [ 'sometimes' ],
-
-            // Validate product overviews and relations
-            'data.relationships.overviews'                              => [ 'sometimes' ],
-            'data.relationships.overviews.data'                         => [ 'sometimes' ],
-            'data.relationships.overviews.data.*.specification'         => [ 'sometimes' ],
-            'data.relationships.overviews.data.*.description'           => [ 'sometimes' ],
-            'data.relationships.overviews.data.*.file_path'             => [ 'sometimes' ],
-
-            // Validate product files and relations
-            'data.relationships.files'                                  => [ 'sometimes' ],
-            'data.relationships.files.data'                             => [ 'sometimes' ],
-            'data.relationships.files.data.*.file'                      => [ 'sometimes' ],
-            'data.relationships.files.data.*.description'               => [ 'sometimes' ],
         ];
     }
 
@@ -97,8 +77,8 @@ class ProductRequest extends FormRequest
             'data.attributes.sales_price.required'                      => "Sales price is required",
             'data.attributes.sales_price.number'                        => "Sales price must be of a number type",
 
-            'data.specifications.data.*.specification.required'         => "All specification attribute are required",
-            'data.specifications.data.*.value.required'                 => "All specification value are required",
+            'data.specifications.data.*.categories.required'            => "Product must belong to at least one category",
+            'data.specifications.data.*.categories.exists'              => "Some product categorie(s) does not exist",
         ];
     }
 }

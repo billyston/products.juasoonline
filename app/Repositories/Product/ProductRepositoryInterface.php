@@ -4,36 +4,37 @@ namespace App\Repositories\Product;
 
 use App\Http\Requests\Product\ProductRequest;
 use App\Models\Product\Product;
+use Illuminate\Http\JsonResponse;
 
 interface ProductRepositoryInterface
 {
     /**
-     * @return mixed
+     * @return JsonResponse
      */
-    public function index();
+    public function index() : JsonResponse;
 
     /**
      * @param ProductRequest $productRequest
      * @return mixed
      */
-    public function store( ProductRequest $productRequest );
+    public function store( ProductRequest $productRequest ) : JsonResponse;
 
     /**
      * @param Product $product
-     * @return mixed
+     * @return JsonResponse
      */
-    public function show( Product $product );
+    public function show( Product $product ) : JsonResponse;
 
     /**
      * @param ProductRequest $productRequest
      * @param Product $product
-     * @return mixed
+     * @return JsonResponse
      */
-    public function update( ProductRequest $productRequest, Product $product );
+    public function update( ProductRequest $productRequest, Product $product ) : JsonResponse;
 
     /**
      * @param Product $product
-     * @return mixed
+     * @return JsonResponse
      */
-    public function delete( Product $product );
+    public function delete( Product $product ) : JsonResponse;
 }

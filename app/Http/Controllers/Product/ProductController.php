@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Product\ProductRequest;
 use App\Models\Product\Product;
 use App\Repositories\Product\ProductRepositoryInterface;
+use Illuminate\Http\JsonResponse;
 
 class ProductController extends Controller
 {
@@ -21,9 +22,9 @@ class ProductController extends Controller
     }
 
     /**
-     * @return mixed
+     * @return JsonResponse
      */
-    public function index()
+    public function index() : JsonResponse
     {
         return $this -> theRepository -> index();
     }
@@ -32,16 +33,16 @@ class ProductController extends Controller
      * @param ProductRequest $productRequest
      * @return mixed
      */
-    public function store( ProductRequest $productRequest )
+    public function store( ProductRequest $productRequest ) : JsonResponse
     {
         return $this -> theRepository -> store( $productRequest );
     }
 
     /**
      * @param Product $product
-     * @return mixed
+     * @return JsonResponse
      */
-    public function show( Product $product )
+    public function show( Product $product ) : JsonResponse
     {
         return $this -> theRepository -> show( $product );
     }
@@ -49,18 +50,18 @@ class ProductController extends Controller
     /**
      * @param ProductRequest $productRequest
      * @param Product $product
-     * @return mixed
+     * @return JsonResponse
      */
-    public function update( ProductRequest $productRequest, Product $product )
+    public function update( ProductRequest $productRequest, Product $product ) : JsonResponse
     {
         return $this -> theRepository -> update( $productRequest, $product );
     }
 
     /**
      * @param Product $product
-     * @return mixed
+     * @return JsonResponse
      */
-    public function destroy( Product $product )
+    public function destroy( Product $product ) : JsonResponse
     {
         return $this -> theRepository -> delete( $product );
     }

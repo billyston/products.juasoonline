@@ -39,10 +39,10 @@ Route::group( [], function ()
 
     Route::group([ 'prefix' => 'products' ], function()
     {
-        Route::apiResource( '', ProductController::class, [ 'parameters' => [ '' => 'products' ]] );
-        Route::apiResource( 'images', ProductImageController::class );
+        Route::apiResource( '', ProductController::class, [ 'parameters' => [ '' => 'product' ]] );
         Route::apiResource( 'specifications', SpecificationController::class );
-        Route::apiResource( 'reviews', ReviewController::class );
         Route::apiResource( 'overviews', OverviewController::class );
+        Route::apiResource( 'images', ProductImageController::class );
+        Route::apiResource( 'reviews', ReviewController::class );
     });
 });

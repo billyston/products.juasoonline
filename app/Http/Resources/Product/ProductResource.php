@@ -47,13 +47,13 @@ class ProductResource extends JsonResource
                 'updated_at'        => $this -> updated_at -> toDateTimeString(),
             ],
 
-            'include'               => $this -> when( $this -> relationLoaded( 'subcategories' ) || $this -> relationLoaded( 'specifications' ) || $this -> relationLoaded( 'reviews' ) || $this -> relationLoaded( 'overviews' ) || $this -> relationLoaded( 'images' ),
+            'include'               => $this -> when( $this -> relationLoaded( 'categories' ) || $this -> relationLoaded( 'specifications' ) || $this -> relationLoaded( 'reviews' ) || $this -> relationLoaded( 'overviews' ) || $this -> relationLoaded( 'images' ),
             [
-                'subcategories'     => SubcategoryResource::collection( $this -> whenLoaded('subcategories') ),
-                'images'            => ProductImageResource::collection( $this -> whenLoaded('images') ),
+                'categories'        => SubcategoryResource::collection( $this -> whenLoaded('categories') ),
                 'specifications'    => SpecificationResource::collection( $this -> whenLoaded('specifications') ),
-                'reviews'           => ReviewResource::collection( $this -> whenLoaded('reviews') ),
                 'overviews'         => OverviewResource::collection( $this -> whenLoaded('overviews') ),
+                'reviews'           => ReviewResource::collection( $this -> whenLoaded('reviews') ),
+                'images'            => ProductImageResource::collection( $this -> whenLoaded('images') ),
             ])
         ];
     }

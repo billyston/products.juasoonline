@@ -41,7 +41,7 @@ class Product extends Model
     /**
      * @return BelongsToMany
      */
-    public function subcategories(): BelongsToMany
+    public function categories(): BelongsToMany
     {
         return $this -> belongsToMany( Subcategory::class );
     }
