@@ -22,6 +22,8 @@
     <list default="true" id="d1612a24-8f92-4a41-8a01-9056ae58447d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/action_set_name" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/action_set_name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Store/StoreController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Store/StoreController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/Store/CreateStore.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/Store/CreateStore.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -338,7 +340,9 @@
       <workItem from="1616659474478" duration="338000" />
       <workItem from="1616694254977" duration="18674000" />
       <workItem from="1616963795257" duration="375000" />
-      <workItem from="1616964672584" duration="661000" />
+      <workItem from="1616964672584" duration="2884000" />
+      <workItem from="1616973648731" duration="55000" />
+      <workItem from="1616973988920" duration="636000" />
     </task>
     <servers />
   </component>

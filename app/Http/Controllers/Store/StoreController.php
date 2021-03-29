@@ -34,6 +34,7 @@ class StoreController extends Controller
      */
     public function store( StoreRequest $storeRequest )
     {
+        logger( $storeRequest );
         return $this -> theRepository -> store( $storeRequest );
     }
 

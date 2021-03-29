@@ -32,6 +32,7 @@ class CreateStore implements ShouldQueue
      */
     public function handle(): StoreResource
     {
+        logger( $this->theRequest );
         try
         {
             $Store = new Store( $this -> theRequest -> input( 'data.attributes' ) );
