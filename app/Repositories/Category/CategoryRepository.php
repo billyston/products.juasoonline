@@ -23,7 +23,11 @@ class CategoryRepository implements CategoryRepositoryInterface
      */
     public function index() : JsonResponse
     {
-        $Category = Category::query() -> when( $this -> loadRelationships(), function ( Builder $builder ) { return $builder -> with ( $this -> relationships ); } ) -> paginate( 20 );
+        $Category = Category::query() -> when( $this -> loadRelationships(), function ( Builder $builder )
+        {
+            return $builder -> with ( $this -> relationships );
+        }) -> paginate(100);
+
         return $this -> successResponse( CategoryResource::collection( $Category ), "Success", null, Response::HTTP_OK );
     }
 
