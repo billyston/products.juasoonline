@@ -7,6 +7,7 @@ use App\Http\Resources\Product\ProductResource;
 use App\Jobs\Product\CreateProduct;
 use App\Jobs\Product\UpdateProduct;
 use App\Models\Product\Product;
+use App\Models\Store\Store;
 use App\Traits\apiResponseBuilder;
 use App\Traits\Relatives;
 use Exception;
@@ -19,29 +20,32 @@ class ProductRepository implements ProductRepositoryInterface
     use apiResponseBuilder; use Relatives;
 
     /**
+     * @param Store $store
      * @return JsonResponse
      */
-    public function index() : JsonResponse
+    public function index( Store $store ) : JsonResponse
     {
-        $Group = Product::query() -> when( $this -> loadRelationships(), function ( Builder $builder ) { return $builder -> with ( $this -> relationships ); } ) -> paginate( 20 );
-        return $this -> successResponse( ProductResource::collection( $Group ), "Success", null, Response::HTTP_OK );
+        return $this -> successResponse( ProductResource::collection( $store -> products() -> paginate() ), "Success", null, Response::HTTP_OK );
     }
 
     /**
      * @param ProductRequest $productRequest
+     * @param Store $store
      * @return JsonResponse
      */
-    public function store( ProductRequest $productRequest ) : JsonResponse
+    public function store( ProductRequest $productRequest, Store $store ) : JsonResponse
     {
         return $this -> successResponse( ( new CreateProduct( $productRequest ) ) -> handle(), "Success", "Product created", Response::HTTP_CREATED );
     }
 
     /**
      * @param Product $product
+     * @param Store $store
      * @return JsonResponse
      */
-    public function show( Product $product ) : JsonResponse
+    public function show( Store $store, Product $product ) : JsonResponse
     {
+        checkResourceRelation( $store -> products() -> where( 'products.id', $product -> id ) -> count());
         if ( $this -> loadRelationships() ) { $product -> load( $this -> relationships ); }
         return $this -> successResponse( new ProductResource( $product ), "Success", null, Response::HTTP_OK );
     }

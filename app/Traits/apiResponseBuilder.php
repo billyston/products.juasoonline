@@ -4,6 +4,8 @@
 namespace App\Traits;
 
 
+use Illuminate\Http\JsonResponse;
+
 trait apiResponseBuilder
 {
     /**
@@ -11,9 +13,9 @@ trait apiResponseBuilder
      * @param $status_message
      * @param $message
      * @param $status_code
-     * @return \Illuminate\Http\JsonResponse
+     * @return JsonResponse|mixed
      */
-    public function successResponse( $data, $status_message, $message, $status_code )
+    public function successResponse( $data, $status_message, $message, $status_code ) : JsonResponse
     {
         return response() -> json([ 'status' => $status_message, 'code' => $status_code, 'message' => $message, 'data' => $data ] );
     }
@@ -23,9 +25,9 @@ trait apiResponseBuilder
      * @param $status_message
      * @param $message
      * @param $status_code
-     * @return \Illuminate\Http\JsonResponse
+     * @return JsonResponse|mixed
      */
-    public function errorResponse( $data, $status_message, $message, $status_code )
+    public function errorResponse( $data, $status_message, $message, $status_code ) : JsonResponse
     {
         return response() -> json([ 'status' => $status_message, 'code' => $status_code, 'message' => $message, 'data' => $data, ] );
     }

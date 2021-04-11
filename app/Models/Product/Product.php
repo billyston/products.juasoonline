@@ -2,10 +2,10 @@
 
 namespace App\Models\Product;
 
-use App\Models\Overview\Overview;
-use App\Models\ProductImage\ProductImage;
-use App\Models\Review\Review;
-use App\Models\Specification\Specification;
+use App\Models\Product\Overview\Overview;
+use App\Models\Product\Image\Image;
+use App\Models\Product\Review\Review;
+use App\Models\Product\Specification\Specification;
 use App\Models\Store\Store;
 use App\Models\Subcategory\Subcategory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -75,6 +75,6 @@ class Product extends Model
      */
     public function images() : HasMany
     {
-        return $this -> hasMany( ProductImage::class );
+        return $this -> hasMany( Image::class );
     }
 }

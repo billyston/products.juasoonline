@@ -2,11 +2,10 @@
 
 namespace App\Http\Resources\Product;
 
-use App\Http\Resources\File\FileResource;
-use App\Http\Resources\Overview\OverviewResource;
-use App\Http\Resources\ProductImage\ProductImageResource;
-use App\Http\Resources\Review\ReviewResource;
-use App\Http\Resources\Specification\SpecificationResource;
+use App\Http\Resources\Product\Overview\OverviewResource;
+use App\Http\Resources\Product\Image\ImageResource;
+use App\Http\Resources\Product\Review\ReviewResource;
+use App\Http\Resources\Product\Specification\SpecificationResource;
 use App\Http\Resources\Subcategory\SubcategoryResource;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
@@ -50,10 +49,10 @@ class ProductResource extends JsonResource
             'include'               => $this -> when( $this -> relationLoaded( 'categories' ) || $this -> relationLoaded( 'specifications' ) || $this -> relationLoaded( 'reviews' ) || $this -> relationLoaded( 'overviews' ) || $this -> relationLoaded( 'images' ),
             [
                 'categories'        => SubcategoryResource::collection( $this -> whenLoaded('categories') ),
+                'images'            => ImageResource::collection( $this -> whenLoaded('images') ),
                 'specifications'    => SpecificationResource::collection( $this -> whenLoaded('specifications') ),
                 'overviews'         => OverviewResource::collection( $this -> whenLoaded('overviews') ),
                 'reviews'           => ReviewResource::collection( $this -> whenLoaded('reviews') ),
-                'images'            => ProductImageResource::collection( $this -> whenLoaded('images') ),
             ])
         ];
     }

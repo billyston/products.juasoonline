@@ -2,9 +2,9 @@
 
 namespace App\Http\Resources\Store;
 
-use App\Http\Resources\Branch\BranchResource;
+use App\Http\Resources\Store\Branch\BranchResource;
 use App\Http\Resources\Product\ProductResource;
-use App\Http\Resources\StoreAdministrator\StoreAdministratorResource;
+use App\Http\Resources\Store\StoreAdministrator\StoreAdministratorResource;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 

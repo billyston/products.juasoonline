@@ -18,13 +18,19 @@ function includeResources() : array
 function generateProductID( int $length ) : string
 {
     $number = '';
-
     do {
         for ( $i = $length; $i --; $i > 0 )
         {
             $number .= mt_rand(0,9);
         }
-    } while ( !empty( DB::table( 'products' ) -> where( 'resource_id', $number ) -> first([ 'resource_id' ])) );
+    }
+    while ( !empty( DB::table( 'products' ) -> where( 'resource_id', $number ) -> first([ 'resource_id' ])) );
 
     return $number;
 }
+
+function checkResourceRelation( bool $is_related )
+{
+    abort_unless( $is_related, 409, 'The resource you are trying to access does not exist');
+}
+

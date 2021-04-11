@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Product;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Product\ProductRequest;
 use App\Models\Product\Product;
+use App\Models\Store\Store;
 use App\Repositories\Product\ProductRepositoryInterface;
 use Illuminate\Http\JsonResponse;
 
@@ -22,29 +23,32 @@ class ProductController extends Controller
     }
 
     /**
+     * @param Store $store
      * @return JsonResponse
      */
-    public function index() : JsonResponse
+    public function index( Store $store ) : JsonResponse
     {
-        return $this -> theRepository -> index();
+        return $this -> theRepository -> index( $store );
     }
 
     /**
      * @param ProductRequest $productRequest
+     * @param Store $store
      * @return mixed
      */
-    public function store( ProductRequest $productRequest ) : JsonResponse
+    public function store( ProductRequest $productRequest, Store $store ) : JsonResponse
     {
-        return $this -> theRepository -> store( $productRequest );
+        return $this -> theRepository -> store( $productRequest, $store );
     }
 
     /**
      * @param Product $product
+     * @param Store $store
      * @return JsonResponse
      */
-    public function show( Product $product ) : JsonResponse
+    public function show( Store $store, Product $product ) : JsonResponse
     {
-        return $this -> theRepository -> show( $product );
+        return $this -> theRepository -> show( $store, $product );
     }
 
     /**
