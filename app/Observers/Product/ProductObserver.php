@@ -11,6 +11,6 @@ class ProductObserver
      */
     public function creating( Product $product )
     {
-        $product -> resource_id = uniqid();
+        $product -> resource_id = generateProductID( 16 );
     }
 }

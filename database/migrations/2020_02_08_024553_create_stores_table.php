@@ -18,7 +18,8 @@ class CreateStoresTable extends Migration
             $table -> bigIncrements('id' );
             $table -> uuid( 'resource_id' ) -> unique() -> nullable( false );
 
-            $table -> string( 'store_name' ) -> nullable( false ) -> unique();
+            $table -> string( 'name' ) -> nullable( false ) -> unique();
+            $table -> string( 'doing_business_as' ) -> nullable( false ) -> unique();
 
             $table -> string( 'region' );
             $table -> string( 'city' );

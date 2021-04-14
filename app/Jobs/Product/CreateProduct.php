@@ -4,9 +4,7 @@ namespace App\Jobs\Product;
 
 use App\Http\Requests\Product\ProductRequest;
 use App\Http\Resources\Product\ProductResource;
-use App\Models\Overview\Overview;
 use App\Models\Product\Product;
-use App\Models\Specification\Specification;
 use App\Traits\apiResponseBuilder;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -14,7 +12,6 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Exception;
-
 
 class CreateProduct implements ShouldQueue
 {
@@ -47,15 +44,6 @@ class CreateProduct implements ShouldQueue
             // Attach the categories
             $this -> attachCategories( $Product, $this -> getAttributes()[ 'relationships' ][ 'categories' ] );
 
-            // Create the specifications
-            $this -> createSpecifications( $Product, $this -> theRequest[ 'data.relationships.specifications' ] );
-
-            // Create the overviews
-            $this -> createOverviews( $Product, $this -> theRequest[ 'data.relationships.overviews' ] );
-
-            // Upload the images
-            $this -> createFiles( $Product, $this -> theRequest[ 'data.relationships.files' ] );
-
             return ( new ProductResource( $Product ) );
         }
 
@@ -82,57 +70,7 @@ class CreateProduct implements ShouldQueue
     {
         foreach ( $subcategories[ 'data' ] as $subcategory )
         {
-            $product -> subcategories() -> attach( $subcategory[ 'category_id' ] );
-        }
-    }
-
-    /**
-     * @param Product $product
-     * @param array $specifications
-     */
-    private function createSpecifications( Product $product, array $specifications )
-    {
-        foreach ( $specifications[ 'data' ] as $specification )
-        {
-            $Specification = new Specification( $specification );
-            $Specification -> product() -> associate( $product );
-            $Specification -> save();
-        }
-    }
-
-    /**
-     * @param Product $product
-     * @param array $overviews
-     */
-    private function createOverviews( Product $product, array $overviews )
-    {
-        foreach ( $overviews[ 'data' ] as $overview )
-        {
-            $Overview = new Overview( $overview );
-            $Overview -> product() -> associate( $product );
-            $Overview -> save();
-        }
-    }
-
-    /**
-     * @param Product $product
-     * @param array $files
-     */
-    public function createFiles( Product $product, array $files ) : void
-    {
-        foreach ( $files[ 'data' ] as $file )
-        {
-//            $File = $request -> path;
-//            $filePath = $file -> store( 'products/images' );
-//            $productData = array( 'product_id' => $request -> product_id, 'title' => $request -> title, 'description' => $request -> description, 'path' => $filePath );
-//
-//            File::create( $productData );
-
-
-
-//            File::create([ 'product_id' => $product, 'title' => $File['title' ], 'description' => $File['title' ], 'path' => Storage::put( 'public/storage/products', $File['file'] ) ]);
-//            $File = $File[ 'file' ];
-//            echo $File;
+            $product -> categories() -> attach( $subcategory[ 'category_id' ] );
         }
     }
 }

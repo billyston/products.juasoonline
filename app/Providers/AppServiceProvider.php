@@ -2,31 +2,31 @@
 
 namespace App\Providers;
 
-use App\Models\Branch\Branch;
-use App\Models\Category\Category;
-use App\Models\File\File;
 use App\Models\Group\Group;
-use App\Models\Overview\Overview;
-use App\Models\ProductImage\ProductImage;
-use App\Models\Review\Review;
-use App\Models\Specification\Specification;
-use App\Models\Store\Store;
-use App\Models\StoreAdmin\StoreAdmin;
-use App\Models\StoreAdministrator\StoreAdministrator;
-use App\Models\Subcategory\Subcategory;
-use App\Models\Product\Product;
-use App\Observers\Branch\BranchObserver;
-use App\Observers\Category\CategoryObserver;
-use App\Observers\File\FileObserver;
 use App\Observers\Group\GroupObserver;
-use App\Observers\Overview\OverviewObserver;
-use App\Observers\ProductImage\ProductImageObserver;
-use App\Observers\Review\ReviewObserver;
-use App\Observers\Specification\SpecificationObserver;
-use App\Observers\Store\StoreObserver;
-use App\Observers\StoreAdministrator\StoreAdministratorObserver;
+use App\Models\Category\Category;
+use App\Observers\Category\CategoryObserver;
+use App\Models\Subcategory\Subcategory;
 use App\Observers\Subcategory\SubcategoryObserver;
+
+use App\Models\Store\Store;
+use App\Observers\Store\StoreObserver;
+use App\Models\Store\StoreAdministrator\StoreAdministrator;
+use App\Observers\Store\StoreAdministrator\StoreAdministratorObserver;
+use App\Models\Store\Branch\Branch;
+use App\Observers\Store\Branch\BranchObserver;
+
+use App\Models\Product\Product;
 use App\Observers\Product\ProductObserver;
+use App\Models\Product\Image\Image;
+use App\Observers\Product\Image\ImageObserver;
+use App\Models\Product\Specification\Specification;
+use App\Observers\Product\Specification\SpecificationObserver;
+use App\Models\Product\Overview\Overview;
+use App\Observers\Product\Overview\OverviewObserver;
+use App\Models\Product\Review\Review;
+use App\Observers\Product\Review\ReviewObserver;
+
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -48,18 +48,18 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Store::observe( StoreObserver::class );
-        StoreAdministrator::observe( StoreAdministratorObserver::class );
-        Branch::observe( BranchObserver::class );
-
         Group::observe( GroupObserver::class );
         Category::observe( CategoryObserver::class );
         Subcategory::observe( SubcategoryObserver::class );
 
+        Store::observe( StoreObserver::class );
+        StoreAdministrator::observe( StoreAdministratorObserver::class );
+        Branch::observe( BranchObserver::class );
+
         Product::observe( ProductObserver::class );
+        Image::observe( ImageObserver::class );
         Specification::observe( SpecificationObserver::class );
-        Review::observe( ReviewObserver::class );
         Overview::observe( OverviewObserver::class );
-        ProductImage::observe( ProductImageObserver::class );
+        Review::observe( ReviewObserver::class );
     }
 }

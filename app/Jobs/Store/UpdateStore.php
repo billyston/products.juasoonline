@@ -6,7 +6,6 @@ use App\Http\Requests\Store\StoreRequest;
 use App\Http\Resources\Store\StoreResource;
 use App\Models\Store\Store;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;

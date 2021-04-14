@@ -33,7 +33,7 @@ class StoreRepository implements StoreRepositoryInterface
      */
     public function store( StoreRequest $storeRequest ) : JsonResponse
     {
-        return $this -> successResponse( ( new CreateStore( $storeRequest ) ) -> handle(), "Success", "Store created successfully", Response::HTTP_CREATED );
+        return $this -> successResponse( ( new CreateStore( $storeRequest ) ) -> handle(), "Success", "Store created", Response::HTTP_CREATED );
     }
 
     /**
@@ -54,7 +54,7 @@ class StoreRepository implements StoreRepositoryInterface
     public function update(StoreRequest $storeRequest, Store $store ) : JsonResponse
     {
         if ( $this -> loadRelationships() ) { $store -> load( $this -> relationships ); }
-        return $this -> successResponse( ( new UpdateStore( $storeRequest, $store ) ) -> handle(), 'Success', 'Store updated successfully', Response::HTTP_OK );
+        return $this -> successResponse( ( new UpdateStore( $storeRequest, $store ) ) -> handle(), 'Success', 'Store updated', Response::HTTP_OK );
     }
 
     /**
