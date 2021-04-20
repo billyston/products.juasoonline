@@ -11,7 +11,7 @@ use Illuminate\Http\JsonResponse;
 
 class SpecificationController extends Controller
 {
-    private $theRepository;
+    private SpecificationRepositoryInterface $theRepository;
 
     /**
      * SpecificationController constructor.

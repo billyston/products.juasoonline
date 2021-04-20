@@ -14,10 +14,10 @@ interface ReviewRepositoryInterface
     public function index() : JsonResponse;
 
     /**
-     * @param ReviewRequest $request
+     * @param ReviewRequest $reviewRequest
      * @return JsonResponse
      */
-    public function store( ReviewRequest $request ) : JsonResponse;
+    public function store( ReviewRequest $reviewRequest ) : JsonResponse;
 
     /**
      * @param Review $review
@@ -26,11 +26,11 @@ interface ReviewRepositoryInterface
     public function show( Review $review ) : JsonResponse;
 
     /**
-     * @param ReviewRequest $request
+     * @param ReviewRequest $reviewRequest
      * @param Review $review
      * @return JsonResponse
      */
-    public function update( ReviewRequest $request, Review $review ) : JsonResponse;
+    public function update( ReviewRequest $reviewRequest, Review $review ) : JsonResponse;
 
     /**
      * @param Review $review

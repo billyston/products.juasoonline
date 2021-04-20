@@ -14,7 +14,7 @@ class OverviewResource extends JsonResource
     /**
      * Transform the resource into an array.
      * @param  Request  $request
-     * @return array
+     * @return array|mixed
      */
     public function toArray( $request ): array
     {

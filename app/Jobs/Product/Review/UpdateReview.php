@@ -2,14 +2,12 @@
 
 namespace App\Jobs\Product\Review;
 
-use App\Http\Requests\Review\ReviewRequest;
-use App\Http\Resources\Review\ReviewResource;
-use App\Models\Review\Review;
+use App\Http\Requests\Product\Review\ReviewRequest;
+use App\Http\Resources\Product\Review\ReviewResource;
+use App\Models\Product\Review\Review;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use Illuminate\Http\JsonResponse;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Exception;

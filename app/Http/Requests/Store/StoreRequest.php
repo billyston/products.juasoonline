@@ -38,7 +38,8 @@ class StoreRequest extends FormRequest
             'data'                                                      => [ 'required' ],
             'data.type'                                                 => [ 'required', 'string', 'in:Store' ],
 
-            'data.attributes.store_name'                                 => [ 'required', 'string', 'unique:stores,store_name' ],
+            'data.attributes.name'                                      => [ 'required', 'string', 'unique:stores,name' ],
+            'data.attributes.doing_business_as'                         => [ 'required', 'string', 'unique:stores,doing_business_as' ],
 
             'data.attributes.region'                                    => [ 'required', 'string' ],
             'data.attributes.city'                                      => [ 'required', 'string' ],
@@ -66,9 +67,12 @@ class StoreRequest extends FormRequest
             'data.type.string'                                          => "The type must be of a string",
             'data.type.in'                                              => "The type is invalid",
 
-            'data.attributes.store_name.required'                       => "The store name is required",
-            'data.attributes.store_name.string'                         => "The store name must be of a string type",
-            'data.attributes.store_name.unique'                         => "The store name is already taken",
+            'data.attributes.name.required'                             => "The store name is required",
+            'data.attributes.name.string'                               => "The store name must be of a string type",
+            'data.attributes.name.unique'                               => "The store name is already taken",
+
+            'data.attributes.doing_business_as.required'                => "The nickname is required",
+            'data.attributes.doing_business_as.unique'                  => "The nickname already taken",
 
             'data.attributes.region.required'                           => "The region is required",
             'data.attributes.region.string'                             => "The region must be of a string type",

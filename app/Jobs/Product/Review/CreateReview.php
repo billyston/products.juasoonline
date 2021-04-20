@@ -16,7 +16,8 @@ use Exception;
 class CreateReview implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
-    use apiResponseBuilder; private $theRequest;
+    use apiResponseBuilder;
+    private $theRequest;
 
     /**
      * Create a new job instance.

@@ -10,7 +10,6 @@ use App\Models\Product\Product;
 use App\Traits\apiResponseBuilder;
 use App\Traits\Relatives;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Http\Response;
 
 class ImageRepository implements ImageRepositoryInterface
@@ -40,7 +39,7 @@ class ImageRepository implements ImageRepositoryInterface
      * @param Image $image
      * @return JsonResponse
      */
-    public function show( Image $image ) : JsonResponse
+    public function show( Image $image, Product $product ) : JsonResponse
     {}
 
     /**

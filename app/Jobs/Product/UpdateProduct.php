@@ -15,8 +15,7 @@ use Exception;
 class UpdateProduct implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
-
-    private $theRequest; private $theModel;
+    private ProductRequest $theRequest; private Product $theModel;
 
     /**
      * UpdateProduct constructor.

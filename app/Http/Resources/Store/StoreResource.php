@@ -30,7 +30,7 @@ class StoreResource extends JsonResource
             [
                 'resource_id'       => $this -> resource_id,
 
-                'store_name'        => $this -> store_name,
+                'name'              => $this -> name,
                 'region'            => $this -> region,
                 'city'              => $this -> city,
                 'address'           => $this -> address,

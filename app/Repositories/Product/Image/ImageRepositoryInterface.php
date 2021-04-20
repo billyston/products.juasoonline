@@ -24,9 +24,10 @@ interface ImageRepositoryInterface
 
     /**
      * @param Image $image
+     * @param Product $product
      * @return JsonResponse
      */
-    public function show( Image $image ) : JsonResponse;
+    public function show( Image $image, Product $product ) : JsonResponse;
 
     /**
      * @param ImageRequest $imageRequest

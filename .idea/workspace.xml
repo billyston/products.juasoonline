@@ -20,83 +20,63 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d1612a24-8f92-4a41-8a01-9056ae58447d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Product/Image/ImageController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Product/Image/ImageRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Jobs/Product/Image/CreateImage.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Observers/Product/Image/ImageObserver.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/Product/Image/ImageRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/Product/Image/ImageRepositoryInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Product/Color/Color.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/products.juasoonline.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/products.juasoonline.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/action_set_name" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline/virtualbox/action_set_name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Branch/BranchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Store/Branch/BranchController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Overview/OverviewController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Product/Overview/OverviewController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Product/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Product/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductImage/ProductImageController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Review/ReviewController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Product/Review/ReviewController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Specification/SpecificationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Product/Specification/SpecificationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StoreAdministrator/StoreAdministratorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Store/StoreAdministrator/StoreAdministratorController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Branch/BranchRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Store/Branch/BranchRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Overview/OverviewRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Product/Overview/OverviewRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ProductImage/ProductImageRequest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Review/ReviewRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Product/Review/ReviewRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Specification/SpecificationRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Product/Specification/SpecificationRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/StoreAdministrator/StoreAdministratorRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Store/StoreAdministrator/StoreAdministratorRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Branch/BranchResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Store/Branch/BranchResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Overview/OverviewResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Product/Overview/OverviewResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Category/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Others/Category/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Group/GroupController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Others/Group/GroupController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Product/Specification/SpecificationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Product/Specification/SpecificationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Subcategory/SubcategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Others/Subcategory/SubcategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Category/CategoryRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Others/Category/CategoryRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Group/GroupRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Others/Group/GroupRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Store/StoreRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Store/StoreRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Subcategory/SubcategoryRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Others/Subcategory/SubcategoryRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Category/CategoryResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Others/Category/CategoryResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Group/GroupResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Others/Group/GroupResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Product/Overview/OverviewResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Product/Overview/OverviewResource.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Resources/Product/ProductResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Product/ProductResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/ProductImage/ProductImageResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Product/Image/ImageResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Review/ReviewResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Product/Review/ReviewResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Specification/SpecificationResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Product/Specification/SpecificationResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Product/Review/ReviewResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Product/Review/ReviewResource.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Resources/Store/StoreResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Store/StoreResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/StoreAdministrator/StoreAdministratorResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Store/StoreAdministrator/StoreAdministratorResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Jobs/Branch/CreateBranch.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/Store/Branch/CreateBranch.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Jobs/Branch/UpdateBranch.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/Store/Branch/UpdateBranch.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Jobs/Overview/CreateOverview.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/Product/Overview/CreateOverview.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Jobs/Overview/UpdateOverview.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/Product/Overview/UpdateOverview.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Jobs/ProductImage/CreateProductImage.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Jobs/ProductImage/UpdateProductImage.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/Product/Image/UpdateImage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Jobs/Review/CreateReview.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/Product/Review/CreateReview.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Jobs/Review/UpdateReview.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/Product/Review/UpdateReview.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Jobs/Specification/CreateSpecification.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/Product/Specification/CreateSpecification.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Jobs/Specification/UpdateSpecification.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/Product/Specification/UpdateSpecification.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Jobs/Store/UpdateStore.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/Store/UpdateStore.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Jobs/StoreAdministrator/CreateStoreAdministrator.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/Store/StoreAdministrator/CreateStoreAdministrator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Jobs/StoreAdministrator/UpdateStoreAdministrator.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/Store/StoreAdministrator/UpdateStoreAdministrator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Branch/Branch.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Store/Branch/Branch.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Overview/Overview.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product/Overview/Overview.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Subcategory/SubcategoryResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Others/Subcategory/SubcategoryResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/Category/CreateCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/Others/Category/CreateCategory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/Category/UpdateCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/Others/Category/UpdateCategory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/Group/CreateGroup.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/Others/Group/CreateGroup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/Group/UpdateGroup.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/Others/Group/UpdateGroup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/Product/Image/CreateImage.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/Product/Image/CreateImage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/Product/Review/CreateReview.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/Product/Review/CreateReview.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/Product/Review/UpdateReview.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/Product/Review/UpdateReview.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/Product/Specification/CreateSpecification.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/Product/Specification/CreateSpecification.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/Product/Specification/UpdateSpecification.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/Product/Specification/UpdateSpecification.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/Product/UpdateProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/Product/UpdateProduct.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/Subcategory/CreateSubcategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/Others/Subcategory/CreateSubcategory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/Subcategory/UpdateSubcategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/Others/Subcategory/UpdateSubcategory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Category/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Others/Category/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Color/Color.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Group/Group.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Others/Group/Group.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Product/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/ProductImage/ProductImage.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product/Image/Image.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Review/Review.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product/Review/Review.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Specification/Specification.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product/Specification/Specification.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Store/Store.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Store/Store.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/StoreAdministrator/StoreAdministrator.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Store/StoreAdministrator/StoreAdministrator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Observers/Branch/BranchObserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Observers/Store/Branch/BranchObserver.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Observers/Overview/OverviewObserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Observers/Product/Overview/OverviewObserver.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Observers/ProductImage/ProductImageObserver.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Observers/Review/ReviewObserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Observers/Product/Review/ReviewObserver.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Observers/Specification/SpecificationObserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Observers/Product/Specification/SpecificationObserver.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Observers/StoreAdministrator/StoreAdministratorObserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Observers/Store/StoreAdministrator/StoreAdministratorObserver.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Subcategory/Subcategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Others/Subcategory/Subcategory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Observers/Category/CategoryObserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Observers/Others/Category/CategoryObserver.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Observers/Group/GroupObserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Observers/Others/Group/GroupObserver.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Observers/Subcategory/SubcategoryObserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Observers/Others/Subcategory/SubcategoryObserver.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Branch/BranchRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Store/Branch/BranchRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Branch/BranchRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Store/Branch/BranchRepositoryInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Overview/OverviewRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Product/Overview/OverviewRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Overview/OverviewRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Product/Overview/OverviewRepositoryInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Category/CategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Others/Category/CategoryRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Category/CategoryRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Others/Category/CategoryRepositoryInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Group/GroupRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Others/Group/GroupRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Group/GroupRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Others/Group/GroupRepositoryInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Product/Image/ImageRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Product/Image/ImageRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Product/Image/ImageRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Product/Image/ImageRepositoryInterface.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repositories/Product/ProductRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Product/ProductRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Product/ProductRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Product/ProductRepositoryInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/ProductImage/ProductImageRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/ProductImage/ProductImageRepositoryInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Review/ReviewRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Product/Review/ReviewRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Review/ReviewRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Product/Review/ReviewRepositoryInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Specification/SpecificationRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Product/Specification/SpecificationRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Specification/SpecificationRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Product/Specification/SpecificationRepositoryInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/StoreAdministrator/StoreAdministratorRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Store/StoreAdministrator/StoreAdministratorRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/StoreAdministrator/StoreAdministratorRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Store/StoreAdministrator/StoreAdministratorRepositoryInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Traits/apiResponseBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/apiResponseBuilder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/helpers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_02_08_024553_create_stores_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_02_08_024553_create_stores_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_02_09_080946_create_store_administrators_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_02_08_080946_create_store_administrators_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_02_24_225856_create_product_images_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_02_24_225856_create_images_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Product/Review/ReviewRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Product/Review/ReviewRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Product/Review/ReviewRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Product/Review/ReviewRepositoryInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Product/Specification/SpecificationRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Product/Specification/SpecificationRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Subcategory/SubcategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Others/Subcategory/SubcategoryRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Subcategory/SubcategoryRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Others/Subcategory/SubcategoryRepositoryInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Traits/Relatives.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/Relatives.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_02_132158_create_colors_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_02_25_132158_create_colors_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -130,7 +110,6 @@
       <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
       <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
       <path value="$PROJECT_DIR$/vendor/fruitcake/laravel-cors" />
-      <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
       <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
       <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
       <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
@@ -242,17 +221,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/app/Repositories" />
       <recent name="$PROJECT_DIR$/app/Repositories/Category" />
       <recent name="$PROJECT_DIR$/app/Providers" />
       <recent name="$PROJECT_DIR$/app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/Repositories/Product" />
-      <recent name="$PROJECT_DIR$/app/Observers/Store" />
-      <recent name="$PROJECT_DIR$/app/Observers/Product" />
-      <recent name="$PROJECT_DIR$/app/Repositories/Store" />
-      <recent name="$PROJECT_DIR$/app/Http/Resources/Store" />
+      <recent name="$PROJECT_DIR$/app/Http/Resources/Others" />
+      <recent name="$PROJECT_DIR$/app/Repositories/Others" />
+      <recent name="$PROJECT_DIR$/app/Observers/Others" />
+      <recent name="$PROJECT_DIR$/app/Models/Others" />
+      <recent name="$PROJECT_DIR$/app/Models/Product" />
     </key>
   </component>
   <component name="RunManager">
@@ -429,6 +409,14 @@
       <workItem from="1617779017157" duration="59431000" />
       <workItem from="1618073883028" duration="190000" />
       <workItem from="1618075425345" duration="5088000" />
+      <workItem from="1618402857462" duration="2428000" />
+      <workItem from="1618413646755" duration="164000" />
+      <workItem from="1618416231198" duration="4371000" />
+      <workItem from="1618443619426" duration="46000" />
+      <workItem from="1618453317960" duration="28002000" />
+      <workItem from="1618772752862" duration="369000" />
+      <workItem from="1618848333860" duration="921000" />
+      <workItem from="1618849380699" duration="21188000" />
     </task>
     <servers />
   </component>

@@ -2,12 +2,12 @@
 
 namespace App\Providers;
 
-use App\Repositories\Group\GroupRepositoryInterface;
-use App\Repositories\Group\GroupRepository;
-use App\Repositories\Category\CategoryRepositoryInterface;
-use App\Repositories\Category\CategoryRepository;
-use App\Repositories\Subcategory\SubcategoryRepositoryInterface;
-use App\Repositories\Subcategory\SubcategoryRepository;
+use App\Repositories\Others\Group\GroupRepositoryInterface;
+use App\Repositories\Others\Group\GroupRepository;
+use App\Repositories\Others\Category\CategoryRepositoryInterface;
+use App\Repositories\Others\Category\CategoryRepository;
+use App\Repositories\Others\Subcategory\SubcategoryRepositoryInterface;
+use App\Repositories\Others\Subcategory\SubcategoryRepository;
 
 use App\Repositories\Store\StoreRepository;
 use App\Repositories\Store\StoreRepositoryInterface;
@@ -26,6 +26,10 @@ use App\Repositories\Product\Overview\OverviewRepository;
 use App\Repositories\Product\Overview\OverviewRepositoryInterface;
 use App\Repositories\Product\Review\ReviewRepository;
 use App\Repositories\Product\Review\ReviewRepositoryInterface;
+use App\Repositories\Product\Color\ColorRepository;
+use App\Repositories\Product\Color\ColorRepositoryInterface;
+use App\Repositories\Product\Size\SizeRepository;
+use App\Repositories\Product\Size\SizeRepositoryInterface;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -50,6 +54,8 @@ class RepositoryServiceProvider extends ServiceProvider
         $this -> app -> bind( SpecificationRepositoryInterface::class, SpecificationRepository::class );
         $this -> app -> bind( OverviewRepositoryInterface::class, OverviewRepository::class );
         $this -> app -> bind( ReviewRepositoryInterface::class, ReviewRepository::class );
+        $this -> app -> bind( ColorRepositoryInterface::class, ColorRepository::class );
+        $this -> app -> bind( SizeRepositoryInterface::class, SizeRepository::class );
     }
 
     /**

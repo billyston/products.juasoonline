@@ -17,7 +17,7 @@ use Illuminate\Http\Response;
 
 class ProductRepository implements ProductRepositoryInterface
 {
-    use apiResponseBuilder; use Relatives;
+    use apiResponseBuilder, Relatives;
 
     /**
      * @param Store $store

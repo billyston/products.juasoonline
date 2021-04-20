@@ -17,7 +17,7 @@ use Illuminate\Http\Response;
 
 class SpecificationRepository implements SpecificationRepositoryInterface
 {
-    use apiResponseBuilder; use Relatives;
+    use apiResponseBuilder, Relatives;
 
     /**
      * @param Product $product

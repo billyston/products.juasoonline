@@ -18,7 +18,9 @@ use Exception;
 class CreateImage implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
-    use apiResponseBuilder; private $theRequest, $theProduct;
+    use apiResponseBuilder;
+    private Product $theProduct;
+    private ImageRequest $theRequest;
 
     /**
      * CreateProduct constructor.
