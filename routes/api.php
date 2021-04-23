@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Others\Brand\BrandController;
 use App\Http\Controllers\Others\Group\GroupController;
 use App\Http\Controllers\Others\Category\CategoryController;
 use App\Http\Controllers\Others\Subcategory\SubcategoryController;
@@ -37,14 +38,15 @@ Route::group([], function ()
         Route::apiResource('groups', GroupController::class);
         Route::apiResource('categories', CategoryController::class);
         Route::apiResource('subcategories', SubcategoryController::class);
+        Route::apiResource('brands', BrandController::class);
     });
 
     // Store and related resources routes
-    Route::group([ 'prefix' => 'stores' ], function()
+    Route::group([], function()
     {
-        Route::apiResource( '', StoreController::class, [ 'parameters' => [ '' => 'store' ]] );
-        Route::apiResource( 'administrator', StoreAdministratorController::class, [ 'parameters' => [ 'administrator' => 'store_administrator' ]] );
-        Route::apiResource( 'branches', BranchController::class );
+        Route::apiResource( 'stores', StoreController::class ) -> except('index');
+        Route::apiResource( 'store.administrator', StoreAdministratorController::class, [ 'parameters' => [ 'administrator' => 'store_administrator' ]] ) -> except('index');
+        Route::apiResource( 'store.branches', BranchController::class );
     });
 
     // Product and related resources routes

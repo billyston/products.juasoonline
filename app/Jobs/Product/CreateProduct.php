@@ -9,6 +9,7 @@ use App\Traits\apiResponseBuilder;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Http\Response;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Exception;
@@ -16,7 +17,7 @@ use Exception;
 class CreateProduct implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
-    use apiResponseBuilder; private $theRequest;
+    use apiResponseBuilder; private ProductRequest $theRequest;
 
     /**
      * CreateProduct constructor.
@@ -36,6 +37,7 @@ class CreateProduct implements ShouldQueue
         {
             $Product = new Product( $this -> getAttributes()[ 'attributes' ] );
             $Product -> store() -> associate( $this -> theRequest [ 'data.relationships.store.store_id' ] );
+            $Product -> brand() -> associate( $this -> theRequest [ 'data.relationships.brand.brand_id' ] );
 
             // Product associate with brand coming soon
 
@@ -50,7 +52,7 @@ class CreateProduct implements ShouldQueue
         catch ( Exception $exception )
         {
             report( $exception );
-            return abort(500, 'something went wrong, please try again later');
+            return abort( $this -> errorResponse( null, 'Error', 'Something went wrong, please try again later', Response::HTTP_SERVICE_UNAVAILABLE ) );
         }
     }
 

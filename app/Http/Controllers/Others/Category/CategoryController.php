@@ -9,7 +9,7 @@ use App\Repositories\Others\Category\CategoryRepositoryInterface;
 
 class CategoryController extends Controller
 {
-    private $theRepository;
+    private CategoryRepositoryInterface $theRepository;
 
     /**
      * CategoryController constructor.

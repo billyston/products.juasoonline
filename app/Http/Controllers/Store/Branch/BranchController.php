@@ -5,11 +5,13 @@ namespace App\Http\Controllers\Store\Branch;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Store\Branch\BranchRequest;
 use App\Models\Store\Branch\Branch;
+use App\Models\Store\Store;
 use App\Repositories\Store\Branch\BranchRepositoryInterface;
+use Illuminate\Http\JsonResponse;
 
 class BranchController extends Controller
 {
-    private $theRepository;
+    private BranchRepositoryInterface $theRepository;
 
     /**
      * BranchController constructor.
@@ -21,47 +23,51 @@ class BranchController extends Controller
     }
 
     /**
-     * @return mixed
+     * @return JsonResponse|mixed
      */
-    public function index()
+    public function index( Store $store ) : JsonResponse
     {
-        return $this -> theRepository -> index();
+        return $this -> theRepository -> index( $store );
     }
 
     /**
+     * @param Store $store
      * @param BranchRequest $branchRequest
-     * @return mixed
+     * @return JsonResponse|mixed
      */
-    public function store( BranchRequest $branchRequest )
+    public function store( Store $store, BranchRequest $branchRequest ) : JsonResponse
     {
-        return $this -> theRepository -> store( $branchRequest );
+        return $this -> theRepository -> store( $store, $branchRequest );
     }
 
     /**
+     * @param Store $store
      * @param Branch $branch
-     * @return mixed
+     * @return JsonResponse|mixed
      */
-    public function show( Branch $branch )
+    public function show( Store $store, Branch $branch ) : JsonResponse
     {
-        return $this -> theRepository -> show( $branch );
+        return $this -> theRepository -> show( $store, $branch );
     }
 
     /**
+     * @param Store $store
      * @param BranchRequest $branchRequest
      * @param Branch $branch
-     * @return mixed
+     * @return JsonResponse|mixed
      */
-    public function update( BranchRequest $branchRequest, Branch $branch )
+    public function update( Store $store, BranchRequest $branchRequest, Branch $branch ) : JsonResponse
     {
-        return $this -> theRepository -> update( $branchRequest, $branch );
+        return $this -> theRepository -> update( $store, $branchRequest, $branch );
     }
 
     /**
+     * @param Store $store
      * @param Branch $branch
-     * @return mixed
+     * @return JsonResponse|mixed
      */
-    public function destroy( Branch $branch )
+    public function destroy( Store $store, Branch $branch ) : JsonResponse
     {
-        return $this -> theRepository -> destroy( $branch );
+        return $this -> theRepository -> destroy( $store, $branch );
     }
 }

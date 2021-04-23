@@ -37,32 +37,38 @@ class SizeRepository implements SizeRepositoryInterface
     }
 
     /**
+     * @param Product $product
      * @param Size $size
      * @return JsonResponse
      */
-    public function show( Size $size ) : JsonResponse
+    public function show( Product $product, Size $size ) : JsonResponse
     {
+        checkResourceRelation( $product -> sizes() -> where( 'sizes.id', $size -> id ) -> count());
         if ( $this -> loadRelationships() ) { $size -> load( $this -> relationships ); }
         return $this -> successResponse( new SizeResource( $size ), "Success", null, Response::HTTP_OK );
     }
 
     /**
+     * @param Product $product
      * @param SizeRequest $sizeRequest
      * @param Size $size
      * @return JsonResponse
      */
-    public function update( SizeRequest $sizeRequest, Size $size ) : JsonResponse
+    public function update( Product $product, SizeRequest $sizeRequest, Size $size ) : JsonResponse
     {
+        checkResourceRelation( $product -> sizes() -> where( 'sizes.id', $size -> id ) -> count());
         return $this -> successResponse( ( new UpdateSize( $sizeRequest, $size ) ) -> handle(), 'Success', 'Size(s) updated', Response::HTTP_OK );
     }
 
     /**
+     * @param Product $product
      * @param Size $size
      * @return JsonResponse
      */
-    public function destroy( Size $size ) : JsonResponse
+    public function destroy( Product $product, Size $size ) : JsonResponse
     {
+        checkResourceRelation( $product -> sizes() -> where( 'sizes.id', $size -> id ) -> count());
         $size -> delete();
-        return $this -> successResponse( null, 'Success', 'Specification deleted', Response::HTTP_NO_CONTENT );
+        return $this -> successResponse( null, 'Success', 'Size(s) deleted', Response::HTTP_NO_CONTENT );
     }
 }

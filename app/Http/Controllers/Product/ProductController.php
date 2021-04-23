@@ -11,7 +11,7 @@ use Illuminate\Http\JsonResponse;
 
 class ProductController extends Controller
 {
-    private $theRepository;
+    private ProductRepositoryInterface $theRepository;
 
     /**
      * ProductController constructor.
@@ -36,9 +36,9 @@ class ProductController extends Controller
      * @param Store $store
      * @return mixed
      */
-    public function store( ProductRequest $productRequest, Store $store ) : JsonResponse
+    public function store( Store $store, ProductRequest $productRequest ) : JsonResponse
     {
-        return $this -> theRepository -> store( $productRequest, $store );
+        return $this -> theRepository -> store( $store, $productRequest );
     }
 
     /**
@@ -52,21 +52,23 @@ class ProductController extends Controller
     }
 
     /**
+     * @param Store $store
      * @param ProductRequest $productRequest
      * @param Product $product
      * @return JsonResponse
      */
-    public function update( ProductRequest $productRequest, Product $product ) : JsonResponse
+    public function update( Store $store, ProductRequest $productRequest, Product $product ) : JsonResponse
     {
-        return $this -> theRepository -> update( $productRequest, $product );
+        return $this -> theRepository -> update( $store, $productRequest, $product );
     }
 
     /**
+     * @param Store $store
      * @param Product $product
      * @return JsonResponse
      */
-    public function destroy( Product $product ) : JsonResponse
+    public function destroy( Store $store, Product $product ) : JsonResponse
     {
-        return $this -> theRepository -> delete( $product );
+        return $this -> theRepository -> delete( $store, $product );
     }
 }

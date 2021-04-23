@@ -16,6 +16,7 @@ class SizeController extends Controller
 
     /**
      * SizeController constructor.
+     *
      * @param SizeRepositoryInterface $sizeRepository
      */
     public function __construct( SizeRepositoryInterface $sizeRepository )
@@ -49,12 +50,13 @@ class SizeController extends Controller
     /**
      * Display the specified resource.
      *
+     * @param Product $product
      * @param Size $size
      * @return JsonResponse
      */
-    public function show( Size $size ) : JsonResponse
+    public function show( Product $product, Size $size ) : JsonResponse
     {
-        return $this -> theRepository -> show( $size );
+        return $this -> theRepository -> show( $product, $size );
     }
 
     /**
@@ -64,9 +66,9 @@ class SizeController extends Controller
      * @param Size $size
      * @return JsonResponse
      */
-    public function update( SizeRequest $sizeRequest, Size $size ) : JsonResponse
+    public function update( Product $product, SizeRequest $sizeRequest, Size $size ) : JsonResponse
     {
-        return $this -> theRepository -> update( $sizeRequest, $size );
+        return $this -> theRepository -> update( $product, $sizeRequest, $size );
     }
 
     /**
@@ -75,8 +77,8 @@ class SizeController extends Controller
      * @param Size $size
      * @return JsonResponse
      */
-    public function destroy( Size $size ) : JsonResponse
+    public function destroy( Product $product, Size $size ) : JsonResponse
     {
-        return $this -> theRepository -> destroy( $size );
+        return $this -> theRepository -> destroy( $product, $size );
     }
 }

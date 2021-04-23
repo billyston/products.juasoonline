@@ -8,6 +8,8 @@ use App\Repositories\Others\Category\CategoryRepositoryInterface;
 use App\Repositories\Others\Category\CategoryRepository;
 use App\Repositories\Others\Subcategory\SubcategoryRepositoryInterface;
 use App\Repositories\Others\Subcategory\SubcategoryRepository;
+use App\Repositories\Others\Brand\BrandRepository;
+use App\Repositories\Others\Brand\BrandRepositoryInterface;
 
 use App\Repositories\Store\StoreRepository;
 use App\Repositories\Store\StoreRepositoryInterface;
@@ -44,6 +46,7 @@ class RepositoryServiceProvider extends ServiceProvider
         $this -> app -> bind( GroupRepositoryInterface::class, GroupRepository::class );
         $this -> app -> bind( CategoryRepositoryInterface::class, CategoryRepository::class );
         $this -> app -> bind( SubcategoryRepositoryInterface::class, SubcategoryRepository::class );
+        $this -> app -> bind( BrandRepositoryInterface::class, BrandRepository::class );
 
         $this -> app -> bind( StoreRepositoryInterface::class, StoreRepository::class );
         $this -> app -> bind( StoreAdministratorRepositoryInterface::class, StoreAdministratorRepository::class );

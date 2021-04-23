@@ -13,32 +13,34 @@ interface ColorRepositoryInterface
      * @param Product $theProduct
      * @return JsonResponse
      */
-    public function index( Product $theProduct ) : JsonResponse;
+    public function index( Product $product ) : JsonResponse;
 
     /**
+     * @param Product $product
      * @param ColorRequest $colorRequest
-     * @param Product $theProduct
      * @return JsonResponse
      */
-    public function store( ColorRequest $colorRequest, Product $theProduct ) : JsonResponse;
+    public function store( Product $product, ColorRequest $colorRequest ) : JsonResponse;
 
     /**
      * @param Color $color
      * @param Product $product
      * @return JsonResponse
      */
-    public function show( Color $color, Product $product ) : JsonResponse;
+    public function show( Product $product, Color $color ) : JsonResponse;
 
     /**
+     * @param Product $product
      * @param ColorRequest $colorRequest
      * @param Color $color
      * @return JsonResponse
      */
-    public function update( ColorRequest $colorRequest, Color $color ) : JsonResponse;
+    public function update( Product $product, ColorRequest $colorRequest, Color $color ) : JsonResponse;
 
     /**
+     * @param Product $product
      * @param Color $color
      * @return JsonResponse
      */
-    public function destroy( Color $color ) : JsonResponse;
+    public function destroy( Product $product, Color $color ) : JsonResponse;
 }

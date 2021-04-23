@@ -15,7 +15,7 @@ use Illuminate\Http\Response;
 
 class GroupRepository implements GroupRepositoryInterface
 {
-    use apiResponseBuilder; use Relatives;
+    use apiResponseBuilder, Relatives;
 
     /**
      * @return JsonResponse|mixed

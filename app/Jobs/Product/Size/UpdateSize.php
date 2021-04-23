@@ -8,9 +8,10 @@ use App\Models\Product\Size\Size;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
+use Illuminate\Http\Response;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
+use Exception;
 
 class UpdateSize implements ShouldQueue
 {
@@ -31,9 +32,9 @@ class UpdateSize implements ShouldQueue
     /**
      * Execute the job.
      *
-     * @return AnonymousResourceCollection
+     * @return SizeResource|mixed
      */
-    public function handle() : AnonymousResourceCollection
+    public function handle() : SizeResource
     {
         try
         {
@@ -43,7 +44,7 @@ class UpdateSize implements ShouldQueue
         catch ( Exception $exception )
         {
             report( $exception );
-            return abort(500, 'something went wrong, please try again later');
+            return abort( $this -> errorResponse( null, 'Error', 'Something went wrong, please try again later', Response::HTTP_SERVICE_UNAVAILABLE ) );
         }
     }
 }

@@ -20,25 +20,27 @@ interface ImageRepositoryInterface
      * @param Product $product
      * @return JsonResponse
      */
-    public function store( ImageRequest $imageRequest, Product $product ) : JsonResponse;
+    public function store( Product $product, ImageRequest $imageRequest ) : JsonResponse;
 
     /**
      * @param Image $image
      * @param Product $product
      * @return JsonResponse
      */
-    public function show( Image $image, Product $product ) : JsonResponse;
+    public function show( Product $product, Image $image ) : JsonResponse;
 
     /**
+     * @param Product $product
      * @param ImageRequest $imageRequest
      * @param Image $image
      * @return JsonResponse
      */
-    public function update( ImageRequest $imageRequest, Image $image ) : JsonResponse;
+    public function update( Product $product, ImageRequest $imageRequest, Image $image ) : JsonResponse;
 
     /**
+     * @param Product $product
      * @param Image $image
      * @return JsonResponse
      */
-    public function destroy( Image $image ) : JsonResponse;
+    public function destroy( Product $product, Image $image ) : JsonResponse;
 }

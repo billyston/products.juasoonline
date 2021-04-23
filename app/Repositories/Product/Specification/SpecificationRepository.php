@@ -10,9 +10,7 @@ use App\Models\Product\Product;
 use App\Models\Product\Specification\Specification;
 use App\Traits\apiResponseBuilder;
 use App\Traits\Relatives;
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\JsonResponse;
-use Exception;
 use Illuminate\Http\Response;
 
 class SpecificationRepository implements SpecificationRepositoryInterface
@@ -39,32 +37,37 @@ class SpecificationRepository implements SpecificationRepositoryInterface
     }
 
     /**
+     * @param Product $product
      * @param Specification $specification
      * @return JsonResponse
      */
-    public function show( Specification $specification ) : JsonResponse
+    public function show( Product $product, Specification $specification ) : JsonResponse
     {
+        checkResourceRelation( $product -> specifications() -> where( 'specifications.id', $specification -> id ) -> count());
         if ( $this -> loadRelationships() ) { $specification -> load( $this -> relationships ); }
         return $this -> successResponse( new SpecificationResource( $specification ), "Success", null, Response::HTTP_OK );
     }
 
     /**
+     * @param Product $product
      * @param SpecificationRequest $specificationRequest
      * @param Specification $specification
      * @return JsonResponse
      */
-    public function update( SpecificationRequest $specificationRequest, Specification $specification ) : JsonResponse
+    public function update( Product $product, SpecificationRequest $specificationRequest, Specification $specification ) : JsonResponse
     {
+        checkResourceRelation( $product -> specifications() -> where( 'specifications.id', $specification -> id ) -> count());
         return $this -> successResponse( ( new UpdateSpecification( $specificationRequest, $specification ) ) -> handle(), 'Success', 'Specification updated', Response::HTTP_OK );
     }
 
     /**
+     * @param Product $product
      * @param Specification $specification
      * @return JsonResponse
-     * @throws Exception
      */
-    public function destroy( Specification $specification ) : JsonResponse
+    public function destroy( Product $product, Specification $specification ) : JsonResponse
     {
+        checkResourceRelation( $product -> specifications() -> where( 'specifications.id', $specification -> id ) -> count());
         $specification -> delete();
         return $this -> successResponse( null, 'Success', 'Specification deleted', Response::HTTP_NO_CONTENT );
     }

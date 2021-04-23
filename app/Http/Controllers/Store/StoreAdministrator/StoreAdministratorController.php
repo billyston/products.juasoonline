@@ -4,13 +4,14 @@ namespace App\Http\Controllers\Store\StoreAdministrator;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Store\StoreAdministrator\StoreAdministratorRequest;
+use App\Models\Store\Store;
 use App\Models\Store\StoreAdministrator\StoreAdministrator;
 use App\Repositories\Store\StoreAdministrator\StoreAdministratorRepositoryInterface;
 use Illuminate\Http\JsonResponse;
 
 class StoreAdministratorController extends Controller
 {
-    private $theRepository;
+    private StoreAdministratorRepositoryInterface $theRepository;
 
     /**
      * AdministratorController constructor.
@@ -45,34 +46,37 @@ class StoreAdministratorController extends Controller
     /**
      * Display the specified resource.
      *
+     * @param Store $store
      * @param StoreAdministrator $storeAdministrator
      * @return JsonResponse
      */
-    public function show( StoreAdministrator $storeAdministrator ) : JsonResponse
+    public function show( Store $store, StoreAdministrator $storeAdministrator ) : JsonResponse
     {
-        return $this -> theRepository -> show( $storeAdministrator );
+        return $this -> theRepository -> show( $store, $storeAdministrator );
     }
 
     /**
      * Update the specified resource in storage.
      *
+     * @param Store $store
      * @param StoreAdministratorRequest $storeAdministratorRequest
      * @param StoreAdministrator $storeAdministrator
      * @return JsonResponse
      */
-    public function update( StoreAdministratorRequest $storeAdministratorRequest, StoreAdministrator $storeAdministrator ) : JsonResponse
+    public function update( Store $store, StoreAdministratorRequest $storeAdministratorRequest, StoreAdministrator $storeAdministrator ) : JsonResponse
     {
-        return $this -> theRepository -> update( $storeAdministratorRequest, $storeAdministrator );
+        return $this -> theRepository -> update( $store, $storeAdministratorRequest, $storeAdministrator );
     }
 
     /**
      * Remove the specified resource from storage.
      *
+     * @param Store $store
      * @param StoreAdministrator $storeAdministrator
      * @return JsonResponse
      */
-    public function destroy( StoreAdministrator $storeAdministrator ) : JsonResponse
+    public function destroy( Store $store, StoreAdministrator $storeAdministrator ) : JsonResponse
     {
-        return $this -> theRepository -> destroy( $storeAdministrator );
+        return $this -> theRepository -> destroy( $store, $storeAdministrator );
     }
 }

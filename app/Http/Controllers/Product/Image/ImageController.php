@@ -11,7 +11,7 @@ use Illuminate\Http\JsonResponse;
 
 class ImageController extends Controller
 {
-    private $theRepository;
+    private ImageRepositoryInterface $theRepository;
 
     /**
      * ImageController constructor.
@@ -38,9 +38,9 @@ class ImageController extends Controller
      * @param Product $product
      * @return JsonResponse
      */
-    public function store( ImageRequest $imageRequest, Product $product ) : JsonResponse
+    public function store( Product $product, ImageRequest $imageRequest ) : JsonResponse
     {
-        return $this -> theRepository -> store( $imageRequest, $product );
+        return $this -> theRepository -> store( $product, $imageRequest );
     }
 
     /**
@@ -51,28 +51,29 @@ class ImageController extends Controller
      */
     public function show( Product $product, Image $image ) : JsonResponse
     {
-        abort_unless($product -> id === $image -> product_id, 401,'Image does not belong to product' );
-        return $this -> theRepository -> show( $image );
+        return $this -> theRepository -> show( $product, $image );
     }
 
     /**
      * Update the specified resource in storage.
+     * @param Product $product
      * @param ImageRequest $imageRequest
      * @param Image $image
      * @return JsonResponse
      */
-    public function update( ImageRequest $imageRequest, Image $image ) : JsonResponse
+    public function update( Product $product, ImageRequest $imageRequest, Image $image ) : JsonResponse
     {
-        return $this -> theRepository -> update( $imageRequest, $image );
+        return $this -> theRepository -> update( $product, $imageRequest, $image );
     }
 
     /**
      * Remove the specified resource from storage.
+     * @param Product $product
      * @param Image $image
      * @return JsonResponse
      */
-    public function destroy( Image $image ) : JsonResponse
+    public function destroy( Product $product, Image $image ) : JsonResponse
     {
-        return $this -> theRepository -> delete( $image );
+        return $this -> theRepository -> destroy( $product, $image );
     }
 }

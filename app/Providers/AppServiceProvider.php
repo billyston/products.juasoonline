@@ -8,6 +8,8 @@ use App\Models\Others\Category\Category;
 use App\Observers\Others\Category\CategoryObserver;
 use App\Models\Others\Subcategory\Subcategory;
 use App\Observers\Others\Subcategory\SubcategoryObserver;
+use App\Models\Others\Brand\Brand;
+use App\Observers\Others\Brand\BrandObserver;
 
 use App\Models\Store\Store;
 use App\Observers\Store\StoreObserver;
@@ -55,6 +57,7 @@ class AppServiceProvider extends ServiceProvider
         Group::observe( GroupObserver::class );
         Category::observe( CategoryObserver::class );
         Subcategory::observe( SubcategoryObserver::class );
+        Brand::observe( BrandObserver::class );
 
         Store::observe( StoreObserver::class );
         StoreAdministrator::observe( StoreAdministratorObserver::class );

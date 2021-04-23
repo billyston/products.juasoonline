@@ -22,7 +22,7 @@ class BranchResource extends JsonResource
         return
         [
             'id'                    => $this -> id,
-            'type'                  => 'StoreBranch',
+            'type'                  => 'Branch',
 
             'attributes' =>
             [

@@ -7,6 +7,7 @@ use App\Http\Resources\Store\Branch\BranchResource;
 use App\Jobs\Store\Branch\CreateBranch;
 use App\Jobs\Store\Branch\UpdateBranch;
 use App\Models\Store\Branch\Branch;
+use App\Models\Store\Store;
 use App\Traits\apiResponseBuilder;
 use App\Traits\Relatives;
 use Illuminate\Database\Eloquent\Builder;
@@ -21,58 +22,55 @@ class BranchRepository implements BranchRepositoryInterface
     /**
      * @return JsonResponse|mixed
      */
-    public function index() : JsonResponse
+    public function index( Store $store ) : JsonResponse
     {
-        $Branch = Branch::query() -> when( $this -> loadRelationships(), function ( Builder $builder ) { return $builder -> with ( $this -> relationships ); } ) -> paginate( 20 );
-        return $this -> successResponse( BranchResource::collection( $Branch ), "Success", null, Response::HTTP_OK );
+        return $this -> successResponse( BranchResource::collection( $store -> branches() -> paginate() ), "Success", null, Response::HTTP_OK );
     }
 
     /**
+     * @param Store $store
      * @param BranchRequest $branchRequest
      * @return JsonResponse|mixed
      */
-    public function store( BranchRequest $branchRequest ) : JsonResponse
+    public function store( Store $store, BranchRequest $branchRequest ) : JsonResponse
     {
         return $this -> successResponse( ( new CreateBranch( $branchRequest ) ) -> handle(), "Success", "Branch created", Response::HTTP_CREATED );
     }
 
     /**
+     * @param Store $store
      * @param Branch $branch
      * @return JsonResponse|mixed
      */
-    public function show( Branch $branch ) : JsonResponse
+    public function show( Store $store, Branch $branch ) : JsonResponse
     {
+        checkResourceRelation( $store -> branches() -> where( 'branches.id', $branch -> id ) -> count());
         if ( $this -> loadRelationships() ) { $branch -> load( $this -> relationships ); }
         return $this -> successResponse( new BranchResource( $branch ), "Success", null, Response::HTTP_OK );
     }
 
     /**
+     * @param Store $store
      * @param BranchRequest $branchRequest
      * @param Branch $branch
      * @return JsonResponse|mixed
      */
-    public function update( BranchRequest $branchRequest, Branch $branch ) : JsonResponse
+    public function update( Store $store, BranchRequest $branchRequest, Branch $branch ) : JsonResponse
     {
+        checkResourceRelation( $store -> branches() -> where( 'branches.id', $branch -> id ) -> count());
         if ( $this -> loadRelationships() ) { $branch -> load( $this -> relationships ); }
         return $this -> successResponse( ( new UpdateBranch( $branchRequest, $branch ) ) -> handle(), 'Success', 'Branch updated', Response::HTTP_OK );
     }
 
     /**
+     * @param Store $store
      * @param Branch $branch
      * @return JsonResponse|mixed|void
      */
-    public function destroy( Branch $branch ) : JsonResponse
+    public function destroy( Store $store, Branch $branch ) : JsonResponse
     {
-        try
-        {
-            $branch -> delete();
-            return $this -> successResponse( null, 'Success', 'Branch deleted.', Response::HTTP_NO_CONTENT );
-        }
-
-        catch ( Exception $exception )
-        {
-            report( $exception );
-            return abort(500, 'something went wrong, please try again later');
-        }
+        checkResourceRelation( $store -> branches() -> where( 'branches.id', $branch -> id ) -> count());
+        $branch -> delete();
+        return $this -> successResponse( null, 'Success', 'Branch deleted.', Response::HTTP_NO_CONTENT );
     }
 }

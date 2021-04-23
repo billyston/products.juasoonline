@@ -5,16 +5,18 @@ namespace App\Jobs\Product;
 use App\Http\Requests\Product\ProductRequest;
 use App\Http\Resources\Product\ProductResource;
 use App\Models\Product\Product;
+use App\Traits\apiResponseBuilder;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Http\Response;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Exception;
 
 class UpdateProduct implements ShouldQueue
 {
-    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
+    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels, apiResponseBuilder;
     private ProductRequest $theRequest; private Product $theModel;
 
     /**
@@ -29,9 +31,9 @@ class UpdateProduct implements ShouldQueue
     }
 
     /**
-     * @return ProductResource|void
+     * @return ProductResource|mixed
      */
-    public function handle()
+    public function handle() : ProductResource
     {
         try
         {
@@ -41,7 +43,7 @@ class UpdateProduct implements ShouldQueue
         catch ( Exception $exception )
         {
             report( $exception );
-            return abort(500, 'something went wrong, please try again later');
+            return abort( $this -> errorResponse( null, 'Error', 'Something went wrong, please try again later', Response::HTTP_SERVICE_UNAVAILABLE ) );
         }
     }
 }

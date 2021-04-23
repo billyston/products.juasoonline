@@ -6,10 +6,11 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Store\StoreRequest;
 use App\Models\Store\Store;
 use App\Repositories\Store\StoreRepositoryInterface;
+use Illuminate\Http\JsonResponse;
 
 class StoreController extends Controller
 {
-    private $theRepository;
+    private StoreRepositoryInterface $theRepository;
 
     /**
      * StoreController constructor.
@@ -21,27 +22,27 @@ class StoreController extends Controller
     }
 
     /**
-     * @return mixed
+     * @return JsonResponse|mixed
      */
-    public function index()
+    public function index() : JsonResponse
     {
         return $this -> theRepository -> index();
     }
 
     /**
      * @param StoreRequest $storeRequest
-     * @return mixed
+     * @return JsonResponse|mixed
      */
-    public function store( StoreRequest $storeRequest )
+    public function store( StoreRequest $storeRequest ) : JsonResponse
     {
         return $this -> theRepository -> store( $storeRequest );
     }
 
     /**
      * @param Store $store
-     * @return mixed
+     * @return JsonResponse|mixed
      */
-    public function show( Store $store )
+    public function show( Store $store ) : JsonResponse
     {
         return $this -> theRepository -> show( $store );
     }
@@ -49,18 +50,18 @@ class StoreController extends Controller
     /**
      * @param StoreRequest $storeRequest
      * @param Store $store
-     * @return mixed
+     * @return JsonResponse|mixed
      */
-    public function update( StoreRequest $storeRequest, Store $store )
+    public function update( StoreRequest $storeRequest, Store $store ) : JsonResponse
     {
         return $this -> theRepository -> update( $storeRequest, $store );
     }
 
     /**
      * @param Store $store
-     * @return mixed
+     * @return JsonResponse|mixed
      */
-    public function destroy( Store $store )
+    public function destroy( Store $store ) : JsonResponse
     {
         return $this -> theRepository -> destroy( $store );
     }

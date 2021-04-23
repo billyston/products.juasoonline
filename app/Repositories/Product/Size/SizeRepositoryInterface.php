@@ -23,21 +23,24 @@ interface SizeRepositoryInterface
     public function store( Product $product, SizeRequest $sizeRequest ) : JsonResponse;
 
     /**
+     * @param Product $product
      * @param Size $size
      * @return JsonResponse
      */
-    public function show( Size $size ) : JsonResponse;
+    public function show( Product $product, Size $size ) : JsonResponse;
 
     /**
+     * @param Product $product
      * @param SizeRequest $sizeRequest
      * @param Size $size
      * @return JsonResponse
      */
-    public function update( SizeRequest $sizeRequest, Size $size ) : JsonResponse;
+    public function update( Product $product, SizeRequest $sizeRequest, Size $size ) : JsonResponse;
 
     /**
+     * @param Product $product
      * @param Size $size
      * @return JsonResponse
      */
-    public function destroy( Size $size ) : JsonResponse;
+    public function destroy( Product $product, Size $size ) : JsonResponse;
 }

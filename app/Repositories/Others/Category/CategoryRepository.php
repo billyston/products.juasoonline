@@ -16,7 +16,7 @@ use Illuminate\Http\Response;
 
 class CategoryRepository implements CategoryRepositoryInterface
 {
-    use apiResponseBuilder; use Relatives;
+    use apiResponseBuilder, Relatives;
 
     /**
      * @return JsonResponse
@@ -27,7 +27,6 @@ class CategoryRepository implements CategoryRepositoryInterface
         {
             return $builder -> with ( $this -> relationships );
         }) -> paginate(100);
-
         return $this -> successResponse( CategoryResource::collection( $Category ), "Success", null, Response::HTTP_OK );
     }
 

@@ -11,6 +11,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
+use Illuminate\Http\Response;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Exception;
@@ -18,19 +19,17 @@ use Exception;
 class CreateColor implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels, apiResponseBuilder;
-
-    private Product $theProduct;
-    private ColorRequest $theRequest;
+    private Product $theModel; private ColorRequest $theRequest;
 
     /**
      * Create a new job instance.
      *
      * @return void
      */
-    public function __construct( ColorRequest $theRequest, Product $product )
+    public function __construct( Product $product, ColorRequest $theRequest  )
     {
         $this -> theRequest = $theRequest;
-        $this -> theProduct = $product;
+        $this -> theModel = $product;
     }
 
     /**
@@ -42,18 +41,18 @@ class CreateColor implements ShouldQueue
     {
         try
         {
-            foreach ( $this -> theRequest [ 'data.color.data' ] as $color )
+            foreach ( $this -> theRequest [ 'data.colors.data' ] as $color )
             {
                 $Color = new Color( $color );
                 $Color -> product() -> associate( $this -> theRequest [ 'data.relationships.product.product_id' ] );
                 $Color -> save();
             }
-            return ColorResource::collection( $this -> theProduct -> colors() -> paginate() );
+            return ColorResource::collection( $this -> theModel -> colors() -> paginate() );
         }
         catch ( Exception $exception )
         {
             report( $exception );
-            return abort(500, 'something went wrong, please try again later');
+            return abort( $this -> errorResponse( null, 'Error', 'Something went wrong, please try again later', Response::HTTP_SERVICE_UNAVAILABLE ) );
         }
     }
 }

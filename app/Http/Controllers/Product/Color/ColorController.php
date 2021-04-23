@@ -27,9 +27,9 @@ class ColorController extends Controller
      * @param Product $theProduct
      * @return JsonResponse
      */
-    public function index( Product $theProduct ) : JsonResponse
+    public function index( Product $product ) : JsonResponse
     {
-        return $this -> theRepository -> index( $theProduct );
+        return $this -> theRepository -> index( $product );
     }
 
     /**
@@ -39,9 +39,9 @@ class ColorController extends Controller
      * @param Product $theProduct
      * @return JsonResponse
      */
-    public function store( ColorRequest $colorRequest, Product $theProduct ) : JsonResponse
+    public function store( Product $product, ColorRequest $colorRequest  ) : JsonResponse
     {
-        return $this -> theRepository -> store( $colorRequest, $theProduct );
+        return $this -> theRepository -> store( $product, $colorRequest );
     }
 
     /**
@@ -51,31 +51,33 @@ class ColorController extends Controller
      * @param Product $product
      * @return JsonResponse
      */
-    public function show( Color $color, Product $product ) : JsonResponse
+    public function show( Product $product, Color $color ) : JsonResponse
     {
-        return $this -> theRepository -> show( $color, $product );
+        return $this -> theRepository -> show( $product, $color );
     }
 
     /**
      * Update the specified resource in storage.
      *
+     * @param Product $product
      * @param ColorRequest $colorRequest
      * @param Color $color
      * @return JsonResponse
      */
-    public function update( ColorRequest $colorRequest, Color $color ) : JsonResponse
+    public function update( Product $product, ColorRequest $colorRequest, Color $color ) : JsonResponse
     {
-        return $this -> theRepository -> update( $colorRequest, $color );
+        return $this -> theRepository -> update( $product, $colorRequest, $color );
     }
 
     /**
      * Remove the specified resource from storage.
      *
+     * @param Product $product
      * @param Color $color
      * @return JsonResponse
      */
-    public function destroy( Color $color ) : JsonResponse
+    public function destroy( Product $product, Color $color ) : JsonResponse
     {
-        return $this -> theRepository -> destroy( $color );
+        return $this -> theRepository -> destroy( $product, $color );
     }
 }

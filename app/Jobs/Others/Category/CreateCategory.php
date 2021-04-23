@@ -15,8 +15,8 @@ use Exception;
 
 class CreateCategory implements ShouldQueue
 {
-    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
-    use apiResponseBuilder; private $theRequest;
+    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels, apiResponseBuilder;
+    private CategoryRequest $theRequest;
 
     /**
      * CreateCategory constructor.
@@ -30,7 +30,7 @@ class CreateCategory implements ShouldQueue
     /**
      * @return CategoryResource|void
      */
-    public function handle()
+    public function handle() : CategoryResource
     {
         try
         {

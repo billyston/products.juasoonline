@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
 
 /**
@@ -31,6 +32,5 @@ function generateProductID( int $length ) : string
 
 function checkResourceRelation( bool $is_related )
 {
-    abort_unless( $is_related, 409, 'The resource you are trying to access does not exist');
+    abort_unless( $is_related, response() -> json([ 'status' => 'Error', 'code' => Response::HTTP_CONFLICT, 'message' => 'The resource you are trying to access does not belong to this category', 'data' => null ]));
 }
-

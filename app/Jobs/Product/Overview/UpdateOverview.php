@@ -8,6 +8,7 @@ use App\Models\Product\Overview\Overview;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Http\Response;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Exception;
@@ -15,7 +16,7 @@ use Exception;
 class UpdateOverview implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
-    private $theRequest; private $theModel;
+    private OverviewRequest $theRequest; private Overview $theModel;
 
     /**
      * Create a new job instance.
@@ -44,7 +45,7 @@ class UpdateOverview implements ShouldQueue
         catch ( Exception $exception )
         {
             report( $exception );
-            return abort(500, 'something went wrong, please try again later');
+            return abort( $this -> errorResponse( null, 'Error', 'Something went wrong, please try again later', Response::HTTP_SERVICE_UNAVAILABLE ) );
         }
     }
 }

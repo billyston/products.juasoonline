@@ -2,12 +2,14 @@
 
 namespace App\Jobs\Store\Branch;
 
-use App\Http\Requests\Branch\BranchRequest;
-use App\Http\Resources\Branch\BranchResource;
-use App\Models\Branch\Branch;
+use App\Http\Requests\Store\Branch\BranchRequest;
+use App\Http\Resources\Store\Branch\BranchResource;
+use App\Models\Store\Branch\Branch;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Response;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Exception;
@@ -15,7 +17,7 @@ use Exception;
 class UpdateBranch implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
-    private $theRequest; private $theModel;
+    private BranchRequest $theRequest; private Branch $theModel;
 
     /**
      * UpdateBranch constructor.
@@ -29,9 +31,9 @@ class UpdateBranch implements ShouldQueue
     }
 
     /**
-     * @return BranchResource|void
+     * @return BranchResource|mixed
      */
-    public function handle()
+    public function handle() : BranchResource
     {
         try
         {
@@ -41,7 +43,7 @@ class UpdateBranch implements ShouldQueue
         catch ( Exception $exception )
         {
             report( $exception );
-            return abort(500, 'something went wrong, please try again later');
+            return abort( $this -> errorResponse( null, 'Error', 'Something went wrong, please try again later', Response::HTTP_SERVICE_UNAVAILABLE ) );
         }
     }
 }

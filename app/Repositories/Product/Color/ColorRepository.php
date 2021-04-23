@@ -18,22 +18,22 @@ class ColorRepository implements ColorRepositoryInterface
     use apiResponseBuilder, Relatives;
 
     /**
-     * @param Product $theProduct
+     * @param Product $product
      * @return JsonResponse
      */
-    public function index( Product $theProduct ) : JsonResponse
+    public function index( Product $product  ) : JsonResponse
     {
-        return $this -> successResponse( ColorResource::collection( $theProduct -> colors() -> paginate() ), "Success", null, Response::HTTP_OK );
+        return $this -> successResponse( ColorResource::collection( $product -> colors() -> paginate() ), "Success", null, Response::HTTP_OK );
     }
 
     /**
+     * @param Product $product
      * @param ColorRequest $colorRequest
-     * @param Product $theProduct
      * @return JsonResponse
      */
-    public function store( ColorRequest $colorRequest, Product $theProduct ) : JsonResponse
+    public function store( Product $product, ColorRequest $colorRequest ) : JsonResponse
     {
-        return $this -> successResponse( ( new CreateColor( $colorRequest, $theProduct ) ) -> handle(), "Success", "Image(s) created", Response::HTTP_CREATED );
+        return $this -> successResponse( ( new CreateColor( $product, $colorRequest ) ) -> handle(), "Success", "Image(s) created", Response::HTTP_CREATED );
     }
 
     /**
@@ -41,7 +41,7 @@ class ColorRepository implements ColorRepositoryInterface
      * @param Product $product
      * @return JsonResponse
      */
-    public function show( Color $color, Product $product ) : JsonResponse
+    public function show( Product $product, Color $color ) : JsonResponse
     {
         checkResourceRelation( $product -> colors() -> where( 'colors.id', $product -> id ) -> count());
         if ( $this -> loadRelationships() ) { $color -> load( $this -> relationships ); }
@@ -53,8 +53,9 @@ class ColorRepository implements ColorRepositoryInterface
      * @param Color $color
      * @return JsonResponse
      */
-    public function update( ColorRequest $colorRequest, Color $color ) : JsonResponse
+    public function update( Product $product, ColorRequest $colorRequest, Color $color ) : JsonResponse
     {
+        checkResourceRelation( $product -> colors() -> where( 'colors.id', $product -> id ) -> count());
         return $this -> successResponse( ( new UpdateColor( $colorRequest, $color ) ) -> handle(), 'Success', 'Product updated', Response::HTTP_OK );
     }
 
@@ -62,8 +63,9 @@ class ColorRepository implements ColorRepositoryInterface
      * @param Color $color
      * @return JsonResponse
      */
-    public function destroy( Color $color ) : JsonResponse
+    public function destroy( Product $product, Color $color ) : JsonResponse
     {
+        checkResourceRelation( $product -> colors() -> where( 'colors.id', $product -> id ) -> count());
         $color -> delete();
         return $this -> successResponse( null, 'Success', 'Color deleted', Response::HTTP_NO_CONTENT );
     }
