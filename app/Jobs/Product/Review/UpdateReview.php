@@ -2,14 +2,13 @@
 
 namespace App\Jobs\Product\Review;
 
-use App\Http\Requests\Review\ReviewRequest;
-use App\Http\Resources\Review\ReviewResource;
-use App\Models\Review\Review;
+use App\Http\Requests\Product\Review\ReviewRequest;
+use App\Http\Resources\Product\Review\ReviewResource;
+use App\Models\Product\Review\Review;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Response;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Exception;
@@ -17,7 +16,7 @@ use Exception;
 class UpdateReview implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
-    private $theRequest; private $theModel;
+    private ReviewRequest $theRequest; private Review $theModel;
 
     /**
      * UpdateReview constructor.
@@ -31,7 +30,7 @@ class UpdateReview implements ShouldQueue
     }
 
     /**
-     * @return ReviewResource
+     * @return ReviewResource|mixed
      */
     public function handle() : ReviewResource
     {
@@ -43,7 +42,7 @@ class UpdateReview implements ShouldQueue
         catch ( Exception $exception )
         {
             report( $exception );
-            return abort(500, 'something went wrong, please try again later');
+            return abort( $this -> errorResponse( null, 'Error', 'Something went wrong, please try again later', Response::HTTP_SERVICE_UNAVAILABLE ) );
         }
     }
 }

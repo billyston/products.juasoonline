@@ -20,7 +20,7 @@ interface ProductRepositoryInterface
      * @param Store $store
      * @return mixed
      */
-    public function store( ProductRequest $productRequest, Store $store ) : JsonResponse;
+    public function store( Store $store, ProductRequest $productRequest ) : JsonResponse;
 
     /**
      * @param Product $product
@@ -30,15 +30,17 @@ interface ProductRepositoryInterface
     public function show( Store $store, Product $product ) : JsonResponse;
 
     /**
+     * @param Store $store
      * @param ProductRequest $productRequest
      * @param Product $product
      * @return JsonResponse
      */
-    public function update( ProductRequest $productRequest, Product $product ) : JsonResponse;
+    public function update( Store $store, ProductRequest $productRequest, Product $product ) : JsonResponse;
 
     /**
+     * @param Store $store
      * @param Product $product
      * @return JsonResponse
      */
-    public function delete( Product $product ) : JsonResponse;
+    public function delete( Store $store, Product $product ) : JsonResponse;
 }

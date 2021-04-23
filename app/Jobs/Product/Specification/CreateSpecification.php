@@ -19,7 +19,9 @@ use Exception;
 class CreateSpecification implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
-    use apiResponseBuilder; private $theRequest, $theProduct;
+    use apiResponseBuilder;
+    private Product $theProduct;
+    private SpecificationRequest $theRequest;
 
     /**
      * Create a new job instance.
@@ -38,7 +40,6 @@ class CreateSpecification implements ShouldQueue
      */
     public function handle() : AnonymousResourceCollection
     {
-        logger( $this->theRequest );
         try
         {
             foreach ( $this -> theRequest [ 'data.specifications.data' ] as $specification )
@@ -49,7 +50,6 @@ class CreateSpecification implements ShouldQueue
             }
             return SpecificationResource::collection( $this -> theProduct -> specifications() -> paginate() );
         }
-
         catch ( Exception $exception )
         {
             report( $exception );

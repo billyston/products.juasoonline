@@ -20,24 +20,27 @@ interface OverviewRepositoryInterface
      * @param Product $product
      * @return JsonResponse
      */
-    public function store( OverviewRequest $overviewRequest, Product $product ) : JsonResponse;
+    public function store( Product $product, OverviewRequest $overviewRequest ) : JsonResponse;
 
     /**
+     * @param Product $product
      * @param Overview $overview
      * @return JsonResponse
      */
-    public function show( Overview $overview ) : JsonResponse;
+    public function show( Product $product, Overview $overview ) : JsonResponse;
 
     /**
+     * @param Product $product
      * @param OverviewRequest $overviewRequest
      * @param Overview $overview
      * @return JsonResponse
      */
-    public function update( OverviewRequest $overviewRequest, Overview $overview ) : JsonResponse;
+    public function update( Product $product, OverviewRequest $overviewRequest, Overview $overview ) : JsonResponse;
 
     /**
+     * @param Product $product
      * @param Overview $overview
      * @return JsonResponse
      */
-    public function destroy( Overview $overview ) : JsonResponse;
+    public function destroy( Product $product, Overview $overview ) : JsonResponse;
 }

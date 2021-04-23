@@ -29,7 +29,7 @@ class ImageResource extends JsonResource
                 'resource_id'       => $this -> resource_id,
 
                 'description'       => $this -> description,
-                'image'              => asset( $this -> file ),
+                'image'             => $this -> file,
 
                 'created_at'        => $this -> created_at -> toDateTimeString(),
                 'updated_at'        => $this -> updated_at -> toDateTimeString(),

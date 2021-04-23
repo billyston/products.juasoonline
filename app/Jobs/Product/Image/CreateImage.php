@@ -11,21 +11,22 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
+use Illuminate\Http\Response;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Exception;
 
 class CreateImage implements ShouldQueue
 {
-    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
-    use apiResponseBuilder; private $theRequest, $theProduct;
+    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels, apiResponseBuilder;
+    private Product $theProduct; private ImageRequest $theRequest;
 
     /**
      * CreateProduct constructor.
      * @param ImageRequest $imageRequest
      * @param Product $product
      */
-    public function __construct( ImageRequest $imageRequest, Product $product )
+    public function __construct( Product $product, ImageRequest $imageRequest )
     {
         $this -> theRequest = $imageRequest;
         $this -> theProduct = $product;
@@ -33,7 +34,7 @@ class CreateImage implements ShouldQueue
 
     /**
      * Execute the job.
-     * @return AnonymousResourceCollection|void
+     * @return AnonymousResourceCollection|mixed
      */
     public function handle() : AnonymousResourceCollection
     {
@@ -50,7 +51,7 @@ class CreateImage implements ShouldQueue
         catch ( Exception $exception )
         {
             report( $exception );
-            return abort(500, 'something went wrong, please try again later');
+            return abort( $this -> errorResponse( null, 'Error', 'Something went wrong, please try again later', Response::HTTP_SERVICE_UNAVAILABLE ) );
         }
     }
 }

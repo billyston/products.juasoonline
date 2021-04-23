@@ -18,6 +18,7 @@ class CreateProductsTable extends Migration
             $table -> bigIncrements('id' );
             $table -> uuid( 'resource_id' ) -> unique() -> nullable( false );
             $table -> unsignedBigInteger( 'store_id' );
+            $table -> unsignedBigInteger( 'brand_id' );
 
             $table -> string( 'name' ) -> nullable( false );
             $table -> string( 'sku' ) -> nullable( true );
@@ -34,6 +35,7 @@ class CreateProductsTable extends Migration
             $table -> timestamps();
             $table -> softDeletes();
 
+            $table -> foreign('brand_id' ) -> references('id' ) -> on( 'brands' ) -> onDelete( 'cascade' );
             $table -> foreign('store_id' ) -> references('id' ) -> on( 'stores' ) -> onDelete( 'cascade' );
         });
     }

@@ -2,17 +2,21 @@
 
 namespace App\Models\Product;
 
+use App\Models\Others\Brand\Brand;
+use App\Models\Product\Color\Color;
 use App\Models\Product\Overview\Overview;
 use App\Models\Product\Image\Image;
 use App\Models\Product\Review\Review;
+use App\Models\Product\Size\Size;
 use App\Models\Product\Specification\Specification;
 use App\Models\Store\Store;
-use App\Models\Subcategory\Subcategory;
+use App\Models\Others\Subcategory\Subcategory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
@@ -39,11 +43,27 @@ class Product extends Model
     }
 
     /**
+     * @return BelongsTo
+     */
+    public function brand() : BelongsTo
+    {
+        return $this -> belongsTo( Brand::class );
+    }
+
+    /**
      * @return BelongsToMany
      */
     public function categories(): BelongsToMany
     {
         return $this -> belongsToMany( Subcategory::class );
+    }
+
+    /**
+     * @return HasMany
+     */
+    public function images() : HasMany
+    {
+        return $this -> hasMany( Image::class );
     }
 
     /**
@@ -73,8 +93,16 @@ class Product extends Model
     /**
      * @return HasMany
      */
-    public function images() : HasMany
+    public function colors() : HasMany
     {
-        return $this -> hasMany( Image::class );
+        return $this -> hasMany( Color::class );
+    }
+
+    /**
+     * @return HasMany
+     */
+    public function sizes() : HasMany
+    {
+        return $this -> hasMany( Size::class );
     }
 }

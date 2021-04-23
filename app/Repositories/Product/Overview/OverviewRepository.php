@@ -17,7 +17,7 @@ use Exception;
 
 class OverviewRepository implements OverviewRepositoryInterface
 {
-    use apiResponseBuilder; use Relatives;
+    use apiResponseBuilder, Relatives;
 
     /**
      * @param Product $product
@@ -33,48 +33,45 @@ class OverviewRepository implements OverviewRepositoryInterface
      * @param Product $product
      * @return JsonResponse
      */
-    public function store( OverviewRequest $overviewRequest, Product $product ) : JsonResponse
+    public function store( Product $product, OverviewRequest $overviewRequest ) : JsonResponse
     {
         return $this -> successResponse( ( new CreateOverview( $overviewRequest, $product ) ) -> handle(), "Success", "Overview created", Response::HTTP_CREATED );
     }
 
     /**
+     * @param Product $product
      * @param Overview $overview
      * @return JsonResponse
      */
-    public function show( Overview $overview ) : JsonResponse
+    public function show( Product $product, Overview $overview ) : JsonResponse
     {
+        checkResourceRelation( $product -> overviews() -> where( 'overviews.id', $overview -> id ) -> count());
         if ( $this -> loadRelationships() ) { $overview -> load( $this -> relationships ); }
         return $this -> successResponse( new OverviewResource( $overview ), "Success", null, Response::HTTP_OK );
     }
 
     /**
+     * @param Product $product
      * @param OverviewRequest $overviewRequest
      * @param Overview $overview
      * @return JsonResponse
      */
-    public function update( OverviewRequest $overviewRequest, Overview $overview ) : JsonResponse
+    public function update( Product $product, OverviewRequest $overviewRequest, Overview $overview ) : JsonResponse
     {
+        checkResourceRelation( $product -> overviews() -> where( 'overviews.id', $overview -> id ) -> count());
         if ( $this -> loadRelationships() ) { $overview -> load( $this -> relationships ); }
         return $this -> successResponse( ( new UpdateOverview( $overviewRequest, $overview ) ) -> handle(), 'Success', 'Overview updated', Response::HTTP_OK );
     }
 
     /**
+     * @param Product $product
      * @param Overview $overview
      * @return JsonResponse|void
      */
-    public function destroy( Overview $overview ) : JsonResponse
+    public function destroy( Product $product, Overview $overview ) : JsonResponse
     {
-        try
-        {
-            $overview -> delete();
-            return $this -> successResponse( null, 'Success', 'Overview deleted.', Response::HTTP_NO_CONTENT );
-        }
-
-        catch ( Exception $exception )
-        {
-            report( $exception );
-            return abort(500, 'something went wrong, please try again later');
-        }
+        checkResourceRelation( $product -> overviews() -> where( 'overviews.id', $overview -> id ) -> count());
+        $overview -> delete();
+        return $this -> successResponse( null, 'Success', 'Overview deleted.', Response::HTTP_NO_CONTENT );
     }
 }

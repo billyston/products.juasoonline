@@ -6,6 +6,7 @@ use App\Http\Requests\Store\StoreAdministrator\StoreAdministratorRequest;
 use App\Http\Resources\Store\StoreAdministrator\StoreAdministratorResource;
 use App\Jobs\Store\StoreAdministrator\CreateStoreAdministrator;
 use App\Jobs\Store\StoreAdministrator\UpdateStoreAdministrator;
+use App\Models\Store\Store;
 use App\Models\Store\StoreAdministrator\StoreAdministrator;
 use App\Traits\apiResponseBuilder;
 use App\Traits\Relatives;
@@ -13,6 +14,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;
 use Exception;
+use Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException;
 
 class StoreAdministratorRepository implements StoreAdministratorRepositoryInterface
 {
@@ -37,42 +39,39 @@ class StoreAdministratorRepository implements StoreAdministratorRepositoryInterf
     }
 
     /**
+     * @param Store $store
      * @param StoreAdministrator $storeAdministrator
      * @return JsonResponse
      */
-    public function show( StoreAdministrator $storeAdministrator ) : JsonResponse
+    public function show( Store $store, StoreAdministrator $storeAdministrator ) : JsonResponse
     {
+        checkResourceRelation( $store -> administrator() -> where( 'store_administrators.id', $storeAdministrator -> id ) -> count());
         if ( $this -> loadRelationships() ) { $storeAdministrator -> load( $this -> relationships ); }
         return $this -> successResponse( new StoreAdministratorResource( $storeAdministrator ), "Success", null, Response::HTTP_OK );
     }
 
     /**
+     * @param Store $store
      * @param StoreAdministratorRequest $storeAdministratorRequest
      * @param StoreAdministrator $storeAdministrator
      * @return JsonResponse
      */
-    public function update( StoreAdministratorRequest $storeAdministratorRequest, StoreAdministrator $storeAdministrator ) : JsonResponse
+    public function update( Store $store, StoreAdministratorRequest $storeAdministratorRequest, StoreAdministrator $storeAdministrator ) : JsonResponse
     {
+        checkResourceRelation( $store -> administrator() -> where( 'store_administrators.id', $storeAdministrator -> id ) -> count());
         if ( $this -> loadRelationships() ) { $storeAdministrator -> load( $this -> relationships ); }
         return $this -> successResponse( ( new UpdateStoreAdministrator( $storeAdministratorRequest, $storeAdministrator ) ) -> handle(), 'Success', 'Shop updated successfully', Response::HTTP_OK );
     }
 
     /**
+     * @param Store $store
      * @param StoreAdministrator $storeAdministrator
      * @return JsonResponse|mixed|void
      */
-    public function destroy( StoreAdministrator $storeAdministrator ) : JsonResponse
+    public function destroy( Store $store, StoreAdministrator $storeAdministrator ) : JsonResponse
     {
-        try
-        {
-            $storeAdministrator -> delete();
-            return $this -> successResponse( null, 'Success', 'Administrator deleted.', Response::HTTP_NO_CONTENT );
-        }
-
-        catch ( Exception $exception )
-        {
-            report( $exception );
-            return abort(500, 'something went wrong, please try again later');
-        }
+        checkResourceRelation( $store -> administrator() -> where( 'store_administrators.id', $storeAdministrator -> id ) -> count());
+        $storeAdministrator -> delete();
+        return $this -> successResponse( null, 'Success', 'Administrator deleted.', Response::HTTP_NO_CONTENT );
     }
 }

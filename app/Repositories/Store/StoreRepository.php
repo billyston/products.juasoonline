@@ -19,17 +19,17 @@ class StoreRepository implements StoreRepositoryInterface
     use apiResponseBuilder; use Relatives;
 
     /**
-     * @return JsonResponse
+     * @return JsonResponse|mixed
      */
     public function index() : JsonResponse
     {
-        $Store = Store::query() -> when( $this -> loadRelationships(), function (Builder $builder ) { return $builder -> with ( $this -> relationships ); } ) -> paginate( 20 );
+        $Store = Store::query() -> when( $this -> loadRelationships(), function ( Builder $builder ) { return $builder -> with ( $this -> relationships ); } ) -> paginate( 20 );
         return $this -> successResponse( StoreResource::collection( $Store ), "Success", null, Response::HTTP_OK );
     }
 
     /**
      * @param StoreRequest $storeRequest
-     * @return JsonResponse
+     * @return JsonResponse|mixed
      */
     public function store( StoreRequest $storeRequest ) : JsonResponse
     {
@@ -38,7 +38,7 @@ class StoreRepository implements StoreRepositoryInterface
 
     /**
      * @param Store $store
-     * @return JsonResponse
+     * @return JsonResponse|mixed
      */
     public function show( Store $store ) : JsonResponse
     {
@@ -51,7 +51,7 @@ class StoreRepository implements StoreRepositoryInterface
      * @param Store $store
      * @return JsonResponse
      */
-    public function update(StoreRequest $storeRequest, Store $store ) : JsonResponse
+    public function update( StoreRequest $storeRequest, Store $store ) : JsonResponse
     {
         if ( $this -> loadRelationships() ) { $store -> load( $this -> relationships ); }
         return $this -> successResponse( ( new UpdateStore( $storeRequest, $store ) ) -> handle(), 'Success', 'Store updated', Response::HTTP_OK );
@@ -59,7 +59,7 @@ class StoreRepository implements StoreRepositoryInterface
 
     /**
      * @param Store $store
-     * @return JsonResponse|mixed|void
+     * @return JsonResponse|mixed
      */
     public function destroy( Store $store ) : JsonResponse
     {
@@ -72,7 +72,7 @@ class StoreRepository implements StoreRepositoryInterface
         catch ( Exception $exception )
         {
             report( $exception );
-            return abort(500, 'something went wrong, please try again later');
+            return abort( $this -> errorResponse( null, 'Error', 'Something went wrong, please try again later', Response::HTTP_SERVICE_UNAVAILABLE ) );
         }
     }
 }

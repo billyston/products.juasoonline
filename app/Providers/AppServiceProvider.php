@@ -2,12 +2,14 @@
 
 namespace App\Providers;
 
-use App\Models\Group\Group;
-use App\Observers\Group\GroupObserver;
-use App\Models\Category\Category;
-use App\Observers\Category\CategoryObserver;
-use App\Models\Subcategory\Subcategory;
-use App\Observers\Subcategory\SubcategoryObserver;
+use App\Models\Others\Group\Group;
+use App\Observers\Others\Group\GroupObserver;
+use App\Models\Others\Category\Category;
+use App\Observers\Others\Category\CategoryObserver;
+use App\Models\Others\Subcategory\Subcategory;
+use App\Observers\Others\Subcategory\SubcategoryObserver;
+use App\Models\Others\Brand\Brand;
+use App\Observers\Others\Brand\BrandObserver;
 
 use App\Models\Store\Store;
 use App\Observers\Store\StoreObserver;
@@ -26,6 +28,10 @@ use App\Models\Product\Overview\Overview;
 use App\Observers\Product\Overview\OverviewObserver;
 use App\Models\Product\Review\Review;
 use App\Observers\Product\Review\ReviewObserver;
+use App\Observers\Product\Color\ColorObserver;
+use App\Models\Product\Color\Color;
+use App\Models\Product\Size\Size;
+use App\Observers\Product\Size\SizeObserver;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -51,6 +57,7 @@ class AppServiceProvider extends ServiceProvider
         Group::observe( GroupObserver::class );
         Category::observe( CategoryObserver::class );
         Subcategory::observe( SubcategoryObserver::class );
+        Brand::observe( BrandObserver::class );
 
         Store::observe( StoreObserver::class );
         StoreAdministrator::observe( StoreAdministratorObserver::class );
@@ -61,5 +68,7 @@ class AppServiceProvider extends ServiceProvider
         Specification::observe( SpecificationObserver::class );
         Overview::observe( OverviewObserver::class );
         Review::observe( ReviewObserver::class );
+        Color::observe( ColorObserver::class );
+        Size::observe( SizeObserver::class );
     }
 }

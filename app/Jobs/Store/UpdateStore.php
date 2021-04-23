@@ -15,14 +15,14 @@ use Exception;
 class UpdateStore implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
-    private $theRequest; private $theModel;
+    private StoreRequest $theRequest; private Store $theModel;
 
     /**
      * UpdateStore constructor.
      * @param StoreRequest $storeRequest
      * @param Store $store
      */
-    public function __construct(StoreRequest $storeRequest, Store $store )
+    public function __construct( StoreRequest $storeRequest, Store $store )
     {
         $this -> theRequest     = $storeRequest;
         $this -> theModel       = $store;

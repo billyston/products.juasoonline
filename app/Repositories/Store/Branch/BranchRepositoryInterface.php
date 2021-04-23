@@ -4,36 +4,42 @@ namespace App\Repositories\Store\Branch;
 
 use App\Http\Requests\Store\Branch\BranchRequest;
 use App\Models\Store\Branch\Branch;
+use App\Models\Store\Store;
+use Illuminate\Http\JsonResponse;
 
 interface BranchRepositoryInterface
 {
     /**
-     * @return mixed
+     * @return JsonResponse|mixed
      */
-    public function index();
+    public function index( Store $store ) : JsonResponse;
 
     /**
+     * @param Store $store
      * @param BranchRequest $branchRequest
-     * @return mixed
+     * @return JsonResponse|mixed
      */
-    public function store( BranchRequest $branchRequest );
+    public function store( Store $store, BranchRequest $branchRequest ) : JsonResponse;
 
     /**
+     * @param Store $store
      * @param Branch $branch
-     * @return mixed
+     * @return JsonResponse|mixed
      */
-    public function show( Branch $branch );
+    public function show( Store $store, Branch $branch ) : JsonResponse;
 
     /**
+     * @param Store $store
      * @param BranchRequest $branchRequest
      * @param Branch $branch
      * @return mixed
      */
-    public function update( BranchRequest $branchRequest, Branch $branch );
+    public function update( Store $store, BranchRequest $branchRequest, Branch $branch ) : JsonResponse;
 
     /**
+     * @param Store $store
      * @param Branch $branch
-     * @return mixed
+     * @return JsonResponse|mixed
      */
-    public function destroy( Branch $branch );
+    public function destroy( Store $store, Branch $branch ) : JsonResponse;
 }
