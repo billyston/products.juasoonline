@@ -25,15 +25,16 @@ class StoreAdministratorRepository implements StoreAdministratorRepositoryInterf
      */
     public function index() : JsonResponse
     {
-        $storeAdministrator = StoreAdministrator::query() -> when( $this -> loadRelationships(), function ( Builder $builder ) { return $builder -> with ( $this -> relationships ); } ) -> paginate( 20 );
+        $storeAdministrator = StoreAdministrator::query() -> when( $this -> loadRelationships(), function ( Builder $builder ) { return $builder -> with ( $this -> relationships ); } ) -> paginate();
         return $this -> successResponse( StoreAdministratorResource::collection( $storeAdministrator ), "Success", null, Response::HTTP_OK );
     }
 
     /**
+     * @param Store $store
      * @param StoreAdministratorRequest $storeAdministratorRequest
      * @return JsonResponse
      */
-    public function store( StoreAdministratorRequest $storeAdministratorRequest ) : JsonResponse
+    public function store( Store $store, StoreAdministratorRequest $storeAdministratorRequest ) : JsonResponse
     {
         return $this -> successResponse( ( new CreateStoreAdministrator( $storeAdministratorRequest ) ) -> handle(), "Success", "Administrator created", Response::HTTP_CREATED );
     }

@@ -35,12 +35,13 @@ class StoreAdministratorController extends Controller
     /**
      * Store a newly created resource in storage.
      *
+     * @param Store $store
      * @param StoreAdministratorRequest $storeAdministratorRequest
      * @return JsonResponse
      */
-    public function store( StoreAdministratorRequest $storeAdministratorRequest ) : JsonResponse
+    public function store( Store $store, StoreAdministratorRequest $storeAdministratorRequest ) : JsonResponse
     {
-        return $this -> theRepository -> store( $storeAdministratorRequest );
+        return $this -> theRepository -> store( $store, $storeAdministratorRequest );
     }
 
     /**

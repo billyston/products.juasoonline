@@ -15,10 +15,11 @@ interface StoreAdministratorRepositoryInterface
     public function index() : JsonResponse;
 
     /**
+     * @param Store $store
      * @param StoreAdministratorRequest $storeAdministratorRequest
      * @return JsonResponse
      */
-    public function store( StoreAdministratorRequest $storeAdministratorRequest ) : JsonResponse;
+    public function store( Store $store, StoreAdministratorRequest $storeAdministratorRequest ) : JsonResponse;
 
     /**
      * @param Store $store

@@ -45,10 +45,11 @@ class ColorRepository implements ColorRepositoryInterface
     {
         checkResourceRelation( $product -> colors() -> where( 'colors.id', $product -> id ) -> count());
         if ( $this -> loadRelationships() ) { $color -> load( $this -> relationships ); }
-        return $this -> successResponse( new ColorResource( $product ), "Success", null, Response::HTTP_OK );
+        return $this -> successResponse( new ColorResource( $color ), "Success", null, Response::HTTP_OK );
     }
 
     /**
+     * @param Product $product
      * @param ColorRequest $colorRequest
      * @param Color $color
      * @return JsonResponse
@@ -60,6 +61,7 @@ class ColorRepository implements ColorRepositoryInterface
     }
 
     /**
+     * @param Product $product
      * @param Color $color
      * @return JsonResponse
      */

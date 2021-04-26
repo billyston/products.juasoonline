@@ -35,8 +35,8 @@ class ColorController extends Controller
     /**
      * Store a newly created resource in storage.
      *
+     * @param Product $product
      * @param ColorRequest $colorRequest
-     * @param Product $theProduct
      * @return JsonResponse
      */
     public function store( Product $product, ColorRequest $colorRequest  ) : JsonResponse

@@ -16,8 +16,8 @@ use Exception;
 
 class CreateStoreAdministrator implements ShouldQueue
 {
-    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
-    use apiResponseBuilder; private $theRequest;
+    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels, apiResponseBuilder;
+    private StoreAdministratorRequest $theRequest;
 
     /**
      * Create a new job instance.

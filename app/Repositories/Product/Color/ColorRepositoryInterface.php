@@ -10,7 +10,7 @@ use Illuminate\Http\JsonResponse;
 interface ColorRepositoryInterface
 {
     /**
-     * @param Product $theProduct
+     * @param Product $product
      * @return JsonResponse
      */
     public function index( Product $product ) : JsonResponse;

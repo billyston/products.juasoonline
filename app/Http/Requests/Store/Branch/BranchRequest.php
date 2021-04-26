@@ -54,14 +54,14 @@ class BranchRequest extends FormRequest
                 'data.attributes.mobile_phone'                                      => [ 'sometimes', 'min:10', 'numeric' ],
                 'data.attributes.other_phone'                                       => [ 'sometimes', 'min:10', 'numeric' ],
 
-                'data.attributes.email'                                             => [ 'sometimes', 'email', 'unique:branches,email' ],
+                'data.attributes.email'                                             => [ 'sometimes', 'email' ],
             ];
         }
 
         return
         [
             'data'                                                                  => [ 'required' ],
-            'data.type'                                                             => [ 'required', 'string', 'in:StoreBranch' ],
+            'data.type'                                                             => [ 'required', 'string', 'in:Branch' ],
 
             'data.attributes.branch_name'                                           => [ 'required', 'string', 'unique:branches,branch_name' ],
 
@@ -73,7 +73,7 @@ class BranchRequest extends FormRequest
             'data.attributes.mobile_phone'                                          => [ 'required', 'min:10', 'numeric' ],
             'data.attributes.other_phone'                                           => [ 'min:10', 'numeric' ],
 
-            'data.attributes.email'                                                 => [ 'sometimes', 'email', 'unique:branches,email' ],
+            'data.attributes.email'                                                 => [ 'sometimes', 'email' ],
 
             'data.relationships.store.store_id'                                     => [ 'required', 'string', 'exists:stores,id' ],
         ];
@@ -116,7 +116,6 @@ class BranchRequest extends FormRequest
             'data.attributes.other_phone.numeric'                       => "The other phone number must only contain numbers",
 
             'data.attributes.email.email'                               => "The email address is invalid",
-            'data.attributes.email.unique'                              => "The email address is already taken",
 
             'data.relationships.shop.shop_id.required'                  => "The shop id is required",
             'data.relationships.shop.shop_id.exists'                    => "The shop id is invalid",
