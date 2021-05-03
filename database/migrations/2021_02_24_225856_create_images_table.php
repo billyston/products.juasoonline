@@ -20,7 +20,7 @@ class CreateImagesTable extends Migration
             $table -> unsignedBigInteger( 'product_id' );
 
             $table -> mediumText( 'description' );
-            $table -> string( 'file' ) -> nullable( false );
+            $table -> string( 'image' ) -> nullable( false );
 
             $table -> timestamps();
 
