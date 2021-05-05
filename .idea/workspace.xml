@@ -22,8 +22,6 @@
     <list default="true" id="d1612a24-8f92-4a41-8a01-9056ae58447d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline.dev/virtualbox/action_set_name" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline.dev/virtualbox/action_set_name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Jobs/Product/CreateProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/Product/CreateProduct.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_02_24_225856_create_images_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_02_24_225856_create_images_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -372,6 +370,7 @@
       <workItem from="1619717050426" duration="1151000" />
       <workItem from="1619786955607" duration="114000" />
       <workItem from="1619803693942" duration="12094000" />
+      <workItem from="1620057482228" duration="1537000" />
     </task>
     <servers />
   </component>
