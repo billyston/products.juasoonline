@@ -21,7 +21,7 @@ class CreateOverviewsTable extends Migration
 
             $table -> string( 'title' ) -> nullable( true );
             $table -> text( 'description' ) -> nullable( true );
-            $table -> string( 'file' ) -> nullable( true );
+            $table -> string( 'image' ) -> nullable( true );
 
             $table -> timestamps();
             $table -> foreign('product_id' ) -> references('id' ) -> on( 'products' ) -> onDelete( 'cascade' );

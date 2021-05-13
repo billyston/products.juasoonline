@@ -115,7 +115,7 @@ class CreateProduct implements ShouldQueue
 
     /**
      * @param Product $product
-     * @param array $attachOverviews
+     * @param array $overviews
      */
     private function createOverviews( Product $product, array $overviews ) : void
     {

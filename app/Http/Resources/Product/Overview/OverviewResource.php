@@ -29,7 +29,7 @@ class OverviewResource extends JsonResource
 
                 'title'             => $this -> title,
                 'description'       => $this -> description,
-                'file'             => $this -> file,
+                'image'             => $this -> image,
 
                 'created_at'        => $this -> created_at -> toDateTimeString(),
                 'updated_at'        => $this -> updated_at -> toDateTimeString(),
