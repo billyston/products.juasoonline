@@ -5,6 +5,7 @@ namespace App\Http\Resources\Product;
 use App\Http\Resources\Others\Brand\BrandResource;
 use App\Http\Resources\Product\Overview\OverviewResource;
 use App\Http\Resources\Product\Image\ImageResource;
+use App\Http\Resources\Product\Promotion\PromotionResource;
 use App\Http\Resources\Product\Review\ReviewResource;
 use App\Http\Resources\Product\Size\SizeResource;
 use App\Http\Resources\Product\Specification\SpecificationResource;
@@ -26,31 +27,28 @@ class ProductResource extends JsonResource
     {
         return
         [
-            'id'                    => $this -> id,
+            'id'                    => $this -> resource -> id,
             'type'                  => 'Product',
 
             'attributes' =>
             [
-                'resource_id'       => $this -> resource_id,
+                'resource_id'       => $this -> resource -> resource_id,
 
-                'name'              => $this -> name,
-                'sku'               => $this -> sku,
-                'slug'              => $this -> slug,
-                'description'       => $this -> description,
-                'price'             => $this -> price,
-                'sales_price'       => $this -> sales_price,
-                'discount'          => number_format( ( $this -> price - $this -> sales_price ) / $this -> price * 100, 2 ) . '%',
-                'quantity'          => $this -> quantity,
-                'status'            => $this -> status,
+                'name'              => $this -> resource -> name,
+                'sku'               => $this -> resource -> sku,
+                'slug'              => $this -> resource -> slug,
+                'description'       => $this -> resource -> description,
+                'price'             => $this -> resource -> price,
+                'sales_price'       => $this -> resource -> sales_price,
+                'discount'          => number_format( ( $this -> resource -> price - $this -> resource -> sales_price ) / $this -> resource -> price * 100, 2 ) . '%',
+                'quantity'          => $this -> resource -> quantity,
+                'status'            => $this -> resource -> status,
 
-                'promo_start'       => $this -> promo_start,
-                'promo_end'         => $this -> promo_end,
-
-                'created_at'        => $this -> created_at -> toDateTimeString(),
-                'updated_at'        => $this -> updated_at -> toDateTimeString(),
+                'created_at'        => $this -> resource -> created_at -> toDateTimeString(),
+                'updated_at'        => $this -> resource -> updated_at -> toDateTimeString(),
             ],
 
-            'include'               => $this -> when( $this -> relationLoaded( 'brand' ) || $this -> relationLoaded( 'categories' ) || $this -> relationLoaded( 'specifications' ) || $this -> relationLoaded( 'reviews' ) || $this -> relationLoaded( 'overviews' ) || $this -> relationLoaded( 'images' ) || $this -> relationLoaded( 'colors' ) || $this -> relationLoaded( 'sizes' ),
+            'include'               => $this -> when( $this -> relationLoaded( 'brand' ) || $this -> relationLoaded( 'categories' ) || $this -> relationLoaded( 'specifications' ) || $this -> relationLoaded( 'reviews' ) || $this -> relationLoaded( 'overviews' ) || $this -> relationLoaded( 'images' ) || $this -> relationLoaded( 'colors' ) || $this -> relationLoaded( 'sizes' ) || $this -> relationLoaded( 'promotions' ),
             [
                 'brand'             => new BrandResource( $this -> whenLoaded('brand') ),
                 'categories'        => SubcategoryResource::collection( $this -> whenLoaded('categories') ),
@@ -60,6 +58,7 @@ class ProductResource extends JsonResource
                 'reviews'           => ReviewResource::collection( $this -> whenLoaded('reviews') ),
                 'colors'            => ColorResource::collection( $this -> whenLoaded('colors') ),
                 'sizes'             => SizeResource::collection( $this -> whenLoaded('sizes') ),
+                'promotions'        => PromotionResource::collection( $this -> whenLoaded('promotions') ),
             ])
         ];
     }

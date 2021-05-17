@@ -45,7 +45,6 @@ class StoreRequest extends FormRequest
                 'data.type'                                             => [ 'required', 'string', 'in:Store' ],
             ];
         }
-
         return
         [
             'data'                                                      => [ 'required' ],
@@ -64,6 +63,8 @@ class StoreRequest extends FormRequest
 
             'data.attributes.email'                                     => [ 'required', 'email', 'unique:stores,email' ],
             'data.attributes.website'                                   => [ 'sometimes', 'url' ],
+
+            'data.relationships.country.country_id'                     => [ 'required', 'numeric', 'exists:countries,id' ],
         ];
     }
 
@@ -112,6 +113,9 @@ class StoreRequest extends FormRequest
             'data.attributes.email.unique'                              => "The email address is already taken",
 
             'data.attributes.website.url'                               => "The website address is invalid",
+
+            'data.relationships.country.country_id.required'            => "The country is required",
+            'data.relationships.country.country_id.exists'              => "The selected country does not exist",
         ];
     }
 }

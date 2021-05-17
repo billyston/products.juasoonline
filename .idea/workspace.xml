@@ -22,10 +22,25 @@
     <list default="true" id="d1612a24-8f92-4a41-8a01-9056ae58447d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline.dev/virtualbox/action_set_name" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline.dev/virtualbox/action_set_name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Product/Image/ImageResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Product/Image/ImageResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Product/Overview/OverviewResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Product/Overview/OverviewResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Product/Color/ColorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Product/Color/ColorController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Store/StoreRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Store/StoreRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Product/Color/ColorResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Product/Color/ColorResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Product/ProductResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Product/ProductResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Store/Branch/BranchResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Store/Branch/BranchResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Store/StoreResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Store/StoreResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/Others/Subcategory/UpdateSubcategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/Others/Subcategory/UpdateSubcategory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/Product/Color/CreateColor.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/Product/Color/CreateColor.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Jobs/Product/CreateProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/Product/CreateProduct.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_02_11_082554_create_overviews_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_02_11_082554_create_overviews_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/Store/Branch/CreateBranch.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/Store/Branch/CreateBranch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/Store/CreateStore.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/Store/CreateStore.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Product/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Store/Store.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Store/Store.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_02_08_024553_create_stores_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_02_08_024553_create_stores_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_02_230250_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_02_140250_create_products_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -375,7 +390,23 @@
       <workItem from="1619786955607" duration="114000" />
       <workItem from="1619803693942" duration="12094000" />
       <workItem from="1620057482228" duration="4192000" />
-      <workItem from="1620860089563" duration="3006000" />
+      <workItem from="1620860089563" duration="18118000" />
+      <workItem from="1621063414185" duration="22000" />
+      <workItem from="1621073990012" duration="1609000" />
+      <workItem from="1621075775459" duration="598000" />
+      <workItem from="1621088094597" duration="1235000" />
+      <workItem from="1621110513869" duration="1793000" />
+      <workItem from="1621112327234" duration="1800000" />
+      <workItem from="1621114341477" duration="1674000" />
+      <workItem from="1621116167440" duration="1682000" />
+      <workItem from="1621118112769" duration="1779000" />
+      <workItem from="1621119925911" duration="1519000" />
+      <workItem from="1621121736224" duration="1799000" />
+      <workItem from="1621123953227" duration="685000" />
+      <workItem from="1621201663800" duration="1754000" />
+      <workItem from="1621203474553" duration="1749000" />
+      <workItem from="1621205313678" duration="1580000" />
+      <workItem from="1621207136060" duration="1730000" />
     </task>
     <servers />
   </component>

@@ -16,8 +16,8 @@ use Exception;
 
 class CreateBranch implements ShouldQueue
 {
-    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
-    use apiResponseBuilder; private BranchRequest $theRequest;
+    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels, apiResponseBuilder;
+    private BranchRequest $theRequest;
 
     /**
      * CreateBranch constructor.

@@ -26,10 +26,10 @@ class CreateColor implements ShouldQueue
      *
      * @return void
      */
-    public function __construct( Product $product, ColorRequest $theRequest  )
+    public function __construct( Product $product, ColorRequest $colorRequest  )
     {
-        $this -> theRequest = $theRequest;
         $this -> theModel = $product;
+        $this -> theRequest = $colorRequest;
     }
 
     /**

@@ -13,6 +13,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        $this -> call([ CountriesTableSeeder::class ]);
+        $this -> call([ PromoTypeTableSeeder::class ]);
         $this -> call([ GroupTableSeeder::class ]);
         $this -> call([ CategoryTableSeeder::class ]);
         $this -> call([ SubcategoryTableSeeder::class ]);

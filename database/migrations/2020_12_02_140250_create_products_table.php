@@ -19,6 +19,7 @@ class CreateProductsTable extends Migration
             $table -> uuid( 'resource_id' ) -> unique() -> nullable( false );
             $table -> unsignedBigInteger( 'store_id' );
             $table -> unsignedBigInteger( 'brand_id' );
+            $table -> unsignedBigInteger( 'charge_id' );
 
             $table -> string( 'name' ) -> nullable( false );
             $table -> string( 'sku' ) -> nullable( true );
@@ -29,14 +30,14 @@ class CreateProductsTable extends Migration
             $table -> mediumText( 'description' );
             $table -> smallInteger( 'status' ) ->default( 1 );
 
-            $table -> dateTime( 'promo_start' ) -> nullable( true );
-            $table -> dateTime( 'promo_end' ) -> nullable( true );
+            $table -> mediumText( 'extra_data' );
 
             $table -> timestamps();
             $table -> softDeletes();
 
             $table -> foreign('brand_id' ) -> references('id' ) -> on( 'brands' ) -> onDelete( 'cascade' );
             $table -> foreign('store_id' ) -> references('id' ) -> on( 'stores' ) -> onDelete( 'cascade' );
+            $table -> foreign('charge_id' ) -> references('id' ) -> on( 'charges' ) -> onDelete( 'cascade' );
         });
     }
 

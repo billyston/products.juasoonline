@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources\Store;
 
+use App\Http\Resources\Others\Country\CountryResource;
 use App\Http\Resources\Store\Branch\BranchResource;
 use App\Http\Resources\Product\ProductResource;
 use App\Http\Resources\Store\StoreAdministrator\StoreAdministratorResource;
@@ -28,26 +29,29 @@ class StoreResource extends JsonResource
 
             'attributes' =>
             [
-                'resource_id'       => $this -> resource_id,
+                'resource_id'       => $this -> resource -> resource_id,
 
-                'name'              => $this -> name,
-                'region'            => $this -> region,
-                'city'              => $this -> city,
-                'address'           => $this -> address,
-                'postal_code'       => $this -> postal_code,
+                'name'              => $this -> resource -> name,
+                'doing_business_as' => $this -> resource -> doing_business_as,
 
-                'mobile_phone'      => $this -> mobile_phone,
-                'other_phone'       => $this -> other_phone,
+                'region'            => $this -> resource -> region,
+                'city'              => $this -> resource -> city,
+                'address'           => $this -> resource -> address,
+                'postal_code'       => $this -> resource -> postal_code,
 
-                'email'             => $this -> email,
-                'website'           => $this -> website,
+                'mobile_phone'      => $this -> resource -> mobile_phone,
+                'other_phone'       => $this -> resource -> other_phone,
 
-                'created_at'        => $this -> created_at -> toDateTimeString(),
-                'updated_at'        => $this -> updated_at -> toDateTimeString(),
+                'email'             => $this -> resource -> email,
+                'website'           => $this -> resource -> website,
+
+                'created_at'        => $this -> resource -> created_at -> toDateTimeString(),
+                'updated_at'        => $this -> resource -> updated_at -> toDateTimeString(),
             ],
 
-            'include'               => $this -> when( $this -> relationLoaded( 'administrator' ) || $this -> relationLoaded( 'branches' ) || $this -> relationLoaded( 'products' ),
+            'include'               => $this -> when( $this -> relationLoaded( 'country' ) || $this -> relationLoaded( 'administrator' ) || $this -> relationLoaded( 'branches' ) || $this -> relationLoaded( 'products' ),
             [
+                'country'           => new CountryResource( $this -> whenLoaded( 'country' ) ),
                 'administrator'     => new StoreAdministratorResource( $this -> whenLoaded( 'administrator' ) ),
                 'branches'          => BranchResource::collection( $this -> whenLoaded( 'branches' ) ),
                 'products'          => ProductResource::collection( $this -> whenLoaded( 'products' ) ),

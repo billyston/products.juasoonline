@@ -24,7 +24,7 @@ class ColorController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @param Product $theProduct
+     * @param Product $product
      * @return JsonResponse
      */
     public function index( Product $product ) : JsonResponse

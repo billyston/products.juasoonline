@@ -16,7 +16,7 @@ use Exception;
 class CreateStore implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
-    use apiResponseBuilder; private $theRequest;
+    use apiResponseBuilder; private StoreRequest $theRequest;
 
     /**
      * CreateStore constructor.
@@ -35,6 +35,7 @@ class CreateStore implements ShouldQueue
         try
         {
             $Store = new Store( $this -> theRequest -> input( 'data.attributes' ) );
+            $Store -> country() -> associate( $this -> theRequest [ 'data.relationships.country.country_id' ] );
             $Store -> save();
 
             $Store -> refresh();

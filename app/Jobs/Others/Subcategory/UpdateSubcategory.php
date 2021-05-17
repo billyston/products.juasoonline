@@ -8,6 +8,7 @@ use App\Models\Others\Subcategory\Subcategory;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Http\Response;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Exception;
@@ -15,7 +16,7 @@ use Exception;
 class UpdateSubcategory implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
-    private $theRequest; private $theModel;
+    private SubcategoryRequest $theRequest; private Subcategory $theModel;
 
     /**
      * UpdateSubcategory constructor.
@@ -31,7 +32,7 @@ class UpdateSubcategory implements ShouldQueue
     /**
      * @return SubcategoryResource|void
      */
-    public function handle()
+    public function handle() : SubcategoryResource
     {
         try
         {
@@ -41,7 +42,7 @@ class UpdateSubcategory implements ShouldQueue
         catch ( Exception $exception )
         {
             report( $exception );
-            return abort(500, 'something went wrong, please try again later');
+            return abort( $this -> errorResponse( null, 'Error', 'Something went wrong, please try again later', Response::HTTP_SERVICE_UNAVAILABLE ) );
         }
     }
 }

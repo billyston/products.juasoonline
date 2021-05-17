@@ -6,6 +6,7 @@ use App\Models\Others\Brand\Brand;
 use App\Models\Product\Color\Color;
 use App\Models\Product\Overview\Overview;
 use App\Models\Product\Image\Image;
+use App\Models\Product\Promotion\Promotion;
 use App\Models\Product\Review\Review;
 use App\Models\Product\Size\Size;
 use App\Models\Product\Specification\Specification;
@@ -104,5 +105,13 @@ class Product extends Model
     public function sizes() : HasMany
     {
         return $this -> hasMany( Size::class );
+    }
+
+    /**
+     * @return HasMany
+     */
+    public function promotions() : HasMany
+    {
+        return $this -> hasMany( Promotion::class );
     }
 }
