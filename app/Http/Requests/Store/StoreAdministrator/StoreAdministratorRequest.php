@@ -61,6 +61,8 @@ class StoreAdministratorRequest extends FormRequest
             'data'                                                      => [ 'required' ],
             'data.type'                                                 => [ 'required', 'string', 'in:StoreAdministrator' ],
 
+//            'data.attributes.store_resource_id'                         => [ 'required', 'string', 'exists:stores,resource_id' ],
+
             'data.attributes.first_name'                                => [ 'required', 'string' ],
             'data.attributes.other_names'                               => [ 'sometimes', 'string' ],
             'data.attributes.last_name'                                 => [ 'required', 'string' ],

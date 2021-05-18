@@ -10,6 +10,7 @@ use App\Models\Product\Promotion\Promotion;
 use App\Models\Product\Review\Review;
 use App\Models\Product\Size\Size;
 use App\Models\Product\Specification\Specification;
+use App\Models\Store\Charge\Charge;
 use App\Models\Store\Store;
 use App\Models\Others\Subcategory\Subcategory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -49,6 +50,14 @@ class Product extends Model
     public function brand() : BelongsTo
     {
         return $this -> belongsTo( Brand::class );
+    }
+
+    /**
+     * @return BelongsTo
+     */
+    public function charge() : BelongsTo
+    {
+        return $this -> belongsTo( Charge::class );
     }
 
     /**

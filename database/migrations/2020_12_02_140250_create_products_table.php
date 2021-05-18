@@ -30,7 +30,7 @@ class CreateProductsTable extends Migration
             $table -> mediumText( 'description' );
             $table -> smallInteger( 'status' ) ->default( 1 );
 
-            $table -> mediumText( 'extra_data' );
+            $table -> mediumText( 'extra_data' ) -> nullable( true );
 
             $table -> timestamps();
             $table -> softDeletes();

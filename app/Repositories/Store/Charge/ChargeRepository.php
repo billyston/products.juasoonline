@@ -23,7 +23,7 @@ class ChargeRepository implements ChargeRepositoryInterface
      */
     public function index( Store $store ) : JsonResponse
     {
-        return $this -> successResponse( ChargeResource::collection( $store -> branches() -> paginate() ), "Success", null, Response::HTTP_OK );
+        return $this -> successResponse( ChargeResource::collection( $store -> charges() -> paginate() ), "Success", null, Response::HTTP_OK );
     }
 
     /**

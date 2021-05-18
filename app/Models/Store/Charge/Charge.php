@@ -6,11 +6,12 @@ use App\Models\Store\Store;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Charge extends Model
 {
-    use HasFactory; use SoftDeletes;
+    use HasFactory;
 
     protected $guarded = [ 'id' ];
 
@@ -25,5 +26,13 @@ class Charge extends Model
     public function store() : BelongsTo
     {
         return $this -> belongsTo( Store::class );
+    }
+
+    /**
+     * @return HasMany
+     */
+    public function products() : HasMany
+    {
+        return $this -> hasMany( Store::class );
     }
 }

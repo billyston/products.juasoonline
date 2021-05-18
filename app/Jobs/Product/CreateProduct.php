@@ -42,7 +42,8 @@ class CreateProduct implements ShouldQueue
         {
             $Product = new Product( $this -> getAttributes()[ 'attributes' ] );
             $Product -> store() -> associate($this -> theRequest ['data.relationships.store.store_id']);
-            $Product -> brand() -> associate( $this -> theRequest [ 'data.relationships.brand.brand_id' ] );
+            $Product -> charge() -> associate($this -> theRequest ['data.relationships.charge.charge_id']);
+//            $Product -> brand() -> associate( $this -> theRequest [ 'data.relationships.brand.brand_id' ] );
 
             // Product associate with brand coming soon
 

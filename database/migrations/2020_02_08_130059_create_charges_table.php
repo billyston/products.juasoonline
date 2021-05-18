@@ -17,12 +17,15 @@ class CreateChargesTable extends Migration
         {
             $table -> bigIncrements('id' );
             $table -> uuid( 'resource_id' ) -> unique() -> nullable( false );
+            $table -> unsignedBigInteger( 'store_id' );
 
             $table -> string( 'name' ) -> nullable( false );
             $table -> float( 'fee' );
             $table -> mediumText( 'description' );
 
             $table -> timestamps();
+
+            $table -> foreign('store_id' ) -> references('id' ) -> on( 'stores' ) -> onDelete( 'cascade' );
         });
     }
 
