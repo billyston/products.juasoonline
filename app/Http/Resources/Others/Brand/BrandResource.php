@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 /**
- * @method relationLoaded(string $string)
+ * @method relationLoaded( string $string )
  */
 class BrandResource extends JsonResource
 {
@@ -21,19 +21,19 @@ class BrandResource extends JsonResource
     {
         return
         [
-            'id'                    => $this -> id,
+            'id'                    => $this -> resource -> id,
             'type'                  => 'Brand',
 
             'attributes' =>
             [
-                'resource_id'       => $this -> resource_id,
+                'resource_id'       => $this -> resource -> resource_id,
 
-                'name'              => $this -> name,
-                'description'       => $this -> description,
-                'logo'              => $this -> logo,
+                'name'              => $this -> resource -> name,
+                'description'       => $this -> resource -> description,
+                'logo'              => $this -> resource -> logo,
 
-                'created_at'        => $this -> created_at -> toDateTimeString(),
-                'updated_at'        => $this -> updated_at -> toDateTimeString(),
+                'created_at'        => $this -> resource -> created_at -> toDateTimeString(),
+                'updated_at'        => $this -> resource -> updated_at -> toDateTimeString(),
             ],
 
             'include'               => $this -> when( $this -> relationLoaded( 'products' ),

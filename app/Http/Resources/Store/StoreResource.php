@@ -5,6 +5,7 @@ namespace App\Http\Resources\Store;
 use App\Http\Resources\Others\Country\CountryResource;
 use App\Http\Resources\Store\Branch\BranchResource;
 use App\Http\Resources\Product\ProductResource;
+use App\Http\Resources\Store\Charge\ChargeResource;
 use App\Http\Resources\Store\StoreAdministrator\StoreAdministratorResource;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
@@ -49,12 +50,13 @@ class StoreResource extends JsonResource
                 'updated_at'        => $this -> resource -> updated_at -> toDateTimeString(),
             ],
 
-            'include'               => $this -> when( $this -> relationLoaded( 'country' ) || $this -> relationLoaded( 'administrator' ) || $this -> relationLoaded( 'branches' ) || $this -> relationLoaded( 'products' ),
+            'include'               => $this -> when( $this -> relationLoaded( 'charges' ) || $this -> relationLoaded( 'country' ) || $this -> relationLoaded( 'administrator' ) || $this -> relationLoaded( 'branches' ) || $this -> relationLoaded( 'products' ),
             [
-                'country'           => new CountryResource( $this -> whenLoaded( 'country' ) ),
-                'administrator'     => new StoreAdministratorResource( $this -> whenLoaded( 'administrator' ) ),
-                'branches'          => BranchResource::collection( $this -> whenLoaded( 'branches' ) ),
-                'products'          => ProductResource::collection( $this -> whenLoaded( 'products' ) ),
+                'country'           => new CountryResource( $this -> whenLoaded( 'country' )),
+                'administrator'     => new StoreAdministratorResource( $this -> whenLoaded( 'administrator' )),
+                'branches'          => BranchResource::collection( $this -> whenLoaded( 'branches' )),
+                'charges'           => ChargeResource::collection( $this -> whenLoaded( 'charges' )),
+                'products'          => ProductResource::collection( $this -> whenLoaded( 'products' )),
             ])
         ];
     }

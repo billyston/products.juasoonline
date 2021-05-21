@@ -21,20 +21,20 @@ class ReviewResource extends JsonResource
     {
         return
         [
-            'id'                    => $this -> id,
+            'id'                    => $this -> resource -> id,
             'type'                  => 'Review',
 
             'attributes' =>
             [
-                'resource_id'       => $this -> resource_id,
+                'resource_id'       => $this -> resource -> resource_id,
 
-                'rating'            => $this -> rating,
-                'review'            => $this -> review,
-                'customer_id'       => $this -> customer_id,
-                'status'            => $this -> status,
+                'rating'            => $this -> resource -> rating,
+                'review'            => $this -> resource -> review,
+                'customer_id'       => $this -> resource -> customer_id,
+                'status'            => $this -> resource -> status,
 
-                'created_at'        => $this -> created_at -> toDateTimeString(),
-                'updated_at'        => $this -> updated_at -> toDateTimeString(),
+                'created_at'        => $this -> resource -> created_at -> toDateTimeString(),
+                'updated_at'        => $this -> resource -> updated_at -> toDateTimeString(),
             ],
 
             'include'               => $this -> when( $this -> relationLoaded( 'product' ),

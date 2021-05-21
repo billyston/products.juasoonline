@@ -20,19 +20,19 @@ class OverviewResource extends JsonResource
     {
         return
         [
-            'id'                    => $this -> id,
-            'type'                  => 'Review',
+            'id'                    => $this -> resource -> id,
+            'type'                  => 'Overview',
 
             'attributes' =>
             [
-                'resource_id'       => $this -> resource_id,
+                'resource_id'       => $this -> resource -> resource_id,
 
-                'title'             => $this -> title,
-                'description'       => $this -> description,
-                'image'             => $this -> image,
+                'title'             => $this -> resource -> title,
+                'description'       => $this -> resource -> description,
+                'image'             => $this -> resource -> image,
 
-                'created_at'        => $this -> created_at -> toDateTimeString(),
-                'updated_at'        => $this -> updated_at -> toDateTimeString(),
+                'created_at'        => $this -> resource -> created_at -> toDateTimeString(),
+                'updated_at'        => $this -> resource -> updated_at -> toDateTimeString(),
             ],
 
             'include'               => $this -> when( $this -> relationLoaded( 'product' ),

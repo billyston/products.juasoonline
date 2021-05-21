@@ -25,6 +25,7 @@ class CreateProductsTable extends Migration
             $table -> string( 'sku' ) -> nullable( true );
             $table -> string( 'slug' ) -> nullable( true );
             $table -> integer( 'quantity' ) -> nullable( false ) ->default( 0 );
+            $table -> integer( 'total_sold' ) -> nullable( false ) ->default( 0 );
             $table -> float( 'price' );
             $table -> float( 'sales_price' );
             $table -> mediumText( 'description' );

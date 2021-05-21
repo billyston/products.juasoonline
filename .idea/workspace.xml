@@ -21,14 +21,23 @@
   <component name="ChangeListManager">
     <list default="true" id="d1612a24-8f92-4a41-8a01-9056ae58447d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Store/StoreAdministrator/StoreAdministratorRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Store/StoreAdministrator/StoreAdministratorRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Others/Brand/BrandResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Others/Brand/BrandResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Others/Category/CategoryResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Others/Category/CategoryResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Others/Country/CountryResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Others/Country/CountryResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Others/Group/GroupResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Others/Group/GroupResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Others/PromoType/PromoTypeResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Others/PromoType/PromoTypeResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Others/Subcategory/SubcategoryResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Others/Subcategory/SubcategoryResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Product/Image/ImageResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Product/Image/ImageResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Product/Overview/OverviewResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Product/Overview/OverviewResource.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Resources/Product/ProductResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Product/ProductResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Jobs/Product/CreateProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/Product/CreateProduct.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Product/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Store/Charge/Charge.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Store/Charge/Charge.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Store/Charge/ChargeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Store/Charge/ChargeRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_02_08_130059_create_charges_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_02_08_130059_create_charges_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Product/Review/ReviewResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Product/Review/ReviewResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Product/Size/SizeResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Product/Size/SizeResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Product/Specification/SpecificationResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Product/Specification/SpecificationResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Store/StoreAdministrator/StoreAdministratorResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Store/StoreAdministrator/StoreAdministratorResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Store/StoreResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Store/StoreResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Observers/Store/StoreObserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Observers/Store/StoreObserver.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_02_140250_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_02_140250_create_products_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -412,6 +421,37 @@
       <workItem from="1621290587870" duration="1098000" />
       <workItem from="1621292823863" duration="654000" />
       <workItem from="1621295307540" duration="1733000" />
+      <workItem from="1621298176817" duration="505000" />
+      <workItem from="1621326566770" duration="1521000" />
+      <workItem from="1621328372670" duration="1070000" />
+      <workItem from="1621331599448" duration="641000" />
+      <workItem from="1621334941816" duration="1476000" />
+      <workItem from="1621337171381" duration="401000" />
+      <workItem from="1621344537222" duration="1545000" />
+      <workItem from="1621346540513" duration="637000" />
+      <workItem from="1621349937434" duration="707000" />
+      <workItem from="1621372589459" duration="1422000" />
+      <workItem from="1621375157718" duration="1584000" />
+      <workItem from="1621377000384" duration="1235000" />
+      <workItem from="1621378979398" duration="1596000" />
+      <workItem from="1621380889999" duration="1793000" />
+      <workItem from="1621382706819" duration="1082000" />
+      <workItem from="1621412432440" duration="546000" />
+      <workItem from="1621552160739" duration="707000" />
+      <workItem from="1621554602726" duration="1795000" />
+      <workItem from="1621556454238" duration="1781000" />
+      <workItem from="1621586969766" duration="1219000" />
+      <workItem from="1621588856652" duration="1747000" />
+      <workItem from="1621590936307" duration="1363000" />
+      <workItem from="1621592772436" duration="980000" />
+      <workItem from="1621594630193" duration="682000" />
+      <workItem from="1621597377668" duration="1686000" />
+      <workItem from="1621599188803" duration="1119000" />
+      <workItem from="1621601005365" duration="1552000" />
+      <workItem from="1621603533519" duration="1583000" />
+      <workItem from="1621605346123" duration="632000" />
+      <workItem from="1621626609802" duration="834000" />
+      <workItem from="1621630266941" duration="874000" />
     </task>
     <servers />
   </component>

@@ -21,15 +21,17 @@ class CountryResource extends JsonResource
     {
         return
         [
-            'id' => $this -> resource -> id,
-            'types' => 'Country',
+            'id'                    => $this -> resource -> id,
+            'types'                 => 'Country',
+
             'attributes' =>
             [
-                'resource_id' => $this -> resource -> resource_id,
-                'name' => $this -> resource -> name,
-                'iso_code' => $this -> resource -> iso_code,
-                'phone_code' => $this -> resource -> phone_code,
-                'currency' => $this -> resource -> currency
+                'resource_id'       => $this -> resource -> resource_id,
+
+                'name'              => $this -> resource -> name,
+                'iso_code'          => $this -> resource -> iso_code,
+                'phone_code'        => $this -> resource -> phone_code,
+                'currency'          => $this -> resource -> currency
             ],
 
             'include'               => $this -> when( $this -> relationLoaded( 'stores' ),

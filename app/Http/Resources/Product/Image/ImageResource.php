@@ -21,18 +21,18 @@ class ImageResource extends JsonResource
     {
         return
         [
-            'id'                    => $this -> id,
+            'id'                    => $this -> resource -> id,
             'type'                  => 'Images',
 
             'attributes' =>
             [
-                'resource_id'       => $this -> resource_id,
+                'resource_id'       => $this -> resource -> resource_id,
 
-                'description'       => $this -> description,
-                'image'             => $this -> image,
+                'description'       => $this -> resource -> description,
+                'image'             => $this -> resource -> image,
 
-                'created_at'        => $this -> created_at -> toDateTimeString(),
-                'updated_at'        => $this -> updated_at -> toDateTimeString(),
+                'created_at'        => $this -> resource -> created_at -> toDateTimeString(),
+                'updated_at'        => $this -> resource -> updated_at -> toDateTimeString(),
             ],
 
             'include'               => $this -> when( $this -> relationLoaded( 'product' ),

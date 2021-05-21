@@ -21,25 +21,25 @@ class StoreAdministratorResource extends JsonResource
     {
         return
         [
-            'id'                    => $this -> id,
+            'id'                    => $this -> resource -> id,
             'type'                  => 'StoreAdministrator',
 
             'attributes' =>
             [
-                'resource_id'       => $this -> resource_id,
+                'resource_id'       => $this -> resource -> resource_id,
 
-                'first_name'        => $this -> first_name,
-                'other_names'       => $this -> other_names,
-                'last_name'         => $this -> last_name,
+                'first_name'        => $this -> resource -> first_name,
+                'other_names'       => $this -> resource -> other_names,
+                'last_name'         => $this -> resource -> last_name,
 
-                'designation'       => $this -> designation,
+                'designation'       => $this -> resource -> designation,
 
-                'email'             => $this -> email,
-                'mobile_phone'      => $this -> mobile_phone,
-                'office_phone'      => $this -> office_phone,
+                'email'             => $this -> resource -> email,
+                'mobile_phone'      => $this -> resource -> mobile_phone,
+                'office_phone'      => $this -> resource -> office_phone,
 
-                'created_at'        => $this -> created_at -> toDateTimeString(),
-                'updated_at'        => $this -> updated_at -> toDateTimeString(),
+                'created_at'        => $this -> resource -> created_at -> toDateTimeString(),
+                'updated_at'        => $this -> resource -> updated_at -> toDateTimeString(),
             ],
 
             'include'               => $this -> when( $this -> relationLoaded( 'store' ),
