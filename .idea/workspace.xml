@@ -21,23 +21,20 @@
   <component name="ChangeListManager">
     <list default="true" id="d1612a24-8f92-4a41-8a01-9056ae58447d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Others/Brand/BrandResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Others/Brand/BrandResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Others/Category/CategoryResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Others/Category/CategoryResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Others/Country/CountryResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Others/Country/CountryResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Others/Group/GroupResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Others/Group/GroupResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Others/PromoType/PromoTypeResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Others/PromoType/PromoTypeResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Others/Subcategory/SubcategoryResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Others/Subcategory/SubcategoryResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Product/Image/ImageResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Product/Image/ImageResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Product/Overview/OverviewResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Product/Overview/OverviewResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline.dev/virtualbox/action_set_name" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline.dev/virtualbox/action_set_name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Product/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Product/ProductController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Resources/Product/ProductResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Product/ProductResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Product/Review/ReviewResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Product/Review/ReviewResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Product/Size/SizeResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Product/Size/SizeResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Product/Specification/SpecificationResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Product/Specification/SpecificationResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Store/StoreAdministrator/StoreAdministratorResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Store/StoreAdministrator/StoreAdministratorResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Store/StoreResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Store/StoreResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Observers/Store/StoreObserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Observers/Store/StoreObserver.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_02_140250_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_02_140250_create_products_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Product/ProductRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Product/ProductRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Product/ProductRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Product/ProductRepositoryInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/ColorTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/ColorTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/ImageTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/ImageTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/OverviewTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/OverviewTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/ProductCategoryTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/ProductCategoryTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/ProductTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/ProductTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/SizeTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/SizeTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/SpecificationTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/SpecificationTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -452,6 +449,25 @@
       <workItem from="1621605346123" duration="632000" />
       <workItem from="1621626609802" duration="834000" />
       <workItem from="1621630266941" duration="874000" />
+      <workItem from="1621633986354" duration="767000" />
+      <workItem from="1621841966178" duration="353000" />
+      <workItem from="1622021503528" duration="1574000" />
+      <workItem from="1622023295182" duration="1750000" />
+      <workItem from="1622025197796" duration="1458000" />
+      <workItem from="1622027289413" duration="1629000" />
+      <workItem from="1622030380502" duration="556000" />
+      <workItem from="1622032280953" duration="1764000" />
+      <workItem from="1622034308422" duration="236000" />
+      <workItem from="1622036136953" duration="978000" />
+      <workItem from="1622077718761" duration="1567000" />
+      <workItem from="1622079527890" duration="329000" />
+      <workItem from="1622108755852" duration="811000" />
+      <workItem from="1622146988295" duration="440000" />
+      <workItem from="1622218900123" duration="1715000" />
+      <workItem from="1622221087511" duration="1258000" />
+      <workItem from="1622226038956" duration="280000" />
+      <workItem from="1622227945348" duration="426000" />
+      <workItem from="1622230645265" duration="542000" />
     </task>
     <servers />
   </component>

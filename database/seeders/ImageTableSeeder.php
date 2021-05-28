@@ -943,5 +943,315 @@ class ImageTableSeeder extends Seeder
             "created_at"        => date("Y-m-d H:i:s"),
             "updated_at"        => date("Y-m-d H:i:s"),
         ]);
+
+        // Product 16 images
+        DB::table( 'images' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "description"       =>  "Image 1 description",
+            "image"             =>  "https://assets.juasoonline.com/test/images/products/product16_1.jpg",
+
+            "product_id"        =>  16,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'images' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "description"       =>  "Image 2 description",
+            "image"             =>  "https://assets.juasoonline.com/test/images/products/product16_2.jpg",
+
+            "product_id"        =>  16,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'images' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "description"       =>  "Image 3 description",
+            "image"             =>  "https://assets.juasoonline.com/test/images/products/product16_3.jpg",
+
+            "product_id"        =>  16,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'images' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "description"       =>  "Image 4 description",
+            "image"             =>  "https://assets.juasoonline.com/test/images/products/product16_4.jpg",
+
+            "product_id"        =>  16,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'images' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "description"       =>  "Image 5 description",
+            "image"             =>  "https://assets.juasoonline.com/test/images/products/product16_5.jpg",
+
+            "product_id"        =>  16,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+
+        // Product 17 images
+        DB::table( 'images' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "description"       =>  "Image 1 description",
+            "image"             =>  "https://assets.juasoonline.com/test/images/products/product17_1.jpg",
+
+            "product_id"        =>  17,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'images' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "description"       =>  "Image 2 description",
+            "image"             =>  "https://assets.juasoonline.com/test/images/products/product17_2.jpg",
+
+            "product_id"        =>  17,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'images' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "description"       =>  "Image 3 description",
+            "image"             =>  "https://assets.juasoonline.com/test/images/products/product17_3.jpg",
+
+            "product_id"        =>  17,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'images' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "description"       =>  "Image 4 description",
+            "image"             =>  "https://assets.juasoonline.com/test/images/products/product17_4.jpg",
+
+            "product_id"        =>  17,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'images' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "description"       =>  "Image 5 description",
+            "image"             =>  "https://assets.juasoonline.com/test/images/products/product17_5.jpg",
+
+            "product_id"        =>  17,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+
+        // Product 18 images
+        DB::table( 'images' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "description"       =>  "Image 1 description",
+            "image"             =>  "https://assets.juasoonline.com/test/images/products/product18_1.jpg",
+
+            "product_id"        =>  18,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'images' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "description"       =>  "Image 2 description",
+            "image"             =>  "https://assets.juasoonline.com/test/images/products/product18_2.jpg",
+
+            "product_id"        =>  18,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'images' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "description"       =>  "Image 3 description",
+            "image"             =>  "https://assets.juasoonline.com/test/images/products/product18_3.jpg",
+
+            "product_id"        =>  18,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'images' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "description"       =>  "Image 4 description",
+            "image"             =>  "https://assets.juasoonline.com/test/images/products/product18_4.jpg",
+
+            "product_id"        =>  18,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'images' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "description"       =>  "Image 5 description",
+            "image"             =>  "https://assets.juasoonline.com/test/images/products/product18_5.jpg",
+
+            "product_id"        =>  18,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+
+        // Product 19 images
+        DB::table( 'images' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "description"       =>  "Image 1 description",
+            "image"             =>  "https://assets.juasoonline.com/test/images/products/product19_1.jpg",
+
+            "product_id"        =>  19,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'images' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "description"       =>  "Image 2 description",
+            "image"             =>  "https://assets.juasoonline.com/test/images/products/product19_2.jpg",
+
+            "product_id"        =>  19,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'images' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "description"       =>  "Image 3 description",
+            "image"             =>  "https://assets.juasoonline.com/test/images/products/product19_3.jpg",
+
+            "product_id"        =>  19,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'images' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "description"       =>  "Image 4 description",
+            "image"             =>  "https://assets.juasoonline.com/test/images/products/product19_4.jpg",
+
+            "product_id"        =>  19,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'images' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "description"       =>  "Image 5 description",
+            "image"             =>  "https://assets.juasoonline.com/test/images/products/product19_5.jpg",
+
+            "product_id"        =>  19,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+
+        // Product 20 images
+        DB::table( 'images' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "description"       =>  "Image 1 description",
+            "image"             =>  "https://assets.juasoonline.com/test/images/products/product20_1.jpg",
+
+            "product_id"        =>  20,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'images' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "description"       =>  "Image 2 description",
+            "image"             =>  "https://assets.juasoonline.com/test/images/products/product20_2.jpg",
+
+            "product_id"        =>  20,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'images' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "description"       =>  "Image 3 description",
+            "image"             =>  "https://assets.juasoonline.com/test/images/products/product20_3.jpg",
+
+            "product_id"        =>  20,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'images' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "description"       =>  "Image 4 description",
+            "image"             =>  "https://assets.juasoonline.com/test/images/products/product20_4.jpg",
+
+            "product_id"        =>  20,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'images' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "description"       =>  "Image 5 description",
+            "image"             =>  "https://assets.juasoonline.com/test/images/products/product20_5.jpg",
+
+            "product_id"        =>  20,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
     }
 }

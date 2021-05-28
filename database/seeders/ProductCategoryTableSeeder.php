@@ -388,20 +388,150 @@ class ProductCategoryTableSeeder extends Seeder
                 "updated_at"        => date("Y-m-d H:i:s"),
             ]);
         DB::table( 'product_subcategory' ) -> insert(
-            [
-                "product_id"        =>  15,
-                "subcategory_id"    =>  77,
+        [
+            "product_id"        =>  15,
+            "subcategory_id"    =>  77,
 
-                "created_at"        => date("Y-m-d H:i:s"),
-                "updated_at"        => date("Y-m-d H:i:s"),
-            ]);
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
         DB::table( 'product_subcategory' ) -> insert(
-            [
-                "product_id"        =>  15,
-                "subcategory_id"    =>  78,
+        [
+            "product_id"        =>  15,
+            "subcategory_id"    =>  78,
 
-                "created_at"        => date("Y-m-d H:i:s"),
-                "updated_at"        => date("Y-m-d H:i:s"),
-            ]);
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+
+        // Product 16 categories
+        DB::table( 'product_subcategory' ) -> insert(
+        [
+            "product_id"        =>  16,
+            "subcategory_id"    =>  76,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'product_subcategory' ) -> insert(
+        [
+            "product_id"        =>  16,
+            "subcategory_id"    =>  77,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'product_subcategory' ) -> insert(
+        [
+            "product_id"        =>  16,
+            "subcategory_id"    =>  78,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+
+        // Product 17 categories
+        DB::table( 'product_subcategory' ) -> insert(
+        [
+            "product_id"        =>  17,
+            "subcategory_id"    =>  76,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'product_subcategory' ) -> insert(
+        [
+            "product_id"        =>  17,
+            "subcategory_id"    =>  77,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'product_subcategory' ) -> insert(
+        [
+            "product_id"        =>  17,
+            "subcategory_id"    =>  78,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+
+        // Product 18 categories
+        DB::table( 'product_subcategory' ) -> insert(
+        [
+            "product_id"        =>  18,
+            "subcategory_id"    =>  76,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'product_subcategory' ) -> insert(
+        [
+            "product_id"        =>  18,
+            "subcategory_id"    =>  77,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'product_subcategory' ) -> insert(
+        [
+            "product_id"        =>  18,
+            "subcategory_id"    =>  78,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+
+        // Product 19 categories
+        DB::table( 'product_subcategory' ) -> insert(
+        [
+            "product_id"        =>  19,
+            "subcategory_id"    =>  76,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'product_subcategory' ) -> insert(
+        [
+            "product_id"        =>  19,
+            "subcategory_id"    =>  77,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'product_subcategory' ) -> insert(
+        [
+            "product_id"        =>  19,
+            "subcategory_id"    =>  78,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+
+        // Product 20 categories
+        DB::table( 'product_subcategory' ) -> insert(
+        [
+            "product_id"        =>  20,
+            "subcategory_id"    =>  76,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'product_subcategory' ) -> insert(
+        [
+            "product_id"        =>  20,
+            "subcategory_id"    =>  77,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'product_subcategory' ) -> insert(
+        [
+            "product_id"        =>  20,
+            "subcategory_id"    =>  78,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
     }
 }

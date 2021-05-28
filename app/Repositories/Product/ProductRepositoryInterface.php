@@ -6,6 +6,7 @@ use App\Http\Requests\Product\ProductRequest;
 use App\Models\Product\Product;
 use App\Models\Store\Store;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
 interface ProductRepositoryInterface
 {

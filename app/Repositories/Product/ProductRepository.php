@@ -10,7 +10,9 @@ use App\Models\Product\Product;
 use App\Models\Store\Store;
 use App\Traits\apiResponseBuilder;
 use App\Traits\Relatives;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Http\Response;
 
 class ProductRepository implements ProductRepositoryInterface

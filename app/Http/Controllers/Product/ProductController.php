@@ -8,6 +8,7 @@ use App\Models\Product\Product;
 use App\Models\Store\Store;
 use App\Repositories\Product\ProductRepositoryInterface;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
 class ProductController extends Controller
 {

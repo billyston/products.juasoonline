@@ -583,5 +583,195 @@ class ColorTableSeeder extends Seeder
             "created_at"        => date("Y-m-d H:i:s"),
             "updated_at"        => date("Y-m-d H:i:s"),
         ]);
+
+        // Product 16 colors
+        DB::table( 'colors' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "color"             =>  "Product 1 color one",
+            "image"             =>  "https://assets.juasoonline.com/test/images/colors/colors16_1.jpg",
+
+            "product_id"        =>  16,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'colors' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "color"             =>  "Product 1 color two",
+            "image"             =>  "https://assets.juasoonline.com/test/images/colors/colors16_2.jpg",
+
+            "product_id"        =>  16,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'colors' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "color"             =>  "Product 1 color three",
+            "image"             =>  "https://assets.juasoonline.com/test/images/colors/colors16_3.jpg",
+
+            "product_id"        =>  16,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+
+        // Product 17 colors
+        DB::table( 'colors' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "color"             =>  "Product 1 color one",
+            "image"             =>  "https://assets.juasoonline.com/test/images/colors/colors17_1.jpg",
+
+            "product_id"        =>  17,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'colors' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "color"             =>  "Product 1 color two",
+            "image"             =>  "https://assets.juasoonline.com/test/images/colors/colors17_2.jpg",
+
+            "product_id"        =>  17,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'colors' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "color"             =>  "Product 1 color three",
+            "image"             =>  "https://assets.juasoonline.com/test/images/colors/colors17_3.jpg",
+
+            "product_id"        =>  17,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+
+        // Product 18 colors
+        DB::table( 'colors' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "color"             =>  "Product 1 color one",
+            "image"             =>  "https://assets.juasoonline.com/test/images/colors/colors18_1.jpg",
+
+            "product_id"        =>  18,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'colors' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "color"             =>  "Product 1 color two",
+            "image"             =>  "https://assets.juasoonline.com/test/images/colors/colors18_2.jpg",
+
+            "product_id"        =>  18,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'colors' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "color"             =>  "Product 1 color three",
+            "image"             =>  "https://assets.juasoonline.com/test/images/colors/colors18_3.jpg",
+
+            "product_id"        =>  18,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+
+        // Product 19 colors
+        DB::table( 'colors' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "color"             =>  "Product 1 color one",
+            "image"             =>  "https://assets.juasoonline.com/test/images/colors/colors19_1.jpg",
+
+            "product_id"        =>  19,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'colors' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "color"             =>  "Product 1 color two",
+            "image"             =>  "https://assets.juasoonline.com/test/images/colors/colors19_2.jpg",
+
+            "product_id"        =>  19,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'colors' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "color"             =>  "Product 1 color three",
+            "image"             =>  "https://assets.juasoonline.com/test/images/colors/colors19_3.jpg",
+
+            "product_id"        =>  19,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+
+        // Product 20 colors
+        DB::table( 'colors' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "color"             =>  "Product 1 color one",
+            "image"             =>  "https://assets.juasoonline.com/test/images/colors/colors20_1.jpg",
+
+            "product_id"        =>  20,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'colors' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "color"             =>  "Product 1 color two",
+            "image"             =>  "https://assets.juasoonline.com/test/images/colors/colors20_2.jpg",
+
+            "product_id"        =>  20,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'colors' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "color"             =>  "Product 1 color three",
+            "image"             =>  "https://assets.juasoonline.com/test/images/colors/colors20_3.jpg",
+
+            "product_id"        =>  20,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
     }
 }

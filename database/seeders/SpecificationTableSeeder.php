@@ -583,5 +583,195 @@ class SpecificationTableSeeder extends Seeder
             "created_at"        => date("Y-m-d H:i:s"),
             "updated_at"        => date("Y-m-d H:i:s"),
         ]);
+
+        // Product 16 specifications
+        DB::table( 'specifications' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "specification"     =>  "Height",
+            "value"             =>  "6.8",
+
+            "product_id"        =>  16,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'specifications' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "specification"     =>  "Doors",
+            "value"             =>  "Double Door",
+
+            "product_id"        =>  16,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'specifications' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "specification"     =>  "Type",
+            "value"             =>  "Deep Freezer",
+
+            "product_id"        =>  16,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+
+        // Product 17 specifications
+        DB::table( 'specifications' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "specification"     =>  "Height",
+            "value"             =>  "6.8",
+
+            "product_id"        =>  17,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'specifications' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "specification"     =>  "Doors",
+            "value"             =>  "Double Door",
+
+            "product_id"        =>  17,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'specifications' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "specification"     =>  "Type",
+            "value"             =>  "Deep Freezer",
+
+            "product_id"        =>  17,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+
+        // Product 18 specifications
+        DB::table( 'specifications' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "specification"     =>  "Height",
+            "value"             =>  "6.8",
+
+            "product_id"        =>  18,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'specifications' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "specification"     =>  "Doors",
+            "value"             =>  "Double Door",
+
+            "product_id"        =>  18,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'specifications' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "specification"     =>  "Type",
+            "value"             =>  "Deep Freezer",
+
+            "product_id"        =>  18,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+
+        // Product 19 specifications
+        DB::table( 'specifications' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "specification"     =>  "Height",
+            "value"             =>  "6.8",
+
+            "product_id"        =>  19,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'specifications' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "specification"     =>  "Doors",
+            "value"             =>  "Double Door",
+
+            "product_id"        =>  19,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'specifications' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "specification"     =>  "Type",
+            "value"             =>  "Deep Freezer",
+
+            "product_id"        =>  19,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+
+        // Product 20 specifications
+        DB::table( 'specifications' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "specification"     =>  "Height",
+            "value"             =>  "6.8",
+
+            "product_id"        =>  20,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'specifications' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "specification"     =>  "Doors",
+            "value"             =>  "Double Door",
+
+            "product_id"        =>  20,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'specifications' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "specification"     =>  "Type",
+            "value"             =>  "Deep Freezer",
+
+            "product_id"        =>  20,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
     }
 }

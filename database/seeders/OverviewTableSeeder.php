@@ -628,5 +628,210 @@ class OverviewTableSeeder extends Seeder
             "created_at"        => date("Y-m-d H:i:s"),
             "updated_at"        => date("Y-m-d H:i:s"),
         ]);
+
+        // Product 16 overviews
+        DB::table( 'overviews' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "title"             =>  "Product 1 overview title one",
+            "description"       =>  "Apart from blogging, he likes to read Novels, Listening music and Net surfing.",
+            "image"             =>  "https://assets.juasoonline.com/test/images/overviews/overviews16_1.jpg",
+
+            "product_id"        =>  16,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'overviews' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "title"             =>  "Product 1 overview title two",
+            "description"       =>  "Apart from blogging, he likes to read Novels, Listening music and Net surfing.",
+            "image"             =>  "https://assets.juasoonline.com/test/images/overviews/overviews16_2.jpg",
+
+            "product_id"        =>  16,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'overviews' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "title"             =>  "Product 1 overview title three",
+            "description"       =>  "Apart from blogging, he likes to read Novels, Listening music and Net surfing.",
+            "image"             =>  "https://assets.juasoonline.com/test/images/overviews/overviews16_3.jpg",
+
+            "product_id"        =>  16,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+
+        // Product 17 overviews
+        DB::table( 'overviews' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "title"             =>  "Product 1 overview title one",
+            "description"       =>  "Apart from blogging, he likes to read Novels, Listening music and Net surfing.",
+            "image"             =>  "https://assets.juasoonline.com/test/images/overviews/overviews17_1.jpg",
+
+            "product_id"        =>  17,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'overviews' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "title"             =>  "Product 1 overview title two",
+            "description"       =>  "Apart from blogging, he likes to read Novels, Listening music and Net surfing.",
+            "image"             =>  "https://assets.juasoonline.com/test/images/overviews/overviews17_2.jpg",
+
+            "product_id"        =>  17,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'overviews' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "title"             =>  "Product 1 overview title three",
+            "description"       =>  "Apart from blogging, he likes to read Novels, Listening music and Net surfing.",
+            "image"             =>  "https://assets.juasoonline.com/test/images/overviews/overviews17_3.jpg",
+
+            "product_id"        =>  17,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+
+        // Product 18 overviews
+        DB::table( 'overviews' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "title"             =>  "Product 1 overview title one",
+            "description"       =>  "Apart from blogging, he likes to read Novels, Listening music and Net surfing.",
+            "image"             =>  "https://assets.juasoonline.com/test/images/overviews/overviews18_1.jpg",
+
+            "product_id"        =>  18,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'overviews' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "title"             =>  "Product 1 overview title two",
+            "description"       =>  "Apart from blogging, he likes to read Novels, Listening music and Net surfing.",
+            "image"             =>  "https://assets.juasoonline.com/test/images/overviews/overviews18_2.jpg",
+
+            "product_id"        =>  18,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'overviews' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "title"             =>  "Product 1 overview title three",
+            "description"       =>  "Apart from blogging, he likes to read Novels, Listening music and Net surfing.",
+            "image"             =>  "https://assets.juasoonline.com/test/images/overviews/overviews18_3.jpg",
+
+            "product_id"        =>  18,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+
+        // Product 19 overviews
+        DB::table( 'overviews' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "title"             =>  "Product 1 overview title one",
+            "description"       =>  "Apart from blogging, he likes to read Novels, Listening music and Net surfing.",
+            "image"             =>  "https://assets.juasoonline.com/test/images/overviews/overviews19_1.jpg",
+
+            "product_id"        =>  19,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'overviews' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "title"             =>  "Product 1 overview title two",
+            "description"       =>  "Apart from blogging, he likes to read Novels, Listening music and Net surfing.",
+            "image"             =>  "https://assets.juasoonline.com/test/images/overviews/overviews19_2.jpg",
+
+            "product_id"        =>  19,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'overviews' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "title"             =>  "Product 1 overview title three",
+            "description"       =>  "Apart from blogging, he likes to read Novels, Listening music and Net surfing.",
+            "image"             =>  "https://assets.juasoonline.com/test/images/overviews/overviews19_3.jpg",
+
+            "product_id"        =>  19,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+
+        // Product 20 overviews
+        DB::table( 'overviews' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "title"             =>  "Product 1 overview title one",
+            "description"       =>  "Apart from blogging, he likes to read Novels, Listening music and Net surfing.",
+            "image"             =>  "https://assets.juasoonline.com/test/images/overviews/overviews20_1.jpg",
+
+            "product_id"        =>  20,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'overviews' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "title"             =>  "Product 1 overview title two",
+            "description"       =>  "Apart from blogging, he likes to read Novels, Listening music and Net surfing.",
+            "image"             =>  "https://assets.juasoonline.com/test/images/overviews/overviews20_2.jpg",
+
+            "product_id"        =>  20,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'overviews' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "title"             =>  "Product 1 overview title three",
+            "description"       =>  "Apart from blogging, he likes to read Novels, Listening music and Net surfing.",
+            "image"             =>  "https://assets.juasoonline.com/test/images/overviews/overviews20_3.jpg",
+
+            "product_id"        =>  20,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
     }
 }

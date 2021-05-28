@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Repositories\Juasoonline\JuasoonlineRepository;
+use App\Repositories\Juasoonline\JuasoonlineRepositoryInterface;
 use App\Repositories\Others\Country\CountryRepositoryInterface;
 use App\Repositories\Others\Country\CountryRepository;
 use App\Repositories\Others\PromoType\PromoTypeRepositoryInterface;
@@ -71,6 +73,8 @@ class RepositoryServiceProvider extends ServiceProvider
         $this -> app -> bind( ColorRepositoryInterface::class, ColorRepository::class );
         $this -> app -> bind( SizeRepositoryInterface::class, SizeRepository::class );
         $this -> app -> bind( PromotionRepositoryInterface::class, PromotionRepository::class );
+
+        $this -> app -> bind( JuasoonlineRepositoryInterface::class, JuasoonlineRepository::class );
     }
 
     /**

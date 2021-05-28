@@ -583,5 +583,195 @@ class SizeTableSeeder extends Seeder
             "created_at"        => date("Y-m-d H:i:s"),
             "updated_at"        => date("Y-m-d H:i:s"),
         ]);
+
+        // Product 16 sizes
+        DB::table( 'sizes' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "size"              =>  "S",
+            "description"       =>  "Apart from blogging, he likes to read Novels, Listening music and Net surfing.",
+
+            "product_id"        =>  16,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'sizes' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "size"              =>  "M",
+            "description"       =>  "Apart from blogging, he likes to read Novels, Listening music and Net surfing.",
+
+            "product_id"        =>  16,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'sizes' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "size"              =>  "L",
+            "description"       =>  "Apart from blogging, he likes to read Novels, Listening music and Net surfing.",
+
+            "product_id"        =>  16,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+
+        // Product 17 sizes
+        DB::table( 'sizes' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "size"              =>  "S",
+            "description"       =>  "Apart from blogging, he likes to read Novels, Listening music and Net surfing.",
+
+            "product_id"        =>  17,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'sizes' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "size"              =>  "M",
+            "description"       =>  "Apart from blogging, he likes to read Novels, Listening music and Net surfing.",
+
+            "product_id"        =>  17,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'sizes' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "size"              =>  "L",
+            "description"       =>  "Apart from blogging, he likes to read Novels, Listening music and Net surfing.",
+
+            "product_id"        =>  17,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+
+        // Product 18 sizes
+        DB::table( 'sizes' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "size"              =>  "S",
+            "description"       =>  "Apart from blogging, he likes to read Novels, Listening music and Net surfing.",
+
+            "product_id"        =>  18,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'sizes' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "size"              =>  "M",
+            "description"       =>  "Apart from blogging, he likes to read Novels, Listening music and Net surfing.",
+
+            "product_id"        =>  18,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'sizes' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "size"              =>  "L",
+            "description"       =>  "Apart from blogging, he likes to read Novels, Listening music and Net surfing.",
+
+            "product_id"        =>  18,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+
+        // Product 19 sizes
+        DB::table( 'sizes' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "size"              =>  "S",
+            "description"       =>  "Apart from blogging, he likes to read Novels, Listening music and Net surfing.",
+
+            "product_id"        =>  19,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'sizes' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "size"              =>  "M",
+            "description"       =>  "Apart from blogging, he likes to read Novels, Listening music and Net surfing.",
+
+            "product_id"        =>  19,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'sizes' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "size"              =>  "L",
+            "description"       =>  "Apart from blogging, he likes to read Novels, Listening music and Net surfing.",
+
+            "product_id"        =>  19,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+
+        // Product 20 sizes
+        DB::table( 'sizes' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "size"              =>  "S",
+            "description"       =>  "Apart from blogging, he likes to read Novels, Listening music and Net surfing.",
+
+            "product_id"        =>  20,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'sizes' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "size"              =>  "M",
+            "description"       =>  "Apart from blogging, he likes to read Novels, Listening music and Net surfing.",
+
+            "product_id"        =>  20,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
+        DB::table( 'sizes' ) -> insert(
+        [
+            "resource_id"       =>  hexdec( uniqid() ),
+
+            "size"              =>  "L",
+            "description"       =>  "Apart from blogging, he likes to read Novels, Listening music and Net surfing.",
+
+            "product_id"        =>  20,
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
+        ]);
     }
 }

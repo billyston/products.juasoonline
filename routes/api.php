@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Juasoonline\JuasoonlineController;
 use App\Http\Controllers\Others\Country\CountryController;
 use App\Http\Controllers\Others\PromoType\PromoTypeController;
 use App\Http\Controllers\Others\Brand\BrandController;
@@ -67,5 +68,12 @@ Route::group([], function ()
         Route::apiResource( 'product.colors', ColorController::class );
         Route::apiResource( 'product.sizes', SizeController::class );
         Route::apiResource( 'product.promotions', PromotionController::class );
+    });
+
+    // Juasoonline resources routes
+    Route::group([], function ()
+    {
+        Route::get( 'products', [ JuasoonlineController::class, 'products' ]);
+        Route::get( 'product/{product}', [ JuasoonlineController::class, 'product' ]);
     });
 });
