@@ -22,18 +22,9 @@
     <list default="true" id="d1612a24-8f92-4a41-8a01-9056ae58447d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline.dev/virtualbox/action_set_name" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline.dev/virtualbox/action_set_name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Product/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Product/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Product/ProductResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Product/ProductResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Product/ProductRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Product/ProductRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Product/ProductRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Product/ProductRepositoryInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/ColorTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/ColorTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/ImageTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/ImageTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/OverviewTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/OverviewTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/ProductCategoryTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/ProductCategoryTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/ProductTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/ProductTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/SizeTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/SizeTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/SpecificationTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/SpecificationTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Juasoonline/JuasoonlineController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Juasoonline/JuasoonlineController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Juasoonline/JuasoonlineRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Juasoonline/JuasoonlineRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Juasoonline/JuasoonlineRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Juasoonline/JuasoonlineRepositoryInterface.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -468,6 +459,19 @@
       <workItem from="1622226038956" duration="280000" />
       <workItem from="1622227945348" duration="426000" />
       <workItem from="1622230645265" duration="542000" />
+      <workItem from="1622232461780" duration="625000" />
+      <workItem from="1622234780002" duration="1322000" />
+      <workItem from="1622236124908" duration="629000" />
+      <workItem from="1622237938033" duration="598000" />
+      <workItem from="1622239765135" duration="70000" />
+      <workItem from="1622240406397" duration="744000" />
+      <workItem from="1622241578266" duration="25000" />
+      <workItem from="1622242728934" duration="639000" />
+      <workItem from="1622243390401" duration="787000" />
+      <workItem from="1622491133729" duration="1481000" />
+      <workItem from="1622492910429" duration="1453000" />
+      <workItem from="1622495192991" duration="1554000" />
+      <workItem from="1622497005316" duration="904000" />
     </task>
     <servers />
   </component>

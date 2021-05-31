@@ -71,9 +71,11 @@ Route::group([], function ()
     });
 
     // Juasoonline resources routes
-    Route::group([], function ()
+    Route::group(['prefix' => 'juaso'], function ()
     {
+        // Product routes
         Route::get( 'products', [ JuasoonlineController::class, 'products' ]);
         Route::get( 'product/{product}', [ JuasoonlineController::class, 'product' ]);
+        Route::get( 'product/{product}/recommendations', [ JuasoonlineController::class, 'recommendations' ]);
     });
 });

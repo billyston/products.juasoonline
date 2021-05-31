@@ -37,4 +37,9 @@ class JuasoonlineController extends Controller
     {
         return $this -> theRepository -> product( $product );
     }
+
+    public function recommendations( $product ) : JsonResponse
+    {
+        return $this -> theRepository -> recommendations( $product );
+    }
 }

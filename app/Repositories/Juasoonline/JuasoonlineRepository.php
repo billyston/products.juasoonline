@@ -9,7 +9,6 @@ use App\Traits\Relatives;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
-use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Http\Response;
 
 class JuasoonlineRepository implements JuasoonlineRepositoryInterface
@@ -33,5 +32,22 @@ class JuasoonlineRepository implements JuasoonlineRepositoryInterface
     {
         if ( $this -> loadRelationships() ) { $product -> load( $this -> relationships ); }
         return $this -> successResponse( new ProductResource( $product ), "Success", null, Response::HTTP_OK );
+    }
+
+    /**
+     * @param $product
+     * @return JsonResponse
+     */
+    public function recommendations( $product ) : JsonResponse
+    {
+//        $result = Product::with('categories' ) -> findOrFail(1 );
+//        $categoryIds = $result -> categories -> pluck( 'id' ) -> toArray();
+//
+//        $similarProducts = Product::has('categories', function ( $query ) use ( $categoryIds )
+//        {
+//            return $query->whereIn('id', $categoryIds);
+//        })->whereNot( 'id', $product -> id ) -> limit(10) -> get();
+//
+//        return $similarArtists;
     }
 }

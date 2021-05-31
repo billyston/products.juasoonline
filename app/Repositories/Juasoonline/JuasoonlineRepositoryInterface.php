@@ -18,4 +18,10 @@ interface JuasoonlineRepositoryInterface
      * @return JsonResponse
      */
     public function product( Product $product ) : JsonResponse;
+
+    /**
+     * @param $product
+     * @return JsonResponse
+     */
+    public function recommendations( $product ) : JsonResponse;
 }
