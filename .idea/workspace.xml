@@ -21,8 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d1612a24-8f92-4a41-8a01-9056ae58447d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline.dev/virtualbox/action_set_name" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline.dev/virtualbox/action_set_name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Juasoonline/JuasoonlineController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Juasoonline/JuasoonlineController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Product/ProductResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Product/ProductResource.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repositories/Juasoonline/JuasoonlineRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Juasoonline/JuasoonlineRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repositories/Juasoonline/JuasoonlineRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Juasoonline/JuasoonlineRepositoryInterface.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
@@ -471,7 +471,12 @@
       <workItem from="1622491133729" duration="1481000" />
       <workItem from="1622492910429" duration="1453000" />
       <workItem from="1622495192991" duration="1554000" />
-      <workItem from="1622497005316" duration="904000" />
+      <workItem from="1622497005316" duration="1192000" />
+      <workItem from="1622499405532" duration="1691000" />
+      <workItem from="1622501232776" duration="1518000" />
+      <workItem from="1622503114708" duration="1748000" />
+      <workItem from="1622504952492" duration="185000" />
+      <workItem from="1622505261794" duration="728000" />
     </task>
     <servers />
   </component>

@@ -76,6 +76,6 @@ Route::group([], function ()
         // Product routes
         Route::get( 'products', [ JuasoonlineController::class, 'products' ]);
         Route::get( 'product/{product}', [ JuasoonlineController::class, 'product' ]);
-        Route::get( 'product/{product}/recommendations', [ JuasoonlineController::class, 'recommendations' ]);
+        Route::get( 'products/recommendations', [ JuasoonlineController::class, 'recommendations' ]);
     });
 });

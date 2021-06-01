@@ -8,6 +8,7 @@ use App\Traits\apiResponseBuilder;
 use App\Traits\Relatives;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Http\Response;
 
@@ -35,19 +36,26 @@ class JuasoonlineRepository implements JuasoonlineRepositoryInterface
     }
 
     /**
-     * @param $product
+     * @param Request $request
      * @return JsonResponse
      */
-    public function recommendations( $product ) : JsonResponse
+    public function recommendations( Request $request ) : JsonResponse
     {
-//        $result = Product::with('categories' ) -> findOrFail(1 );
-//        $categoryIds = $result -> categories -> pluck( 'id' ) -> toArray();
-//
-//        $similarProducts = Product::has('categories', function ( $query ) use ( $categoryIds )
-//        {
-//            return $query->whereIn('id', $categoryIds);
-//        })->whereNot( 'id', $product -> id ) -> limit(10) -> get();
-//
-//        return $similarArtists;
+//        $product = Product::query();
+//        if ( request('name')) { $product -> where('name', 'Like', '%' . request('name') . '%'); }
+//        return $this -> successResponse( ProductResource::collection( $product -> orderBy('id', 'DESC') -> paginate(500) ), "Success", null, Response::HTTP_OK );
+
+
+        $products = Product::where([
+            [ 'name', '!=', Null ],
+            [ function ( $query ) use ($request)
+            {
+                if (( $item = $request -> name ))
+                {
+                    $query -> orWhere( 'name', 'LIKE', '%' . $item . '%' ) -> get();
+                }
+            } ]
+        ])->orderBy('id', 'desc') -> paginate( 500 );
+        return $this -> successResponse( ProductResource::collection( $products ), "Success", null, Response::HTTP_OK );
     }
 }

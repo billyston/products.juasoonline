@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Product\Product;
 use App\Repositories\Juasoonline\JuasoonlineRepositoryInterface;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
 class JuasoonlineController extends Controller
@@ -38,8 +39,12 @@ class JuasoonlineController extends Controller
         return $this -> theRepository -> product( $product );
     }
 
-    public function recommendations( $product ) : JsonResponse
+    /**
+     * @param Request $request
+     * @return JsonResponse
+     */
+    public function recommendations( Request $request ) : JsonResponse
     {
-        return $this -> theRepository -> recommendations( $product );
+        return $this -> theRepository -> recommendations( $request );
     }
 }

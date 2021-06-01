@@ -49,6 +49,8 @@ class ProductResource extends JsonResource
                 'total_sold'        => $this -> resource -> total_sold,
                 'status'            => $this -> resource -> status,
 
+                'image'             => $this -> resource -> images[0] -> image,
+
                 'star_ratings'      =>
                 [
                     '5_stars'       => $this -> resource -> reviews -> where( 'rating', 5 ) -> count(),
