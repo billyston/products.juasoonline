@@ -4,6 +4,7 @@ namespace App\Repositories\Juasoonline;
 
 use App\Http\Resources\Product\ProductResource;
 use App\Models\Product\Product;
+use App\Models\Store\Store;
 use App\Traits\apiResponseBuilder;
 use App\Traits\Relatives;
 use Illuminate\Database\Eloquent\Builder;
@@ -41,21 +42,30 @@ class JuasoonlineRepository implements JuasoonlineRepositoryInterface
      */
     public function recommendations( Request $request ) : JsonResponse
     {
-//        $product = Product::query();
-//        if ( request('name')) { $product -> where('name', 'Like', '%' . request('name') . '%'); }
-//        return $this -> successResponse( ProductResource::collection( $product -> orderBy('id', 'DESC') -> paginate(500) ), "Success", null, Response::HTTP_OK );
+        $product = Product::query();
+        if ( request('name')) { $product -> where('name', 'Like', '%' . request('name' ) . '%'); }
+        return $this -> successResponse( ProductResource::collection( $product -> orderBy('id', 'DESC' ) -> paginate(500) ), "Success", null, Response::HTTP_OK );
 
+//        $products = Product::where([
+//            [ 'name', '!=', Null ],
+//            [ function ( $query ) use ($request)
+//            {
+//                if (( $item = $request -> name ))
+//                {
+//                    $query -> orWhere( 'name', 'LIKE', '%' . $item . '%' ) -> get();
+//                }
+//            } ]
+//        ])->orderBy('id', 'desc') -> paginate( 500 );
+//        return $this -> successResponse( ProductResource::collection( $products ), "Success", null, Response::HTTP_OK );
+    }
 
-        $products = Product::where([
-            [ 'name', '!=', Null ],
-            [ function ( $query ) use ($request)
-            {
-                if (( $item = $request -> name ))
-                {
-                    $query -> orWhere( 'name', 'LIKE', '%' . $item . '%' ) -> get();
-                }
-            } ]
-        ])->orderBy('id', 'desc') -> paginate( 500 );
-        return $this -> successResponse( ProductResource::collection( $products ), "Success", null, Response::HTTP_OK );
+    /**
+     * @param Store $store
+     * @return JsonResponse
+     */
+    public function storeProducts( Store $store ) : JsonResponse
+    {
+        logger($store);
+        return $this -> successResponse( ProductResource::collection( $store -> products() -> paginate() ), "Success", null, Response::HTTP_OK );
     }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Juasoonline;
 
 use App\Http\Controllers\Controller;
 use App\Models\Product\Product;
+use App\Models\Store\Store;
 use App\Repositories\Juasoonline\JuasoonlineRepositoryInterface;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -46,5 +47,14 @@ class JuasoonlineController extends Controller
     public function recommendations( Request $request ) : JsonResponse
     {
         return $this -> theRepository -> recommendations( $request );
+    }
+
+    /**
+     * @param Store $store
+     * @return JsonResponse
+     */
+    public function storeProducts( Store $store ) : JsonResponse
+    {
+        return $this -> theRepository -> storeProducts( $store );
     }
 }

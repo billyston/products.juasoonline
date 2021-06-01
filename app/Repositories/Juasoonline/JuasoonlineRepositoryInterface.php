@@ -3,6 +3,7 @@
 namespace App\Repositories\Juasoonline;
 
 use App\Models\Product\Product;
+use App\Models\Store\Store;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
@@ -25,4 +26,10 @@ interface JuasoonlineRepositoryInterface
      * @return JsonResponse
      */
     public function recommendations( Request $request ) : JsonResponse;
+
+    /**
+     * @param Store $store
+     * @return JsonResponse
+     */
+    public function storeProducts( Store $store ) : JsonResponse;
 }

@@ -22,7 +22,6 @@
     <list default="true" id="d1612a24-8f92-4a41-8a01-9056ae58447d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Juasoonline/JuasoonlineController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Juasoonline/JuasoonlineController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Product/ProductResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Product/ProductResource.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repositories/Juasoonline/JuasoonlineRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Juasoonline/JuasoonlineRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repositories/Juasoonline/JuasoonlineRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Juasoonline/JuasoonlineRepositoryInterface.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
@@ -476,7 +475,14 @@
       <workItem from="1622501232776" duration="1518000" />
       <workItem from="1622503114708" duration="1748000" />
       <workItem from="1622504952492" duration="185000" />
-      <workItem from="1622505261794" duration="728000" />
+      <workItem from="1622505261794" duration="868000" />
+      <workItem from="1622507356350" duration="567000" />
+      <workItem from="1622544071052" duration="1301000" />
+      <workItem from="1622578007001" duration="1599000" />
+      <workItem from="1622579855167" duration="1619000" />
+      <workItem from="1622581686659" duration="1698000" />
+      <workItem from="1622583732310" duration="1702000" />
+      <workItem from="1622585555905" duration="616000" />
     </task>
     <servers />
   </component>
