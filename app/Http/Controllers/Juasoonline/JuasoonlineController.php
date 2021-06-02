@@ -57,4 +57,12 @@ class JuasoonlineController extends Controller
     {
         return $this -> theRepository -> storeProducts( $store );
     }
+
+    /**
+     * @return JsonResponse
+     */
+    public function deals() : JsonResponse
+    {
+        return $this -> theRepository -> deals();
+    }
 }

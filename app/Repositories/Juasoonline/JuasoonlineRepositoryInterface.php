@@ -32,4 +32,9 @@ interface JuasoonlineRepositoryInterface
      * @return JsonResponse
      */
     public function storeProducts( Store $store ) : JsonResponse;
+
+    /**
+     * @return array|mixed
+     */
+    public function deals() : JsonResponse;
 }

@@ -35,11 +35,11 @@ class PromoTypeTableSeeder extends Seeder
             'description' => 'Laravel is a web application framework with expressive, elegant syntax. We’ve already laid the foundation — freeing you to create without sweating the small things.',
         ]);
 
-//        DB::table( 'promo_types' ) -> insert([
-//            "resource_id"       =>  uniqid(),
-//            'name' => 'Special Promotion',
-//            'fee' => '100.00',
-//            'description' => 'Laravel is a web application framework with expressive, elegant syntax. We’ve already laid the foundation — freeing you to create without sweating the small things.',
-//        ]);
+        DB::table( 'promo_types' ) -> insert([
+            "resource_id"       =>  uniqid(),
+            'name' => 'Special Promotion',
+            'fee' => '100.00',
+            'description' => 'Laravel is a web application framework with expressive, elegant syntax. We’ve already laid the foundation — freeing you to create without sweating the small things.',
+        ]);
     }
 }

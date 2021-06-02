@@ -2,8 +2,11 @@
 
 namespace App\Repositories\Juasoonline;
 
+use App\Http\Resources\Juasoonline\PromotionResource;
 use App\Http\Resources\Product\ProductResource;
+//use App\Http\Resources\Product\Promotion\PromotionResource;
 use App\Models\Product\Product;
+use App\Models\Product\Promotion\Promotion;
 use App\Models\Store\Store;
 use App\Traits\apiResponseBuilder;
 use App\Traits\Relatives;
@@ -65,7 +68,16 @@ class JuasoonlineRepository implements JuasoonlineRepositoryInterface
      */
     public function storeProducts( Store $store ) : JsonResponse
     {
-        logger($store);
         return $this -> successResponse( ProductResource::collection( $store -> products() -> paginate() ), "Success", null, Response::HTTP_OK );
+    }
+
+    /**
+     * @return JsonResponse
+     */
+    public function deals() : JsonResponse
+    {
+        $deals = Promotion::where( 'promo_type_id', '=', 3 ) -> get();
+//        return PromotionResource::collection( $deals );
+        return $this -> successResponse( PromotionResource::collection( $deals ), "Success", null, Response::HTTP_OK );
     }
 }
