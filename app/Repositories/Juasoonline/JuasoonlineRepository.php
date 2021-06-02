@@ -3,8 +3,10 @@
 namespace App\Repositories\Juasoonline;
 
 use App\Http\Resources\Juasoonline\PromotionResource;
+use App\Http\Resources\Others\Group\GroupResource;
 use App\Http\Resources\Product\ProductResource;
 //use App\Http\Resources\Product\Promotion\PromotionResource;
+use App\Models\Others\Group\Group;
 use App\Models\Product\Product;
 use App\Models\Product\Promotion\Promotion;
 use App\Models\Store\Store;
@@ -77,7 +79,15 @@ class JuasoonlineRepository implements JuasoonlineRepositoryInterface
     public function deals() : JsonResponse
     {
         $deals = Promotion::where( 'promo_type_id', '=', 3 ) -> get();
-//        return PromotionResource::collection( $deals );
         return $this -> successResponse( PromotionResource::collection( $deals ), "Success", null, Response::HTTP_OK );
+    }
+
+    /**
+     * @return JsonResponse
+     */
+    public function categories() : JsonResponse
+    {
+        $Group = Group::query() -> when( $this -> loadRelationships(), function ( Builder $builder ) { return $builder -> with ( $this -> relationships ); } ) -> paginate( 20 );
+        return $this -> successResponse( GroupResource::collection( $Group ), "Success", null, Response::HTTP_OK );
     }
 }

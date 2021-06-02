@@ -65,4 +65,12 @@ class JuasoonlineController extends Controller
     {
         return $this -> theRepository -> deals();
     }
+
+    /**
+     * @return JsonResponse
+     */
+    public function categories() : JsonResponse
+    {
+        return $this -> theRepository -> categories();
+    }
 }

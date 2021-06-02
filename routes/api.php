@@ -81,5 +81,8 @@ Route::group([], function ()
 
         // Store routes
         Route::get( 'store/{store}/products', [ JuasoonlineController::class, 'storeProducts' ]);
+
+        // Other routes
+        Route::get( 'categories', [ JuasoonlineController::class, 'categories' ]);
     });
 });

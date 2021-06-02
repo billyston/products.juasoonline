@@ -37,4 +37,9 @@ interface JuasoonlineRepositoryInterface
      * @return array|mixed
      */
     public function deals() : JsonResponse;
+
+    /**
+     * @return array|mixed
+     */
+    public function categories() : JsonResponse;
 }
