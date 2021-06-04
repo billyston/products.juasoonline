@@ -77,7 +77,7 @@ class JuasoonlineRepository implements JuasoonlineRepositoryInterface
      */
     public function deals() : JsonResponse
     {
-        $deals = Promotion::where( 'promo_type_id', '=', 2 ) -> get();
+        $deals = Promotion::where( 'promo_type_id', '=', 3 ) -> get();
         return $this -> successResponse( PromotionResource::collection( $deals ), "Success", null, Response::HTTP_OK );
     }
 

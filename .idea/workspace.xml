@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d1612a24-8f92-4a41-8a01-9056ae58447d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline.dev/virtualbox/action_set_name" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline.dev/virtualbox/action_set_name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Resources/Juasoonline/PromotionResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Juasoonline/PromotionResource.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repositories/Juasoonline/JuasoonlineRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Juasoonline/JuasoonlineRepository.php" afterDir="false" />
     </list>
@@ -500,7 +499,8 @@
       <workItem from="1622760299856" duration="583000" />
       <workItem from="1622762383482" duration="477000" />
       <workItem from="1622801478768" duration="630000" />
-      <workItem from="1622805576253" duration="128000" />
+      <workItem from="1622805576253" duration="476000" />
+      <workItem from="1622806331107" duration="1121000" />
     </task>
     <servers />
   </component>
