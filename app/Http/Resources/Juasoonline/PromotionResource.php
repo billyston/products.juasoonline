@@ -24,8 +24,8 @@ class PromotionResource extends JsonResource
             [
                 'resource_id'               => $this -> resource -> resource_id,
 
-                'promo_start'               => $this -> resource -> promo_start,
-                'promo_end'                 => $this -> resource -> promo_end,
+                'promo_start'               => $this -> resource -> promo_start -> toDayDateTimeString(),
+                'promo_end'                 => $this -> resource -> promo_end -> toDayDateTimeString()(),
                 'status'                    => $this -> resource -> status,
 
                 'product_id'                => $this -> resource -> product -> resource_id,
