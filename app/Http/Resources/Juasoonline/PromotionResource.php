@@ -27,9 +27,6 @@ class PromotionResource extends JsonResource
 
                 'promo_start'               => Carbon::parse( $this -> resource -> promo_start ) -> diffForHumans(),
                 'promo_end'                 => Carbon::parse( $this -> resource -> promo_end ) -> diffForHumans(),
-//                'promo_start'               => date('Y-m-d H:i:s', strtotime( $this -> resource -> promo_start )),
-//                'promo_start'               => $this -> resource -> promo_start,
-//                'promo_end'                 => $this -> resource -> promo_end,
                 'status'                    => $this -> resource -> status,
 
                 'product_id'                => $this -> resource -> product -> resource_id,

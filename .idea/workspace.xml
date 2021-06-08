@@ -21,8 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d1612a24-8f92-4a41-8a01-9056ae58447d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline.dev/virtualbox/action_set_name" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline.dev/virtualbox/action_set_name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Resources/Juasoonline/PromotionResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Juasoonline/PromotionResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Juasoonline/JuasoonlineRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Juasoonline/JuasoonlineRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/StoreAdministratorTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/StoreAdministratorTableSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -500,7 +501,13 @@
       <workItem from="1622762383482" duration="477000" />
       <workItem from="1622801478768" duration="630000" />
       <workItem from="1622805576253" duration="476000" />
-      <workItem from="1622806331107" duration="1121000" />
+      <workItem from="1622806331107" duration="1544000" />
+      <workItem from="1622808766094" duration="641000" />
+      <workItem from="1622811296084" duration="276000" />
+      <workItem from="1622813334040" duration="8000" />
+      <workItem from="1623161542951" duration="259000" />
+      <workItem from="1623163265980" duration="531000" />
+      <workItem from="1623165237636" duration="210000" />
     </task>
     <servers />
   </component>

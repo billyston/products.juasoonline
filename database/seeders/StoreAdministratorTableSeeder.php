@@ -16,7 +16,7 @@ class StoreAdministratorTableSeeder extends Seeder
     {
         DB::table( 'store_administrators' ) -> insert(
         [
-            "resource_id"       =>  hexdec( uniqid() ),
+            "resource_id"       =>  "85728556345",
 
             "first_name"        =>  "Michael",
             "other_names"       =>  "Kabutey",
@@ -36,7 +36,7 @@ class StoreAdministratorTableSeeder extends Seeder
         ]);
         DB::table( 'store_administrators' ) -> insert(
         [
-            "resource_id"       =>  hexdec( uniqid() ),
+            "resource_id"       =>  "8574525096754",
 
             "first_name"        =>  "James",
             "other_names"       =>  "Duah",
