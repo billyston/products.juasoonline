@@ -41,5 +41,10 @@ interface JuasoonlineRepositoryInterface
     /**
      * @return array|mixed
      */
+    public function storeAds() : JsonResponse;
+
+    /**
+     * @return array|mixed
+     */
     public function categories() : JsonResponse;
 }

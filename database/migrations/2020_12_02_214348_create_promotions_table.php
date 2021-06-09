@@ -18,10 +18,12 @@ class CreatePromotionsTable extends Migration
             $table -> bigIncrements('id' );
             $table -> uuid( 'resource_id' ) -> unique() -> nullable( false );
             $table -> unsignedBigInteger( 'promo_type_id' );
-            $table -> unsignedBigInteger( 'product_id' );
+            $table -> unsignedBigInteger( 'product_id' ) -> nullable( true );
 
             $table -> dateTime( 'promo_start' ) -> nullable( true );
             $table -> dateTime( 'promo_end' ) -> nullable( true );
+
+            $table -> string( 'image' ) -> nullable( true );
 
             $table -> smallInteger( 'status' );
 

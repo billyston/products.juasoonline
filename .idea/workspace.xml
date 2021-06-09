@@ -22,8 +22,12 @@
     <list default="true" id="d1612a24-8f92-4a41-8a01-9056ae58447d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline.dev/virtualbox/action_set_name" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline.dev/virtualbox/action_set_name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Juasoonline/PromotionResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Juasoonline/PromotionResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/StoreAdministratorTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/StoreAdministratorTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Juasoonline/JuasoonlineController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Juasoonline/JuasoonlineController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Juasoonline/JuasoonlineRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Juasoonline/JuasoonlineRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Juasoonline/JuasoonlineRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Juasoonline/JuasoonlineRepositoryInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_02_214348_create_promotions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_02_214348_create_promotions_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/PromotionTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/PromotionTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -507,7 +511,11 @@
       <workItem from="1622813334040" duration="8000" />
       <workItem from="1623161542951" duration="259000" />
       <workItem from="1623163265980" duration="531000" />
-      <workItem from="1623165237636" duration="210000" />
+      <workItem from="1623165237636" duration="874000" />
+      <workItem from="1623180252527" duration="12000" />
+      <workItem from="1623197603606" duration="1726000" />
+      <workItem from="1623199476028" duration="1288000" />
+      <workItem from="1623201304524" duration="608000" />
     </task>
     <servers />
   </component>
