@@ -27,7 +27,7 @@ class JuasoonlineRepository implements JuasoonlineRepositoryInterface
      */
     public function products() : AnonymousResourceCollection
     {
-        $Product = Product::query() -> when( $this -> loadRelationships(), function ( Builder $builder ) { return $builder -> with ( $this -> relationships ); }) -> paginate('100');
+        $Product = Product::query() -> when( $this -> loadRelationships(), function ( Builder $builder ) { return $builder -> with ( $this -> relationships ); }) -> paginate('10');
         return ProductResource::collection( $Product );
     }
 
@@ -78,7 +78,7 @@ class JuasoonlineRepository implements JuasoonlineRepositoryInterface
      */
     public function deals() : JsonResponse
     {
-        $deals = Promotion::where( 'promo_type_id', '=', 3 ) -> get();
+        $deals = Promotion::where('promo_type_id', '=', 3) -> where('status', '=', 1) -> get();
         return $this -> successResponse( PromotionResource::collection( $deals ), "Success", null, Response::HTTP_OK );
     }
 

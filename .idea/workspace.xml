@@ -21,13 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d1612a24-8f92-4a41-8a01-9056ae58447d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline.dev/virtualbox/action_set_name" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline.dev/virtualbox/action_set_name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Juasoonline/JuasoonlineController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Juasoonline/JuasoonlineController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repositories/Juasoonline/JuasoonlineRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Juasoonline/JuasoonlineRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Juasoonline/JuasoonlineRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Juasoonline/JuasoonlineRepositoryInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_02_214348_create_promotions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_02_214348_create_promotions_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/PromotionTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/PromotionTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -515,7 +509,12 @@
       <workItem from="1623180252527" duration="12000" />
       <workItem from="1623197603606" duration="1726000" />
       <workItem from="1623199476028" duration="1288000" />
-      <workItem from="1623201304524" duration="608000" />
+      <workItem from="1623201304524" duration="1121000" />
+      <workItem from="1623203274184" duration="5000" />
+      <workItem from="1623279019861" duration="585000" />
+      <workItem from="1623280321640" duration="14000" />
+      <workItem from="1623284577165" duration="1078000" />
+      <workItem from="1623285863332" duration="284000" />
     </task>
     <servers />
   </component>
