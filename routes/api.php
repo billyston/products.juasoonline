@@ -80,6 +80,7 @@ Route::group([], function ()
 
         // Store routes
         Route::get( 'store/{store}/products', [ JuasoonlineController::class, 'storeProducts' ]);
+        Route::get( 'store/product/{product}/recommendations', [ JuasoonlineController::class, 'storeRecommendations' ]);
 
         // Ad routes
         Route::get( 'products/deals', [ JuasoonlineController::class, 'deals' ]);

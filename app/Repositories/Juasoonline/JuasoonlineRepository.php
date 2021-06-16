@@ -27,7 +27,8 @@ class JuasoonlineRepository implements JuasoonlineRepositoryInterface
      */
     public function products() : AnonymousResourceCollection
     {
-        $Product = Product::query() -> when( $this -> loadRelationships(), function ( Builder $builder ) { return $builder -> with ( $this -> relationships ); }) -> paginate('10');
+        $Product = Product::query() -> when( $this -> loadRelationships(), function ( Builder $builder )
+        { return $builder -> with ( $this -> relationships ); }) -> orderBy( 'id', 'desc' ) -> paginate('10');
         return ProductResource::collection( $Product );
     }
 
@@ -74,11 +75,39 @@ class JuasoonlineRepository implements JuasoonlineRepositoryInterface
     }
 
     /**
+     * @param Product $product
+     * @return AnonymousResourceCollection
+     */
+    public function storeRecommendations( Product $product ) : AnonymousResourceCollection
+    {
+        $product = Product::query();
+        if ( request('name')) { $product -> where('name', 'Like', '%' . request('name' ) . '%'); }
+        return ProductResource::collection( $product -> orderBy('id', 'DESC' ) -> paginate(18 ));
+
+//        $products = Product::where([[ 'name', '!=', Null ], [ function ( $query ) use ( $request )
+//        {
+//            if (( $item = $request -> name )) { $query -> orWhere( 'name', 'LIKE', '%' . $item . '%' ) -> get(); }
+//        }]]) -> orderBy('id', 'desc') -> paginate( 500 );
+//        return $this -> successResponse( ProductResource::collection( $products ), "Success", null, Response::HTTP_OK );
+
+
+
+//        $keywords = 'suede';
+//        $products = Product::with('categories') -> findOrFail( 1 );
+//        $category_ids = $products -> categories -> pluck( 'id' ) -> toArray();
+//        $similarProducts = Product::whereHas( 'categories', function ( $query ) use ( $category_ids )
+//        {
+//            return $query -> whereIn( 'subcategories.id', $category_ids );
+//        }) -> where( 'id', '!=', $products -> id ) -> where( 'store_id', '=', $product -> store_id ) -> where( 'name', 'LIKE', "%{$keywords}%" ) -> where( 'status', '=', 1 ) -> where( 'id', '!=', $product -> id ) -> limit( 10 ) -> get();
+//        return ProductResource::collection( $similarProducts );
+    }
+
+    /**
      * @return JsonResponse
      */
     public function deals() : JsonResponse
     {
-        $deals = Promotion::where('promo_type_id', '=', 3) -> where('status', '=', 1) -> get();
+        $deals = Promotion::where('promo_type_id', '=', 3) -> where('status', '=', 1 ) -> get();
         return $this -> successResponse( PromotionResource::collection( $deals ), "Success", null, Response::HTTP_OK );
     }
 

@@ -59,6 +59,15 @@ class JuasoonlineController extends Controller
     }
 
     /**
+     * @param Product $product
+     * @return AnonymousResourceCollection
+     */
+    public function storeRecommendations( Product $product ) : AnonymousResourceCollection
+    {
+        return $this -> theRepository -> storeRecommendations( $product );
+    }
+
+    /**
      * @return JsonResponse
      */
     public function deals() : JsonResponse

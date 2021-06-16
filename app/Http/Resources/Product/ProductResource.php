@@ -11,6 +11,7 @@ use App\Http\Resources\Product\Size\SizeResource;
 use App\Http\Resources\Product\Specification\SpecificationResource;
 use App\Http\Resources\Product\Color\ColorResource;
 use App\Http\Resources\Others\Subcategory\SubcategoryResource;
+use App\Http\Resources\Product\Tag\TagResource;
 use App\Http\Resources\Store\Charge\ChargeResource;
 use App\Http\Resources\Store\StoreResource;
 use Illuminate\Http\Request;
@@ -65,12 +66,13 @@ class ProductResource extends JsonResource
                 'updated_at'        => $this -> resource -> updated_at -> toDateTimeString(),
             ],
 
-            'include'               => $this -> when( $this -> relationLoaded( 'store' ) || $this -> relationLoaded( 'brand' ) || $this -> relationLoaded( 'charge' ) || $this -> relationLoaded( 'categories' ) || $this -> relationLoaded( 'specifications' ) || $this -> relationLoaded( 'reviews' ) || $this -> relationLoaded( 'overviews' ) || $this -> relationLoaded( 'images' ) || $this -> relationLoaded( 'colors' ) || $this -> relationLoaded( 'sizes' ) || $this -> relationLoaded( 'promotions' ),
+            'include'               => $this -> when( $this -> relationLoaded( 'store' ) || $this -> relationLoaded( 'brand' ) || $this -> relationLoaded( 'charge' ) || $this -> relationLoaded( 'categories' ) || $this -> relationLoaded( 'tags' ) || $this -> relationLoaded( 'specifications' ) || $this -> relationLoaded( 'reviews' ) || $this -> relationLoaded( 'overviews' ) || $this -> relationLoaded( 'images' ) || $this -> relationLoaded( 'colors' ) || $this -> relationLoaded( 'sizes' ) || $this -> relationLoaded( 'promotions' ),
             [
                 'store'             => new StoreResource( $this -> whenLoaded('store')),
                 'brand'             => new BrandResource( $this -> whenLoaded('brand')),
                 'charge'            => new ChargeResource( $this -> whenLoaded('charge')),
                 'categories'        => SubcategoryResource::collection( $this -> whenLoaded('categories')),
+                'tags'              => TagResource::collection( $this -> whenLoaded('tags')),
                 'specifications'    => SpecificationResource::collection( $this -> whenLoaded('specifications')),
                 'images'            => ImageResource::collection( $this -> whenLoaded('images')),
                 'overviews'         => OverviewResource::collection( $this -> whenLoaded('overviews')),

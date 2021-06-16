@@ -21,7 +21,14 @@
   <component name="ChangeListManager">
     <list default="true" id="d1612a24-8f92-4a41-8a01-9056ae58447d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline.dev/virtualbox/action_set_name" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline.dev/virtualbox/action_set_name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Juasoonline/JuasoonlineController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Juasoonline/JuasoonlineController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Product/ProductResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Product/ProductResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Others/Subcategory/Subcategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Others/Subcategory/Subcategory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Product/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product/Product.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repositories/Juasoonline/JuasoonlineRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Juasoonline/JuasoonlineRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Juasoonline/JuasoonlineRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Juasoonline/JuasoonlineRepositoryInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -514,7 +521,30 @@
       <workItem from="1623279019861" duration="585000" />
       <workItem from="1623280321640" duration="14000" />
       <workItem from="1623284577165" duration="1078000" />
-      <workItem from="1623285863332" duration="284000" />
+      <workItem from="1623285863332" duration="613000" />
+      <workItem from="1623289026797" duration="16000" />
+      <workItem from="1623415395304" duration="1709000" />
+      <workItem from="1623417194874" duration="1329000" />
+      <workItem from="1623419006022" duration="1522000" />
+      <workItem from="1623420819881" duration="1277000" />
+      <workItem from="1623422394457" duration="298000" />
+      <workItem from="1623424736358" duration="1233000" />
+      <workItem from="1623576759889" duration="1535000" />
+      <workItem from="1623578569002" duration="1729000" />
+      <workItem from="1623580697372" duration="1485000" />
+      <workItem from="1623583467638" duration="1088000" />
+      <workItem from="1623585403154" duration="1269000" />
+      <workItem from="1623587211658" duration="1238000" />
+      <workItem from="1623839207568" duration="121000" />
+      <workItem from="1623839353487" duration="242000" />
+      <workItem from="1623844543440" duration="1008000" />
+      <workItem from="1623846356120" duration="1042000" />
+      <workItem from="1623848846263" duration="1387000" />
+      <workItem from="1623851791021" duration="1734000" />
+      <workItem from="1623853694892" duration="1794000" />
+      <workItem from="1623855550304" duration="416000" />
+      <workItem from="1623857479151" duration="921000" />
+      <workItem from="1623859310431" duration="189000" />
     </task>
     <servers />
   </component>

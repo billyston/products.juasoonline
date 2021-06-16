@@ -10,6 +10,7 @@ use App\Models\Product\Promotion\Promotion;
 use App\Models\Product\Review\Review;
 use App\Models\Product\Size\Size;
 use App\Models\Product\Specification\Specification;
+use App\Models\Product\Tag\Tag;
 use App\Models\Store\Charge\Charge;
 use App\Models\Store\Store;
 use App\Models\Others\Subcategory\Subcategory;
@@ -66,6 +67,14 @@ class Product extends Model
     public function categories(): BelongsToMany
     {
         return $this -> belongsToMany( Subcategory::class );
+    }
+
+    /**
+     * @return BelongsToMany
+     */
+    public function tags(): BelongsToMany
+    {
+        return $this -> belongsToMany( Tag::class );
     }
 
     /**

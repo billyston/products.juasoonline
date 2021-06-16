@@ -34,6 +34,12 @@ interface JuasoonlineRepositoryInterface
     public function storeProducts( Store $store ) : JsonResponse;
 
     /**
+     * @param Product $product
+     * @return AnonymousResourceCollection
+     */
+    public function storeRecommendations( Product $product ) : AnonymousResourceCollection;
+
+    /**
      * @return array|mixed
      */
     public function deals() : JsonResponse;
