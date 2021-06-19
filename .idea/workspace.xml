@@ -21,7 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d1612a24-8f92-4a41-8a01-9056ae58447d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/ColorTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/ColorTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline.dev/virtualbox/action_set_name" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline.dev/virtualbox/action_set_name" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -540,6 +540,11 @@
       <workItem from="1623859310431" duration="780000" />
       <workItem from="1623861122592" duration="20000" />
       <workItem from="1623942988369" duration="334000" />
+      <workItem from="1623945134595" duration="139000" />
+      <workItem from="1624138211590" duration="614000" />
+      <workItem from="1624142311775" duration="599000" />
+      <workItem from="1624144239636" duration="1020000" />
+      <workItem from="1624146071199" duration="339000" />
     </task>
     <servers />
   </component>
