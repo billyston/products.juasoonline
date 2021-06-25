@@ -41,6 +41,10 @@ class ProductResource extends JsonResource
                 'sku'               => $this -> resource -> sku,
                 'slug'              => $this -> resource -> slug,
                 'description'       => $this -> resource -> description,
+
+                'raw_price'         => $this -> resource -> price,
+                'raw_sales_price'   => $this -> resource -> sales_price,
+
                 'price'             => number_format( $this -> resource -> price, 2 ),
                 'sales_price'       => number_format( $this -> resource -> sales_price, 2 ),
                 'discount'          => round(( $this -> resource -> price - $this -> resource -> sales_price ) / $this -> resource -> price * 100, 2 ). '%',

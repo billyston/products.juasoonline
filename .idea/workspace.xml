@@ -22,6 +22,7 @@
     <list default="true" id="d1612a24-8f92-4a41-8a01-9056ae58447d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline.dev/virtualbox/action_set_name" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline.dev/virtualbox/action_set_name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Product/ProductResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Product/ProductResource.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -544,7 +545,32 @@
       <workItem from="1624138211590" duration="614000" />
       <workItem from="1624142311775" duration="599000" />
       <workItem from="1624144239636" duration="1020000" />
-      <workItem from="1624146071199" duration="339000" />
+      <workItem from="1624146071199" duration="656000" />
+      <workItem from="1624219778299" duration="13000" />
+      <workItem from="1624276432381" duration="677000" />
+      <workItem from="1624278102709" duration="1200000" />
+      <workItem from="1624280118368" duration="691000" />
+      <workItem from="1624285200832" duration="1608000" />
+      <workItem from="1624287345638" duration="1409000" />
+      <workItem from="1624289640513" duration="598000" />
+      <workItem from="1624291667054" duration="263000" />
+      <workItem from="1624295154935" duration="598000" />
+      <workItem from="1624302094218" duration="575000" />
+      <workItem from="1624304023484" duration="299000" />
+      <workItem from="1624355269563" duration="534000" />
+      <workItem from="1624367051233" duration="741000" />
+      <workItem from="1624368753635" duration="885000" />
+      <workItem from="1624375636051" duration="607000" />
+      <workItem from="1624376788709" duration="164000" />
+      <workItem from="1624485056255" duration="38000" />
+      <workItem from="1624485115911" duration="376000" />
+      <workItem from="1624524795215" duration="82000" />
+      <workItem from="1624526124526" duration="34000" />
+      <workItem from="1624562924090" duration="661000" />
+      <workItem from="1624564436640" duration="104000" />
+      <workItem from="1624608132744" duration="601000" />
+      <workItem from="1624609939767" duration="598000" />
+      <workItem from="1624612125941" duration="86000" />
     </task>
     <servers />
   </component>
