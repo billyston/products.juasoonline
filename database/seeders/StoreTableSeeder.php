@@ -18,8 +18,8 @@ class StoreTableSeeder extends Seeder
         [
             "resource_id"       =>  "8572852475",
 
-            "name"              =>  "Test Store 1 Ghana Limited",
-            "doing_business_as" =>  "Test Store 1",
+            "name"              =>  "Juaso Merchandise Limited",
+            "doing_business_as" =>  "Juaso Merchandise",
 
             "region"            =>  "Greater Accra",
             "city"              =>  "Accra",
@@ -29,8 +29,8 @@ class StoreTableSeeder extends Seeder
             "mobile_phone"      =>  "2143658709",
             "other_phone"       =>  "9078563412",
 
-            "website"           =>  "http://teststoreone.com",
-            "email"             =>  "info@teststoreone.com",
+            "website"           =>  "http://juasomerchandise.com",
+            "email"             =>  "info@juasomerchandise.com",
 
             "country_id"        =>  1,
 
@@ -41,8 +41,8 @@ class StoreTableSeeder extends Seeder
         [
             "resource_id"       =>  "8574525262644",
 
-            "name"              =>  "Test Store 2 Ghana Limited",
-            "doing_business_as" =>  "Test Store 2",
+            "name"              =>  "Juaso Electronics Limited",
+            "doing_business_as" =>  "Juaso Electronics",
 
             "region"            =>  "Greater Accra",
             "city"              =>  "Accra",
@@ -52,8 +52,8 @@ class StoreTableSeeder extends Seeder
             "mobile_phone"      =>  "01234567890",
             "other_phone"       =>  "09876543210",
 
-            "website"           =>  "http://teststoretwo.com",
-            "email"             =>  "info@teststoretwo.com",
+            "website"           =>  "http://juasoelectronics.com",
+            "email"             =>  "info@juasoelectronics.com",
 
             "country_id"        =>  1,
 
