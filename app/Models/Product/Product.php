@@ -3,6 +3,7 @@
 namespace App\Models\Product;
 
 use App\Models\Others\Brand\Brand;
+use App\Models\Product\Bundle\Bundle;
 use App\Models\Product\Color\Color;
 use App\Models\Product\Overview\Overview;
 use App\Models\Product\Image\Image;
@@ -10,7 +11,7 @@ use App\Models\Product\Promotion\Promotion;
 use App\Models\Product\Review\Review;
 use App\Models\Product\Size\Size;
 use App\Models\Product\Specification\Specification;
-use App\Models\Product\Tag\Tag;
+use App\Models\Others\Tag\Tag;
 use App\Models\Store\Charge\Charge;
 use App\Models\Store\Store;
 use App\Models\Others\Subcategory\Subcategory;
@@ -123,6 +124,14 @@ class Product extends Model
     public function sizes() : HasMany
     {
         return $this -> hasMany( Size::class );
+    }
+
+    /**
+     * @return HasMany
+     */
+    public function bundles() : HasMany
+    {
+        return $this -> hasMany( Bundle::class );
     }
 
     /**

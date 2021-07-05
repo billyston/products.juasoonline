@@ -3,6 +3,7 @@
 namespace App\Http\Resources\Product;
 
 use App\Http\Resources\Others\Brand\BrandResource;
+use App\Http\Resources\Product\Bundle\BundleResource;
 use App\Http\Resources\Product\Overview\OverviewResource;
 use App\Http\Resources\Product\Image\ImageResource;
 use App\Http\Resources\Product\Promotion\PromotionResource;
@@ -56,21 +57,11 @@ class ProductResource extends JsonResource
 
                 'image'             => $this -> resource -> images[0] -> image,
 
-                'star_ratings'      =>
-                [
-                    '5_stars'       => $this -> resource -> reviews -> where( 'rating', 5 ) -> count(),
-                    '4_stars'       => $this -> resource -> reviews -> where( 'rating', 4 ) -> count(),
-                    '3_stars'       => $this -> resource -> reviews -> where( 'rating', 3 ) -> count(),
-                    '2_stars'       => $this -> resource -> reviews -> where( 'rating', 2 ) -> count(),
-                    '1_star'        => $this -> resource -> reviews -> where( 'rating', 1 ) -> count(),
-                ],
-                'total_rating'      => $this -> calculate_rate( $this -> resource -> reviews -> where( 'rating', 5 ) -> count(), $this -> resource -> reviews -> where( 'rating', 4 ) -> count(), $this -> resource -> reviews -> where( 'rating', 3 ) -> count(), $this -> resource -> reviews -> where( 'rating', 2 ) -> count(), $this -> resource -> reviews -> where( 'rating', 1 ) -> count() ),
-
                 'created_at'        => $this -> resource -> created_at -> toDateTimeString(),
                 'updated_at'        => $this -> resource -> updated_at -> toDateTimeString(),
             ],
 
-            'include'               => $this -> when( $this -> relationLoaded( 'store' ) || $this -> relationLoaded( 'brand' ) || $this -> relationLoaded( 'charge' ) || $this -> relationLoaded( 'categories' ) || $this -> relationLoaded( 'tags' ) || $this -> relationLoaded( 'specifications' ) || $this -> relationLoaded( 'reviews' ) || $this -> relationLoaded( 'overviews' ) || $this -> relationLoaded( 'images' ) || $this -> relationLoaded( 'colors' ) || $this -> relationLoaded( 'sizes' ) || $this -> relationLoaded( 'promotions' ),
+            'include'               => $this -> when( $this -> relationLoaded( 'store' ) || $this -> relationLoaded( 'brand' ) || $this -> relationLoaded( 'charge' ) || $this -> relationLoaded( 'categories' ) || $this -> relationLoaded( 'tags' ) || $this -> relationLoaded( 'specifications' ) || $this -> relationLoaded( 'reviews' ) || $this -> relationLoaded( 'overviews' ) || $this -> relationLoaded( 'images' ) || $this -> relationLoaded( 'colors' ) || $this -> relationLoaded( 'sizes' ) || $this -> relationLoaded( 'bundles' ) || $this -> relationLoaded( 'promotions' ),
             [
                 'store'             => new StoreResource( $this -> whenLoaded('store')),
                 'brand'             => new BrandResource( $this -> whenLoaded('brand')),
@@ -82,8 +73,10 @@ class ProductResource extends JsonResource
                 'overviews'         => OverviewResource::collection( $this -> whenLoaded('overviews')),
                 'colors'            => ColorResource::collection( $this -> whenLoaded('colors')),
                 'sizes'             => SizeResource::collection( $this -> whenLoaded('sizes')),
-                'reviews'           => ReviewResource::collection( $this -> whenLoaded('reviews')),
+                'bundles'           => BundleResource::collection( $this -> whenLoaded('bundles')),
                 'promotions'        => PromotionResource::collection( $this -> whenLoaded('promotions')),
+                'reviews'           => ReviewResource::collection( $this -> whenLoaded('reviews')),
+                'review_rating'     => [ 'total' => $this -> calculate_rate( $this -> resource -> reviews -> where( 'rating', 5 ) -> count(), $this -> resource -> reviews -> where( 'rating', 4 ) -> count(), $this -> resource -> reviews -> where( 'rating', 3 ) -> count(), $this -> resource -> reviews -> where( 'rating', 2 ) -> count(), $this -> resource -> reviews -> where( 'rating', 1 ) -> count() ), 'one' => $this -> resource -> reviews -> where( 'rating', 1 ) -> count(), 'two' => $this -> resource -> reviews -> where( 'rating', 2 ) -> count(), 'three' => $this -> resource -> reviews -> where( 'rating', 3 ) -> count(), 'four' => $this -> resource -> reviews -> where( 'rating', 4 ) -> count(), 'five' => $this -> resource -> reviews -> where( 'rating', 5 ) -> count() ],
             ])
         ];
     }

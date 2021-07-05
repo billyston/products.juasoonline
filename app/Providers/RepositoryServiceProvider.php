@@ -17,6 +17,8 @@ use App\Repositories\Others\Subcategory\SubcategoryRepository;
 use App\Repositories\Others\Brand\BrandRepository;
 use App\Repositories\Others\Brand\BrandRepositoryInterface;
 
+use App\Repositories\Product\Bundle\BundleRepository;
+use App\Repositories\Product\Bundle\BundleRepositoryInterface;
 use App\Repositories\Store\StoreRepositoryInterface;
 use App\Repositories\Store\StoreRepository;
 use App\Repositories\Store\StoreAdministrator\StoreAdministratorRepositoryInterface;
@@ -73,6 +75,7 @@ class RepositoryServiceProvider extends ServiceProvider
         $this -> app -> bind( ColorRepositoryInterface::class, ColorRepository::class );
         $this -> app -> bind( SizeRepositoryInterface::class, SizeRepository::class );
         $this -> app -> bind( PromotionRepositoryInterface::class, PromotionRepository::class );
+        $this -> app -> bind( BundleRepositoryInterface::class, BundleRepository::class );
 
         $this -> app -> bind( JuasoonlineRepositoryInterface::class, JuasoonlineRepository::class );
     }

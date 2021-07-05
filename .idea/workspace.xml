@@ -21,8 +21,15 @@
   <component name="ChangeListManager">
     <list default="true" id="d1612a24-8f92-4a41-8a01-9056ae58447d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline.dev/virtualbox/action_set_name" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/products.juasoonline.dev/virtualbox/action_set_name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/StoreTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/StoreTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Product/ProductResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Product/ProductResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/Product/CreateProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/Product/CreateProduct.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Product/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Product/Tag/Tag.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Others/Tag/Tag.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_02_131454_create_brands_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_02_131454_create_brands_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_02_140250_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_02_140250_create_products_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,10 +180,10 @@
       <recent name="$PROJECT_DIR$/app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Models/Others" />
       <recent name="$PROJECT_DIR$/app/Http/Resources/Others" />
       <recent name="$PROJECT_DIR$/app/Repositories/Others" />
       <recent name="$PROJECT_DIR$/app/Observers/Others" />
-      <recent name="$PROJECT_DIR$/app/Models/Others" />
       <recent name="$PROJECT_DIR$/app/Models/Product" />
     </key>
   </component>
@@ -573,6 +580,37 @@
       <workItem from="1624612125941" duration="86000" />
       <workItem from="1624960438686" duration="117000" />
       <workItem from="1624960579671" duration="240000" />
+      <workItem from="1624967379104" duration="328000" />
+      <workItem from="1624967889160" duration="13000" />
+      <workItem from="1625091419268" duration="1025000" />
+      <workItem from="1625093044607" duration="373000" />
+      <workItem from="1625126954459" duration="1561000" />
+      <workItem from="1625128665527" duration="1785000" />
+      <workItem from="1625130493052" duration="1566000" />
+      <workItem from="1625134484562" duration="831000" />
+      <workItem from="1625138173037" duration="4200000" />
+      <workItem from="1625255926301" duration="1242000" />
+      <workItem from="1625257841214" duration="534000" />
+      <workItem from="1625298879779" duration="1443000" />
+      <workItem from="1625300688244" duration="1535000" />
+      <workItem from="1625302602809" duration="698000" />
+      <workItem from="1625304498424" duration="662000" />
+      <workItem from="1625307348485" duration="356000" />
+      <workItem from="1625309765142" duration="1053000" />
+      <workItem from="1625312739434" duration="1726000" />
+      <workItem from="1625314550366" duration="1674000" />
+      <workItem from="1625316362617" duration="1765000" />
+      <workItem from="1625318274844" duration="1798000" />
+      <workItem from="1625320200302" duration="1694000" />
+      <workItem from="1625322215178" duration="1772000" />
+      <workItem from="1625347961158" duration="1633000" />
+      <workItem from="1625349772282" duration="1573000" />
+      <workItem from="1625352381196" duration="655000" />
+      <workItem from="1625435165091" duration="776000" />
+      <workItem from="1625436501648" duration="930000" />
+      <workItem from="1625438308848" duration="8000" />
+      <workItem from="1625452575583" duration="2350000" />
+      <workItem from="1625472015103" duration="387000" />
     </task>
     <servers />
   </component>

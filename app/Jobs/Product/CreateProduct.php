@@ -4,6 +4,8 @@ namespace App\Jobs\Product;
 
 use App\Http\Requests\Product\ProductRequest;
 use App\Http\Resources\Product\ProductResource;
+use App\Models\Others\Brand\Brand;
+use App\Models\Others\Tag\Tag;
 use App\Models\Product\Color\Color;
 use App\Models\Product\Image\Image;
 use App\Models\Product\Overview\Overview;
@@ -41,24 +43,27 @@ class CreateProduct implements ShouldQueue
         try
         {
             $Product = new Product( $this -> getAttributes()[ 'attributes' ] );
-            $Product -> store() -> associate($this -> theRequest ['data.relationships.store.store_id']);
-            $Product -> charge() -> associate($this -> theRequest ['data.relationships.charge.charge_id']);
-//            $Product -> brand() -> associate( $this -> theRequest [ 'data.relationships.brand.brand_id' ] );
+            $Product -> store() -> associate( $this -> theRequest ['data.relationships.store.store_id'] );
+            $Product -> charge() -> associate( $this -> theRequest ['data.relationships.charge.charge_id'] );
 
-            // Product associate with brand coming soon
+            $Brand = Brand::firstOrCreate([ 'name' => $this -> theRequest -> input( 'data.relationships.brand.name' ) ]);
+            $Product -> brand() -> associate( $Brand );
 
             $Product -> save();
 
             // Attach related products
             $this -> attachCategories( $Product, $this -> getAttributes()['relationships']['categories'] );
+            $this -> attachTags( $Product, $this -> getAttributes()['relationships']['tags'] );
             $this -> createSpecifications( $Product, $this -> theRequest ['data.relationships.specifications'] );
             $this -> createImages( $Product, $this -> theRequest ['data.relationships.images'] );
-            $this -> createOverviews( $Product, $this -> theRequest ['data.relationships.overviews'] );
-            $this -> createColors( $Product, $this -> theRequest ['data.relationships.colors'] );
-            $this -> createSizes( $Product, $this -> theRequest ['data.relationships.sizes'] );
+
+            if ( isset($this -> theRequest ['data.relationships.overviews']) ){ $this -> createOverviews( $Product, $this -> theRequest ['data.relationships.overviews'] ); }
+            if ( isset($this -> theRequest ['data.relationships.colors']) ){ $this -> createColors( $Product, $this -> theRequest ['data.relationships.colors'] ); }
+            if ( isset($this -> theRequest ['data.relationships.sizes']) ){ $this -> createSizes( $Product, $this -> theRequest ['data.relationships.sizes'] ); }
 
             return ( new ProductResource( $Product ) );
         }
+
         catch ( Exception $exception )
         {
             report( $exception );
@@ -83,6 +88,19 @@ class CreateProduct implements ShouldQueue
         foreach ( $subcategories[ 'data' ] as $subcategory )
         {
             $product -> categories() -> attach( $subcategory[ 'category_id' ] );
+        }
+    }
+
+    /**
+     * @param Product $product
+     * @param array $tags
+     */
+    private function attachTags( Product $product, array $tags ) : void
+    {
+        foreach ( $tags[ 'data' ] as $tag )
+        {
+            $tag = Tag::firstOrCreate([ 'name' => $tag['name'] ]);
+            $product -> tags() -> attach( $tag );
         }
     }
 

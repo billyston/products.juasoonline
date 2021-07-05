@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Product\Tag;
+namespace App\Models\Others\Tag;
 
 use App\Models\Product\Product;
 use Illuminate\Database\Eloquent\Factories\HasFactory;

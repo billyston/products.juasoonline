@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use App\Models\Others\Country\Country;
+use App\Models\Others\Tag\Tag;
+use App\Models\Product\Bundle\Bundle;
 use App\Observers\Others\Country\CountryObserver;
 use App\Models\Others\PromoType\PromoType;
 use App\Observers\Others\PromoType\PromoTypeObserver;
@@ -16,6 +18,8 @@ use App\Models\Others\Brand\Brand;
 use App\Observers\Others\Brand\BrandObserver;
 
 use App\Models\Store\Store;
+use App\Observers\Others\Tag\TagObserver;
+use App\Observers\Product\Bundle\BundleObserver;
 use App\Observers\Store\StoreObserver;
 use App\Models\Store\StoreAdministrator\StoreAdministrator;
 use App\Observers\Store\StoreAdministrator\StoreAdministratorObserver;
@@ -68,6 +72,7 @@ class AppServiceProvider extends ServiceProvider
         Category::observe( CategoryObserver::class );
         Subcategory::observe( SubcategoryObserver::class );
         Brand::observe( BrandObserver::class );
+        Tag::observe( TagObserver::class );
 
         Store::observe( StoreObserver::class );
         StoreAdministrator::observe( StoreAdministratorObserver::class );
@@ -82,5 +87,6 @@ class AppServiceProvider extends ServiceProvider
         Color::observe( ColorObserver::class );
         Size::observe( SizeObserver::class );
         Promotion::observe( PromotionObserver::class );
+        Bundle::observe( BundleObserver::class );
     }
 }

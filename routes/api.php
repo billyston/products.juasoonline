@@ -8,6 +8,7 @@ use App\Http\Controllers\Others\Group\GroupController;
 use App\Http\Controllers\Others\Category\CategoryController;
 use App\Http\Controllers\Others\Subcategory\SubcategoryController;
 
+use App\Http\Controllers\Product\Bundle\BundleController;
 use App\Http\Controllers\Store\StoreController;
 use App\Http\Controllers\Store\StoreAdministrator\StoreAdministratorController;
 use App\Http\Controllers\Store\Branch\BranchController;
@@ -68,25 +69,26 @@ Route::group([], function ()
         Route::apiResource( 'product.colors', ColorController::class );
         Route::apiResource( 'product.sizes', SizeController::class );
         Route::apiResource( 'product.promotions', PromotionController::class );
+        Route::apiResource( 'product.bundles', BundleController::class );
     });
+});
 
-    // Juasoonline resources routes
-    Route::group(['prefix' => 'juaso'], function ()
-    {
-        // Product routes
-        Route::get( 'products', [ JuasoonlineController::class, 'products' ]);
-        Route::get( 'product/{product}', [ JuasoonlineController::class, 'product' ]);
-        Route::get( 'products/recommendations', [ JuasoonlineController::class, 'recommendations' ]);
+// Juasoonline resources routes
+Route::group(['prefix' => 'juasoonline'], function ()
+{
+    // Product routes
+    Route::get( 'products', [ JuasoonlineController::class, 'products' ]);
+    Route::get( 'product/{product}', [ JuasoonlineController::class, 'product' ]);
+    Route::get( 'products/recommendations', [ JuasoonlineController::class, 'recommendations' ]);
 
-        // Store routes
-        Route::get( 'store/{store}/products', [ JuasoonlineController::class, 'storeProducts' ]);
-        Route::get( 'store/product/{product}/recommendations', [ JuasoonlineController::class, 'storeRecommendations' ]);
+    // Store routes
+    Route::get( 'store/{store}/products', [ JuasoonlineController::class, 'storeProducts' ]);
+    Route::get( 'store/product/{product}/recommendations', [ JuasoonlineController::class, 'storeRecommendations' ]);
 
-        // Ad routes
-        Route::get( 'products/deals', [ JuasoonlineController::class, 'deals' ]);
-        Route::get( 'stores/ads', [ JuasoonlineController::class, 'storeAds' ]);
+    // Ad routes
+    Route::get( 'products/deals', [ JuasoonlineController::class, 'deals' ]);
+    Route::get( 'stores/ads', [ JuasoonlineController::class, 'storeAds' ]);
 
-        // Other routes
-        Route::get( 'categories', [ JuasoonlineController::class, 'categories' ]);
-    });
+    // Other routes
+    Route::get( 'categories', [ JuasoonlineController::class, 'categories' ]);
 });

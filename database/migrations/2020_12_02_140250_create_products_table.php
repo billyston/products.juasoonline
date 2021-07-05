@@ -29,6 +29,10 @@ class CreateProductsTable extends Migration
             $table -> float( 'price' );
             $table -> float( 'sales_price' );
             $table -> mediumText( 'description' );
+
+            $table -> string( 'free_delivery' ) -> nullable( true );
+            $table -> integer( 'buyer_protection' ) -> nullable( false ) ->default( 7 );
+
             $table -> smallInteger( 'status' ) ->default( 1 );
 
             $table -> mediumText( 'extra_data' ) -> nullable( true );
