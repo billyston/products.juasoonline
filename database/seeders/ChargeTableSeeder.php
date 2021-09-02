@@ -19,7 +19,7 @@ class ChargeTableSeeder extends Seeder
             "resource_id"       =>  hexdec( uniqid() ),
 
             "name"              =>  "Monthly",
-            "fee"               =>  "0.2",
+            "fee"               =>  "0.5",
             "description"       =>  "2 percent of the product sales price will be charged every month starting from the first month of which the product was created.",
 
             "store_id"          =>  1,

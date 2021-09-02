@@ -19,6 +19,9 @@ class PromoTypeTableSeeder extends Seeder
             'name' => 'Top Ad',
             'fee' => '10.00',
             'description' => 'Laravel is a web application framework with expressive, elegant syntax. We’ve already laid the foundation — freeing you to create without sweating the small things.',
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
         ]);
 
         DB::table( 'promo_types' ) -> insert([
@@ -26,6 +29,9 @@ class PromoTypeTableSeeder extends Seeder
             'name' => 'Main Sliders',
             'fee' => '50.00',
             'description' => 'Laravel is a web application framework with expressive, elegant syntax. We’ve already laid the foundation — freeing you to create without sweating the small things.',
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
         ]);
 
         DB::table( 'promo_types' ) -> insert([
@@ -33,6 +39,9 @@ class PromoTypeTableSeeder extends Seeder
             'name' => 'Quick Deals',
             'fee' => '20.00',
             'description' => 'Laravel is a web application framework with expressive, elegant syntax. We’ve already laid the foundation — freeing you to create without sweating the small things.',
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
         ]);
 
         DB::table( 'promo_types' ) -> insert([
@@ -40,6 +49,9 @@ class PromoTypeTableSeeder extends Seeder
             'name' => 'Special Promotion',
             'fee' => '100.00',
             'description' => 'Laravel is a web application framework with expressive, elegant syntax. We’ve already laid the foundation — freeing you to create without sweating the small things.',
+
+            "created_at"        => date("Y-m-d H:i:s"),
+            "updated_at"        => date("Y-m-d H:i:s"),
         ]);
     }
 }

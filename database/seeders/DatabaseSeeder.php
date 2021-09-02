@@ -20,10 +20,14 @@ class DatabaseSeeder extends Seeder
         $this -> call([ GroupTableSeeder::class ]);
         $this -> call([ CategoryTableSeeder::class ]);
         $this -> call([ SubcategoryTableSeeder::class ]);
+        $this -> call([ SubscriptionTableSeeder::class ]);
 
         $this -> call([ StoreTableSeeder::class ]);
         $this -> call([ StoreAdministratorTableSeeder::class ]);
         $this -> call([ ChargeTableSeeder::class ]);
+
+        $this -> call([ CustomerTableSeeder::class ]);
+        $this -> call([ AddressTableSeeder::class ]);
 
         $this -> call([ ProductTableSeeder::class ]);
         $this -> call([ ProductCategoryTableSeeder::class ]);

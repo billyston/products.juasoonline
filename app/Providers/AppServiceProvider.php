@@ -2,48 +2,64 @@
 
 namespace App\Providers;
 
-use App\Models\Others\Country\Country;
-use App\Models\Others\Tag\Tag;
-use App\Models\Product\Bundle\Bundle;
-use App\Observers\Others\Country\CountryObserver;
-use App\Models\Others\PromoType\PromoType;
-use App\Observers\Others\PromoType\PromoTypeObserver;
-use App\Models\Others\Group\Group;
-use App\Observers\Others\Group\GroupObserver;
-use App\Models\Others\Category\Category;
-use App\Observers\Others\Category\CategoryObserver;
-use App\Models\Others\Subcategory\Subcategory;
-use App\Observers\Others\Subcategory\SubcategoryObserver;
-use App\Models\Others\Brand\Brand;
-use App\Observers\Others\Brand\BrandObserver;
+use App\Models\Juaso\Country\Country;
+use App\Models\Juaso\Brand\Brand;
+use App\Models\Juaso\PromoType\PromoType;
+use App\Models\Juaso\Group\Group;
+use App\Models\Juaso\Category\Category;
+use App\Models\Juaso\Subcategory\Subcategory;
+use App\Models\Juaso\Tag\Tag;
+use App\Observers\Juaso\Country\CountryObserver;
+use App\Observers\Juaso\PromoType\PromoTypeObserver;
+use App\Observers\Juaso\Group\GroupObserver;
+use App\Observers\Juaso\Category\CategoryObserver;
+use App\Observers\Juaso\Subcategory\SubcategoryObserver;
+use App\Observers\Juaso\Brand\BrandObserver;
+use App\Observers\Juaso\Tag\TagObserver;
 
-use App\Models\Store\Store;
-use App\Observers\Others\Tag\TagObserver;
-use App\Observers\Product\Bundle\BundleObserver;
-use App\Observers\Store\StoreObserver;
-use App\Models\Store\StoreAdministrator\StoreAdministrator;
-use App\Observers\Store\StoreAdministrator\StoreAdministratorObserver;
-use App\Models\Store\Branch\Branch;
-use App\Observers\Store\Branch\BranchObserver;
-use App\Models\Store\Charge\Charge;
-use App\Observers\Store\Charge\ChargeObserver;
+use App\Models\Business\Store\Store\Store;
+use App\Observers\Business\Store\Store\StoreObserver;
+use App\Models\Business\Store\StoreAdministrator\StoreAdministrator;
+use App\Observers\Business\Store\StoreAdministrator\StoreAdministratorObserver;
+use App\Models\Business\Store\Branch\Branch;
+use App\Observers\Business\Store\Branch\BranchObserver;
+use App\Models\Business\Store\Charge\Charge;
+use App\Observers\Business\Store\Charge\ChargeObserver;
+use App\Observers\Business\Store\StoreReview\StoreReviewObserver;
+use App\Models\Business\Store\StoreReview\StoreReview;
+use App\Models\Business\Store\StoreCategory\StoreCategory;
+use App\Observers\Business\Store\StoreCategory\StoreCategoryObserver;
+use App\Models\Business\Store\StoreSubcategory\StoreSubcategory;
+use App\Observers\Business\Store\StoreSubcategory\ProductSubcategoryObserver;
+use App\Models\Business\Product\Product\Product;
+use App\Observers\Business\Product\Product\ProductObserver;
+use App\Models\Business\Product\Image\Image;
+use App\Observers\Business\Product\Image\ImageObserver;
+use App\Models\Business\Product\Specification\Specification;
+use App\Observers\Business\Product\Specification\SpecificationObserver;
+use App\Models\Business\Product\Overview\Overview;
+use App\Observers\Business\Product\Overview\OverviewObserver;
+use App\Models\Business\Product\Faq\Faq;
+use App\Observers\Business\Product\Faq\FaqObserver;
+use App\Models\Business\Product\Review\Review;
+use App\Observers\Business\Product\Review\ReviewObserver;
+use App\Observers\Business\Product\Color\ColorObserver;
+use App\Models\Business\Product\Color\Color;
+use App\Models\Business\Product\Size\Size;
+use App\Observers\Business\Product\Size\SizeObserver;
+use App\Models\Business\Product\Promotion\Promotion;
+use App\Observers\Business\Product\Promotion\PromotionObserver;
+use App\Observers\Business\Product\Bundle\BundleObserver;
+use App\Models\Business\Product\Bundle\Bundle;
 
-use App\Models\Product\Product;
-use App\Observers\Product\ProductObserver;
-use App\Models\Product\Image\Image;
-use App\Observers\Product\Image\ImageObserver;
-use App\Models\Product\Specification\Specification;
-use App\Observers\Product\Specification\SpecificationObserver;
-use App\Models\Product\Overview\Overview;
-use App\Observers\Product\Overview\OverviewObserver;
-use App\Models\Product\Review\Review;
-use App\Observers\Product\Review\ReviewObserver;
-use App\Observers\Product\Color\ColorObserver;
-use App\Models\Product\Color\Color;
-use App\Models\Product\Size\Size;
-use App\Observers\Product\Size\SizeObserver;
-use App\Models\Product\Promotion\Promotion;
-use App\Observers\Product\Promotion\PromotionObserver;
+use App\Models\Juasoonline\Customer\Customer\Customer;
+use App\Observers\Juasoonline\Customer\Customer\CustomerObserver;
+use App\Models\Juasoonline\Customer\Address\Address;
+use App\Observers\Juasoonline\Customer\Address\AddressObserver;
+use App\Models\Juasoonline\Customer\Wishlist\Wishlist;
+use App\Observers\Juasoonline\Customer\Wishlist\WishlistObserver;
+use App\Models\Juasoonline\Customer\Cart\Cart;
+use App\Observers\Juasoonline\Customer\Cart\CartObserver;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -67,26 +83,34 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Country::observe( CountryObserver::class );
+        Brand::observe( BrandObserver::class );
         PromoType::observe( PromoTypeObserver::class );
         Group::observe( GroupObserver::class );
         Category::observe( CategoryObserver::class );
         Subcategory::observe( SubcategoryObserver::class );
-        Brand::observe( BrandObserver::class );
         Tag::observe( TagObserver::class );
 
         Store::observe( StoreObserver::class );
         StoreAdministrator::observe( StoreAdministratorObserver::class );
         Branch::observe( BranchObserver::class );
         Charge::observe( ChargeObserver::class );
-
+        StoreReview::observe( StoreReviewObserver::class );
+        StoreCategory::observe( StoreCategoryObserver::class );
+        StoreSubcategory::observe( ProductSubcategoryObserver::class );
         Product::observe( ProductObserver::class );
         Image::observe( ImageObserver::class );
+        Color::observe( ColorObserver::class );
+        Size::observe( SizeObserver::class );
         Specification::observe( SpecificationObserver::class );
         Overview::observe( OverviewObserver::class );
         Review::observe( ReviewObserver::class );
-        Color::observe( ColorObserver::class );
-        Size::observe( SizeObserver::class );
+        Faq::observe( FaqObserver::class );
         Promotion::observe( PromotionObserver::class );
         Bundle::observe( BundleObserver::class );
+
+        Customer::observe( CustomerObserver::class );
+        Address::observe( AddressObserver::class );
+        Wishlist::observe( WishlistObserver::class );
+        Cart::observe( CartObserver::class );
     }
 }

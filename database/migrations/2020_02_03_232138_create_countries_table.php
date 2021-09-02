@@ -16,7 +16,7 @@ class CreateCountriesTable extends Migration
         Schema::create('countries', function ( Blueprint $table )
         {
             $table -> bigIncrements('id');
-            $table -> string('resource_id') -> unique();
+            $table -> uuid( 'resource_id' ) -> unique() -> nullable( false );
 
             $table -> string('name') -> unique();
             $table -> string('currency') -> unique();

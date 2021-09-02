@@ -25,7 +25,7 @@ class CreatePromotionsTable extends Migration
 
             $table -> string( 'image' ) -> nullable( true );
 
-            $table -> smallInteger( 'status' );
+            $table -> string( 'status' ) ->default( '000' );
 
             $table -> timestamps();
 

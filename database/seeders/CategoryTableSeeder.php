@@ -137,8 +137,8 @@ class CategoryTableSeeder extends Seeder
         DB::table( 'categories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
             "group_id"          =>  3,
-            "name"              =>  "Hot Brands",
-            "slug"              =>  Str::slug( 'Hot Brands', '-' ),
+            "name"              =>  "Hot Brand",
+            "slug"              =>  Str::slug( 'Hot Brand', '-' ),
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
             "created_at"        => date("Y-m-d H:i:s"),
             "updated_at"        => date("Y-m-d H:i:s"),
@@ -411,8 +411,8 @@ class CategoryTableSeeder extends Seeder
         DB::table( 'categories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
             "group_id"          =>  7,
-            "name"              =>  "Pet Products",
-            "slug"              =>  Str::slug( 'Pet Products', '-' ),
+            "name"              =>  "Pet Product",
+            "slug"              =>  Str::slug( 'Pet Product', '-' ),
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
             "created_at"        => date("Y-m-d H:i:s"),
             "updated_at"        => date("Y-m-d H:i:s"),

@@ -18,10 +18,10 @@ class PromotionTableSeeder extends Seeder
         DB::table( 'promotions' ) -> insert([
             "resource_id"       =>  uniqid(),
 
-            'promo_start' => '2021-06-01 15:15:38',
-            'promo_end' => '2021-06-10 15:15:38',
+            'promo_start' => '2021-09-01 15:15:38',
+            'promo_end' => '2021-12-10 15:15:38',
 
-            'status' => 1,
+            'status' => "000",
 
             'promo_type_id' => 3,
             'product_id' => 1,
@@ -32,10 +32,10 @@ class PromotionTableSeeder extends Seeder
         DB::table( 'promotions' ) -> insert([
             "resource_id"       =>  uniqid(),
 
-            'promo_start' => '2021-06-01 15:15:38',
-            'promo_end' => '2021-06-10 15:15:38',
+            'promo_start' => '2021-09-01 15:15:38',
+            'promo_end' => '2021-12-10 15:15:38',
 
-            'status' => 1,
+            'status' => "000",
 
             'promo_type_id' => 3,
             'product_id' => 3,
@@ -46,10 +46,10 @@ class PromotionTableSeeder extends Seeder
         DB::table( 'promotions' ) -> insert([
             "resource_id"       =>  uniqid(),
 
-            'promo_start' => '2021-06-01 15:15:38',
-            'promo_end' => '2021-06-10 15:15:38',
+            'promo_start' => '2021-09-01 15:15:38',
+            'promo_end' => '2021-12-10 15:15:38',
 
-            'status' => 1,
+            'status' => "000",
 
             'promo_type_id' => 3,
             'product_id' => 4,
@@ -60,10 +60,10 @@ class PromotionTableSeeder extends Seeder
         DB::table( 'promotions' ) -> insert([
             "resource_id"       =>  uniqid(),
 
-            'promo_start' => '2021-06-01 15:15:38',
-            'promo_end' => '2021-06-10 15:15:38',
+            'promo_start' => '2021-09-01 15:15:38',
+            'promo_end' => '2021-12-10 15:15:38',
 
-            'status' => 1,
+            'status' => "000",
 
             'promo_type_id' => 3,
             'product_id' => 6,
@@ -74,10 +74,10 @@ class PromotionTableSeeder extends Seeder
         DB::table( 'promotions' ) -> insert([
             "resource_id"       =>  uniqid(),
 
-            'promo_start' => '2021-06-01 15:15:38',
-            'promo_end' => '2021-06-10 15:15:38',
+            'promo_start' => '2021-09-01 15:15:38',
+            'promo_end' => '2021-12-10 15:15:38',
 
-            'status' => 1,
+            'status' => "000",
 
             'promo_type_id' => 3,
             'product_id' => 7,
@@ -88,10 +88,10 @@ class PromotionTableSeeder extends Seeder
         DB::table( 'promotions' ) -> insert([
             "resource_id"       =>  uniqid(),
 
-            'promo_start' => '2021-06-01 15:15:38',
-            'promo_end' => '2021-06-10 15:15:38',
+            'promo_start' => '2021-09-01 15:15:38',
+            'promo_end' => '2021-12-10 15:15:38',
 
-            'status' => 1,
+            'status' => "000",
 
             'promo_type_id' => 3,
             'product_id' => 10,
@@ -102,10 +102,10 @@ class PromotionTableSeeder extends Seeder
         DB::table( 'promotions' ) -> insert([
             "resource_id"       =>  uniqid(),
 
-            'promo_start' => '2021-06-01 15:15:38',
-            'promo_end' => '2021-06-10 15:15:38',
+            'promo_start' => '2021-09-01 15:15:38',
+            'promo_end' => '2021-12-10 15:15:38',
 
-            'status' => 1,
+            'status' => "000",
 
             'promo_type_id' => 3,
             'product_id' => 11,
@@ -116,10 +116,10 @@ class PromotionTableSeeder extends Seeder
         DB::table( 'promotions' ) -> insert([
             "resource_id"       =>  uniqid(),
 
-            'promo_start' => '2021-06-01 15:15:38',
-            'promo_end' => '2021-06-10 15:15:38',
+            'promo_start' => '2021-09-01 15:15:38',
+            'promo_end' => '2021-12-10 15:15:38',
 
-            'status' => 1,
+            'status' => "000",
 
             'promo_type_id' => 3,
             'product_id' => 18,
@@ -130,10 +130,10 @@ class PromotionTableSeeder extends Seeder
         DB::table( 'promotions' ) -> insert([
             "resource_id"       =>  uniqid(),
 
-            'promo_start' => '2021-06-01 15:15:38',
-            'promo_end' => '2021-06-10 15:15:38',
+            'promo_start' => '2021-09-01 15:15:38',
+            'promo_end' => '2021-12-10 15:15:38',
 
-            'status' => 1,
+            'status' => "000",
 
             'promo_type_id' => 3,
             'product_id' => 20,
@@ -146,15 +146,14 @@ class PromotionTableSeeder extends Seeder
         DB::table( 'promotions' ) -> insert([
             "resource_id"       =>  uniqid(),
 
-            'promo_start' => '2021-06-01 15:15:38',
-            'promo_end' => '2021-06-10 15:15:38',
+            'promo_start' => '2021-09-01 15:15:38',
+            'promo_end' => '2021-12-10 15:15:38',
 
             "image"             =>  "https://assets.juasoonline.com/test/images/sliders/1.jpg",
 
-            'status' => 1,
+            'status' => "000",
 
             'promo_type_id' => 2,
-            'product_id' => 20,
 
             "created_at"        => date("Y-m-d H:i:s"),
             "updated_at"        => date("Y-m-d H:i:s"),
@@ -162,15 +161,14 @@ class PromotionTableSeeder extends Seeder
         DB::table( 'promotions' ) -> insert([
             "resource_id"       =>  uniqid(),
 
-            'promo_start' => '2021-06-01 15:15:38',
-            'promo_end' => '2021-06-10 15:15:38',
+            'promo_start' => '2021-09-01 15:15:38',
+            'promo_end' => '2021-12-10 15:15:38',
 
             "image"             =>  "https://assets.juasoonline.com/test/images/sliders/2.jpg",
 
-            'status' => 1,
+            'status' => "000",
 
             'promo_type_id' => 2,
-            'product_id' => 20,
 
             "created_at"        => date("Y-m-d H:i:s"),
             "updated_at"        => date("Y-m-d H:i:s"),
@@ -178,15 +176,14 @@ class PromotionTableSeeder extends Seeder
         DB::table( 'promotions' ) -> insert([
             "resource_id"       =>  uniqid(),
 
-            'promo_start' => '2021-06-01 15:15:38',
-            'promo_end' => '2021-06-10 15:15:38',
+            'promo_start' => '2021-09-01 15:15:38',
+            'promo_end' => '2021-12-10 15:15:38',
 
             "image"             =>  "https://assets.juasoonline.com/test/images/sliders/3.jpg",
 
-            'status' => 1,
+            'status' => "000",
 
             'promo_type_id' => 2,
-            'product_id' => 20,
 
             "created_at"        => date("Y-m-d H:i:s"),
             "updated_at"        => date("Y-m-d H:i:s"),

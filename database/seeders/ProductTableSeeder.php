@@ -30,6 +30,8 @@ class ProductTableSeeder extends Seeder
 
             "total_sold"        =>  200,
 
+            "status"            =>  '000',
+
             "created_at"        => date("Y-m-d H:i:s"),
             "updated_at"        => date("Y-m-d H:i:s"),
         ]);
@@ -48,6 +50,8 @@ class ProductTableSeeder extends Seeder
             "charge_id"         =>  1,
 
             "total_sold"        =>  267,
+
+            "status"            =>  '000',
 
             "created_at"        => date("Y-m-d H:i:s"),
             "updated_at"        => date("Y-m-d H:i:s"),
@@ -68,6 +72,8 @@ class ProductTableSeeder extends Seeder
 
             "total_sold"        =>  167,
 
+            "status"            =>  '000',
+
             "created_at"        => date("Y-m-d H:i:s"),
             "updated_at"        => date("Y-m-d H:i:s"),
         ]);
@@ -86,6 +92,8 @@ class ProductTableSeeder extends Seeder
             "charge_id"         =>  1,
 
             "total_sold"        =>  1067,
+
+            "status"            =>  '000',
 
             "created_at"        => date("Y-m-d H:i:s"),
             "updated_at"        => date("Y-m-d H:i:s"),
@@ -106,6 +114,8 @@ class ProductTableSeeder extends Seeder
 
             "total_sold"        =>  17,
 
+            "status"            =>  '000',
+
             "created_at"        => date("Y-m-d H:i:s"),
             "updated_at"        => date("Y-m-d H:i:s"),
         ]);
@@ -124,6 +134,8 @@ class ProductTableSeeder extends Seeder
             "charge_id"         =>  1,
 
             "total_sold"        =>  2690,
+
+            "status"            =>  '000',
 
             "created_at"        => date("Y-m-d H:i:s"),
             "updated_at"        => date("Y-m-d H:i:s"),
@@ -144,6 +156,8 @@ class ProductTableSeeder extends Seeder
 
             "total_sold"        =>  700,
 
+            "status"            =>  '000',
+
             "created_at"        => date("Y-m-d H:i:s"),
             "updated_at"        => date("Y-m-d H:i:s"),
         ]);
@@ -162,6 +176,8 @@ class ProductTableSeeder extends Seeder
             "charge_id"         =>  1,
 
             "total_sold"        =>  180,
+
+            "status"            =>  '000',
 
             "created_at"        => date("Y-m-d H:i:s"),
             "updated_at"        => date("Y-m-d H:i:s"),
@@ -182,6 +198,8 @@ class ProductTableSeeder extends Seeder
 
             "total_sold"        =>  677,
 
+            "status"            =>  '000',
+
             "created_at"        => date("Y-m-d H:i:s"),
             "updated_at"        => date("Y-m-d H:i:s"),
         ]);
@@ -200,6 +218,8 @@ class ProductTableSeeder extends Seeder
             "charge_id"         =>  1,
 
             "total_sold"        =>  1207,
+
+            "status"            =>  '000',
 
             "created_at"        => date("Y-m-d H:i:s"),
             "updated_at"        => date("Y-m-d H:i:s"),
@@ -220,6 +240,8 @@ class ProductTableSeeder extends Seeder
 
             "total_sold"        =>  1001,
 
+            "status"            =>  '000',
+
             "created_at"        => date("Y-m-d H:i:s"),
             "updated_at"        => date("Y-m-d H:i:s"),
         ]);
@@ -236,6 +258,10 @@ class ProductTableSeeder extends Seeder
             "store_id"          =>  1,
             "brand_id"          =>  1,
             "charge_id"         =>  1,
+
+            "total_sold"        =>  101,
+
+            "status"            =>  '000',
 
             "created_at"        => date("Y-m-d H:i:s"),
             "updated_at"        => date("Y-m-d H:i:s"),
@@ -256,6 +282,8 @@ class ProductTableSeeder extends Seeder
 
             "total_sold"        =>  1067,
 
+            "status"            =>  '000',
+
             "created_at"        => date("Y-m-d H:i:s"),
             "updated_at"        => date("Y-m-d H:i:s"),
         ]);
@@ -274,6 +302,8 @@ class ProductTableSeeder extends Seeder
             "charge_id"         =>  1,
 
             "total_sold"        =>  67,
+
+            "status"            =>  '000',
 
             "created_at"        => date("Y-m-d H:i:s"),
             "updated_at"        => date("Y-m-d H:i:s"),
@@ -294,6 +324,8 @@ class ProductTableSeeder extends Seeder
 
             "total_sold"        =>  1207,
 
+            "status"            =>  '000',
+
             "created_at"        => date("Y-m-d H:i:s"),
             "updated_at"        => date("Y-m-d H:i:s"),
         ]);
@@ -313,6 +345,8 @@ class ProductTableSeeder extends Seeder
 
             "total_sold"        =>  1001,
 
+            "status"            =>  '000',
+
             "created_at"        => date("Y-m-d H:i:s"),
             "updated_at"        => date("Y-m-d H:i:s"),
         ]);
@@ -329,6 +363,10 @@ class ProductTableSeeder extends Seeder
             "store_id"          =>  1,
             "brand_id"          =>  1,
             "charge_id"         =>  1,
+
+            "total_sold"        =>  1001,
+
+            "status"            =>  '000',
 
             "created_at"        => date("Y-m-d H:i:s"),
             "updated_at"        => date("Y-m-d H:i:s"),
@@ -349,6 +387,8 @@ class ProductTableSeeder extends Seeder
 
             "total_sold"        =>  1067,
 
+            "status"            =>  '000',
+
             "created_at"        => date("Y-m-d H:i:s"),
             "updated_at"        => date("Y-m-d H:i:s"),
         ]);
@@ -368,6 +408,8 @@ class ProductTableSeeder extends Seeder
 
             "total_sold"        =>  67,
 
+            "status"            =>  '000',
+
             "created_at"        => date("Y-m-d H:i:s"),
             "updated_at"        => date("Y-m-d H:i:s"),
         ]);
@@ -386,6 +428,8 @@ class ProductTableSeeder extends Seeder
                 "charge_id"         =>  1,
 
                 "total_sold"        =>  1267,
+
+                "status"            =>  '000',
 
                 "created_at"        => date("Y-m-d H:i:s"),
                 "updated_at"        => date("Y-m-d H:i:s"),
