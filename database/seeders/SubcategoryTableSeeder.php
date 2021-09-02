@@ -3234,8 +3234,8 @@ class SubcategoryTableSeeder extends Seeder
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
             "category_id"       =>  67,
-            "name"              =>  "Bundles With Closure",
-            "slug"              =>  Str::slug( 'Bundles With Closure', '-' ),
+            "name"              =>  "Bundle With Closure",
+            "slug"              =>  Str::slug( 'Bundle With Closure', '-' ),
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
             "created_at"        => date("Y-m-d H:i:s"),
             "updated_at"        => date("Y-m-d H:i:s"),
@@ -3243,8 +3243,8 @@ class SubcategoryTableSeeder extends Seeder
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
             "category_id"       =>  67,
-            "name"              =>  "3/4 Bundles",
-            "slug"              =>  Str::slug( '3 4 Bundles', '-' ),
+            "name"              =>  "3/4 Bundle",
+            "slug"              =>  Str::slug( '3 4 Bundle', '-' ),
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
             "created_at"        => date("Y-m-d H:i:s"),
             "updated_at"        => date("Y-m-d H:i:s"),
@@ -3668,8 +3668,8 @@ class SubcategoryTableSeeder extends Seeder
         DB::table( 'subcategories' ) -> insert([
             "resource_id"       =>  hexdec( uniqid() ),
             "category_id"       =>  78,
-            "name"              =>  "Other Maintenance Products",
-            "slug"              =>  Str::slug( 'Other Maintenance Products', '-' ),
+            "name"              =>  "Other Maintenance Product",
+            "slug"              =>  Str::slug( 'Other Maintenance Product', '-' ),
             "description"       =>  "This is youtube channel which helps new web developer learn and upgrade their skills",
             "created_at"        => date("Y-m-d H:i:s"),
             "updated_at"        => date("Y-m-d H:i:s"),

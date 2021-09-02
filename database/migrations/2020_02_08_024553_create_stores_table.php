@@ -18,6 +18,9 @@ class CreateStoresTable extends Migration
             $table -> bigIncrements('id' );
             $table -> uuid( 'resource_id' ) -> unique() -> nullable( false );
 
+            $table -> unsignedBigInteger( 'country_id' ) -> nullable( false );
+            $table -> unsignedBigInteger( 'subscription_id' ) -> nullable( false );
+
             $table -> string( 'name' ) -> nullable( false ) -> unique();
             $table -> string( 'doing_business_as' ) -> nullable( false ) -> unique();
 
@@ -32,8 +35,15 @@ class CreateStoresTable extends Migration
             $table -> string( 'email' ) -> nullable( false ) -> unique();
             $table -> string( 'website' );
 
+            $table -> string( 'banner_image' ) -> nullable( true );
+
+            $table -> smallInteger( 'status' ) ->default( 100 );
+
             $table -> timestamps();
             $table -> softDeletes();
+
+            $table -> foreign('country_id' ) -> references('id' ) -> on( 'countries' ) -> onDelete( 'cascade' );
+            $table -> foreign('subscription_id' ) -> references('id' ) -> on( 'subscriptions' ) -> onDelete( 'cascade' );
         });
     }
 
